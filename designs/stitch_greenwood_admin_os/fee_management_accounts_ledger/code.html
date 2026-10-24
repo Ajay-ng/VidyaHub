@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"background":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-primary":"#ffffff","surface-container-low":"#eff4ff","on-secondary-fixed":"#131b2e","tertiary-fixed-dim":"#93ccff","secondary-fixed":"#dae2fd","on-background":"#0b1c30","surface-variant":"#d3e4fe","primary-container":"#eab308","on-secondary-fixed-variant":"#3f465c","secondary-fixed-dim":"#bec6e0","surface-bright":"#f8f9ff","surface":"#f8f9ff","tertiary-fixed":"#cce5ff","inverse-primary":"#f7be1d","surface-container":"#e5eeff","on-primary-container":"#604700","outline":"#817660","on-tertiary":"#ffffff","error":"#ba1a1a","on-primary-fixed-variant":"#5a4300","inverse-surface":"#213145","on-surface-variant":"#4f4633","on-tertiary-container":"#004f7a","surface-container-lowest":"#ffffff","tertiary-container":"#78c2ff","on-secondary":"#ffffff","tertiary":"#006398","primary-fixed-dim":"#f7be1d","on-secondary-container":"#5c647a","secondary":"#565e74","surface-tint":"#785a00","surface-container-high":"#dce9ff","on-surface":"#0b1c30","on-primary-fixed":"#251a00","on-error":"#ffffff","secondary-container":"#dae2fd","primary":"#785a00","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","surface-dim":"#cbdbf5","on-error-container":"#93000a","primary-fixed":"#ffdf9a","outline-variant":"#d3c5ac","on-tertiary-fixed":"#001d31"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"headline-xl":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.025em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-surface-container-high"><div class="flex items-center gap-space-sm"><img alt="Greenwood International School Crest Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V57aiJ9MtRuKyLMKpK-ZEcWO73gHyDUmQMJw29e5RDXyLSvGcPkzfndBk_RXOQuf11m-C-ejzm7qXIpqDzcuKcj07BfQx5xPQPyhWhv02O5HDq_GVc0AYTG0KW6YT-71inLcd-iTusMTgNJgqp4owigF9GnGg4EIt062b3lZ3mSHegm-bIo8yuRMS1MnLw9try9tZL8J-X4BsUUgnqH3Xbw1Lo-M3IxjkrxcevFlJ6Em182VQs2jrD6VI"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Greenwood Int. School</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin Portal</span></div></div><div class="mt-space-sm inline-flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>AY 2026-27 Active</div></div><nav class="px-space-sm py-space-md space-y-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-lg border-l-4 border-primary-container pl-space-sm"><div class="px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Main</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Dashboard</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Academic Management</div><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="students" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">school</span><span>Students</span></div><span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">2,845</span></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="teachers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">cast_for_education</span><span>Teachers</span></div><span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">184</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="staff-directory" href="#"><span class="material-symbols-outlined text-base">badge</span><span>Staff</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="classes-and-sections" href="#"><span class="material-symbols-outlined text-base">meeting_room</span><span>Classes & Sections</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="subjects-curriculum" href="#"><span class="material-symbols-outlined text-base">auto_stories</span><span>Subjects</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="master-timetable" href="#"><span class="material-symbols-outlined text-base">calendar_month</span><span>Timetable</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="attendance-registry" href="#"><span class="material-symbols-outlined text-base">fact_check</span><span>Attendance</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="examination-center" href="#"><span class="material-symbols-outlined text-base">assignment_turned_in</span><span>Exams</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="assignments-homework" href="#"><span class="material-symbols-outlined text-base">draw</span><span>Assignments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="results-transcripts" href="#"><span class="material-symbols-outlined text-base">grade</span><span>Results</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Administration</div><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="admissions" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">how_to_reg</span><span>Admissions</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold">12 new</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="leave-management" href="#"><span class="material-symbols-outlined text-base">event_busy</span><span>Leave Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="events-calendar" href="#"><span class="material-symbols-outlined text-base">event</span><span>Events & Calendar</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="announcements-bulletin" href="#"><span class="material-symbols-outlined text-base">campaign</span><span>Announcements</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="document-repository" href="#"><span class="material-symbols-outlined text-base">folder</span><span>Documents</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Finance</div><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-xs rounded transition-colors bg-surface-container-high text-on-surface font-label-lg border-l-4 border-primary-container pl-space-sm" data-path="fee-management" href="#"><span class="material-symbols-outlined text-base">payments</span><span>Fee Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="payments-ledger" href="#"><span class="material-symbols-outlined text-base">receipt_long</span><span>Payments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="expenses" href="#"><span class="material-symbols-outlined text-base">account_balance_wallet</span><span>Expenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="payroll-system" href="#"><span class="material-symbols-outlined text-base">request_quote</span><span>Payroll</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="financial-reports" href="#"><span class="material-symbols-outlined text-base">analytics</span><span>Financial Reports</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Resources</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="library-catalog" href="#"><span class="material-symbols-outlined text-base">local_library</span><span>Library</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="transportation-fleet" href="#"><span class="material-symbols-outlined text-base">directions_bus</span><span>Transport</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="hostel-management" href="#"><span class="material-symbols-outlined text-base">domain</span><span>Hostel</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="inventory-assets" href="#"><span class="material-symbols-outlined text-base">inventory_2</span><span>Inventory</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Communication</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="messages-inbox" href="#"><span class="material-symbols-outlined text-base">chat</span><span>Messages</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="notifications-center" href="#"><span class="material-symbols-outlined text-base">notifications</span><span>Notifications</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="email-sms-center" href="#"><span class="material-symbols-outlined text-base">send</span><span>Email/SMS Center</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">System & Security</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="user-accounts" href="#"><span class="material-symbols-outlined text-base">manage_accounts</span><span>Users</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="roles-and-permissions" href="#"><span class="material-symbols-outlined text-base">shield_person</span><span>Roles & Permissions</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-base">history</span><span>Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="portal-settings" href="#"><span class="material-symbols-outlined text-base">settings</span><span>Settings</span></a></nav></div><div class="p-space-sm border-t border-surface-container-high space-y-space-xs bg-surface-container-lowest"><div class="flex items-center justify-between px-space-sm py-1"><a class="text-label-sm font-label-sm text-secondary hover:text-on-surface" data-path="help-support" href="#">Help & Support</a><a class="text-label-sm font-label-sm text-secondary hover:text-on-surface" data-path="documentation" href="#">Docs</a></div><div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNhNu5kgwFNIh69AvsVORbb9iP5dcd5KHaDoBuGryvGEOvuNECAXbMnZM59LRm9Lf6qH223mYntOJ6FA6rd7jNbdL2LLvndqu3H35uzCgIkUaEcuhQxUwgJpa3dPlXBXdTrvt2tX_EZAtf4ATgIqfgA34LSfV80IWTnqeLNHfQ9DMXkFmrtG5e8IW1hu7Ui5g3XiVKv1oBIQUwHvqtGAMV9CsiKdoFtz7UrSvIYi1-SJwYBxjh5nI-A"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">Dr. R. Malhotra</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin</span></div></div><a class="text-on-surface-variant hover:text-error transition-colors p-1" data-path="login" href="#" title="Sign Out"><span class="material-symbols-outlined text-lg">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-gutter-desktop border-b border-surface-container-high"><div class="flex items-center gap-space-md"><button class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container p-1 rounded transition-colors" title="Toggle Sidebar" type="button"><span class="material-symbols-outlined">menu_open</span></button><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary"><a class="hover:text-on-surface" href="#">Greenwood</a><span>/</span><a class="hover:text-on-surface" href="#">Admin Portal</a><span>/</span><span class="text-on-surface font-semibold">Executive Dashboard</span></div></div><div class="flex-1 max-w-md mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full h-9 pl-9 pr-12 text-body-sm font-body-sm bg-surface-container-low rounded border border-surface-container-high focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container placeholder-secondary text-on-surface" placeholder="Search students, faculty, invoices, exams... (⌘K)" type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant rounded">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-sm text-secondary">apartment</span><span>Main Campus (Bengaluru)</span></div><div class="hidden md:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-sm text-secondary">event_repeat</span><span>AY 2026-2027</span></div><button class="relative p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 bg-primary-container text-on-primary-container text-label-sm font-label-sm w-4 h-4 rounded-full flex items-center justify-center font-bold">12</span></button><button class="relative p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Messages" type="button"><span class="material-symbols-outlined text-xl">mail</span><span class="absolute top-1.5 right-1.5 bg-tertiary-container text-on-tertiary-container text-label-sm font-label-sm w-4 h-4 rounded-full flex items-center justify-center font-bold">4</span></button><button class="p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-surface-container-high mx-space-xs"></div><div class="flex items-center gap-space-sm cursor-pointer p-1 rounded hover:bg-surface-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNhNu5kgwFNIh69AvsVORbb9iP5dcd5KHaDoBuGryvGEOvuNECAXbMnZM59LRm9Lf6qH223mYntOJ6FA6rd7jNbdL2LLvndqu3H35uzCgIkUaEcuhQxUwgJpa3dPlXBXdTrvt2tX_EZAtf4ATgIqfgA34LSfV80IWTnqeLNHfQ9DMXkFmrtG5e8IW1hu7Ui5g3XiVKv1oBIQUwHvqtGAMV9CsiKdoFtz7UrSvIYi1-SJwYBxjh5nI-A"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Dr. Rajesh Malhotra</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin</span></div><span class="material-symbols-outlined text-sm text-secondary hidden lg:block">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1600px] mx-auto px-margin-desktop py-space-lg space-y-space-lg">
+<!-- Top Action Hub Header -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">FINANCE & BURSAR HUB</span>
+<span class="text-secondary font-label-sm text-label-sm">• Term 1 & 2 Reconciled</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Fee Management & Collections</h1>
+<p class="font-body-md text-body-md text-secondary max-w-3xl">Track institutional fee invoices, reconcile physical demand drafts and digital UPI settlements, regulate tuition concessions, and initiate automated defaulter outreach.</p>
+</div>
+<!-- Action Button Group -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Reports Dropdown Trigger -->
+<div class="relative inline-block text-left" id="reportsMenuWrapper">
+<button class="h-9 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-lg text-label-lg flex items-center gap-1.5" onclick="document.getElementById('reportsDropdown').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">analytics</span>
+<span>Financial Reports</span>
+<span class="material-symbols-outlined text-sm text-secondary">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 rounded-xl bg-surface-container-lowest shadow-xl py-1.5 z-30 ring-0" id="reportsDropdown">
+<a class="flex items-center gap-2 px-3.5 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-base text-tertiary">menu_book</span>
+<span>General Bursar Ledger</span>
+</a>
+<a class="flex items-center gap-2 px-3.5 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-base text-error">warning</span>
+<span>Defaulters (>45 Days) List</span>
+</a>
+<a class="flex items-center gap-2 px-3.5 py-2 text-body-sm font-body-sm text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-base text-primary">percent</span>
+<span>GST & Concession Audit</span>
+</a>
+<div class="my-1 bg-surface-container-high h-px"></div>
+<a class="flex items-center gap-2 px-3.5 py-2 text-body-sm font-body-sm text-secondary hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Export Tally XML Format</span>
+</a>
+</div>
+</div>
+<!-- Bulk Reminders Trigger -->
+<button class="h-9 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-lg text-label-lg flex items-center gap-1.5" onclick="alert('Batch WhatsApp & SMS alerts queued for 342 active overdue accounts.')" type="button">
+<span class="material-symbols-outlined text-lg text-primary">send_and_archive</span>
+<span>Send Due Reminders</span>
+</button>
+<!-- Record Offline Payment -->
+<button class="h-9 px-3.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-lg text-label-lg flex items-center gap-1.5" onclick="openRecordPaymentModal('INV-2026-0892', 'Tanvi Mukherjee', '₹18,500')" type="button">
+<span class="material-symbols-outlined text-lg text-on-surface">point_of_sale</span>
+<span>Record Payment</span>
+</button>
+<!-- Create Invoice Primary -->
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim transition-all shadow-sm font-label-lg text-label-lg flex items-center gap-1.5 font-semibold" onclick="alert('Opening Fee Invoice Builder for Academic Session 2026-27')" type="button">
+<span class="material-symbols-outlined text-lg font-bold">add</span>
+<span>Create Fee Invoice</span>
+</button>
+</div>
+</div>
+<!-- 5 KPI Overview Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1 -->
+<div class="rounded-xl p-space-md bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Billed</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-base">receipt_long</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">₹6,19,20,000</div>
+<div class="mt-1 flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Term 1 & Term 2 Target</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">92% of AY Budget</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-xl p-space-md bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Fees Realized</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-base">verified</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">₹4,85,20,000</div>
+<div class="mt-1 flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span class="text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12.4% MoM
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">78.3% Ratio</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-tertiary h-1.5 rounded-full" style="width: 78.3%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="rounded-xl p-space-md bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Outstanding</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-base">pending_actions</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">₹1,34,00,000</div>
+<div class="mt-1 flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Pending Clearance</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">342 Accounts</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 21.7%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="rounded-xl p-space-md bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Critical Overdue</span>
+<span class="px-1.5 py-0.5 rounded-md bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">alarm</span> >60 Days
+          </span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-error tracking-tight">₹28,60,000</div>
+<div class="mt-1 flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>48 Defaulter Files</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Flagged</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-error h-1.5 rounded-full" style="width: 38%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="rounded-xl p-space-md bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Waivers & Concessions</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-base">card_giftcard</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface tracking-tight">₹14,50,000</div>
+<div class="mt-1 flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Merit & Staff Siblings</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">112 Scholars</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-2">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Analytical Breakdowns: Charts & Gateway Splits -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Velocity Chart (7 cols) -->
+<div class="lg:col-span-7 rounded-xl p-space-md bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-space-md gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Fee Collection Velocity & Projections</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">AY 2026-27</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Actual collections realized vs targeted school budget (Values in ₹ Lakhs)</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-primary-container inline-block"></span>
+<span class="font-label-sm text-label-sm text-secondary">Actual Collected</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-surface-container-high inline-block"></span>
+<span class="font-label-sm text-label-sm text-secondary">Projected Target</span>
+</div>
+</div>
+</div>
+<!-- Custom SVG Chart Visualization -->
+<div class="w-full pt-4 pb-2">
+<svg class="w-full h-52 overflow-visible text-on-surface font-body-sm" viewbox="0 0 700 240">
+<!-- Background grid lines -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.06" x1="40" x2="680" y1="20" y2="20"></line>
+<text fill="currentColor" font-size="10" opacity="0.45" text-anchor="end" x="32" y="24">120L</text>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.06" x1="40" x2="680" y1="65" y2="65"></line>
+<text fill="currentColor" font-size="10" opacity="0.45" text-anchor="end" x="32" y="69">90L</text>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.06" x1="40" x2="680" y1="110" y2="110"></line>
+<text fill="currentColor" font-size="10" opacity="0.45" text-anchor="end" x="32" y="114">60L</text>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.06" x1="40" x2="680" y1="155" y2="155"></line>
+<text fill="currentColor" font-size="10" opacity="0.45" text-anchor="end" x="32" y="159">30L</text>
+<line stroke="currentColor" stroke-opacity="0.1" x1="40" x2="680" y1="200" y2="200"></line>
+<text fill="currentColor" font-size="10" opacity="0.45" text-anchor="end" x="32" y="204">0L</text>
+<!-- Month 1: Apr (Admission Rush) -->
+<rect class="fill-surface-container-high" height="145" rx="3" width="22" x="70" y="55"></rect>
+<rect class="fill-primary-container" height="155" rx="3" width="22" x="96" y="45"></rect>
+<text fill="currentColor" font-size="11" opacity="0.6" text-anchor="middle" x="94" y="220">Apr</text>
+<!-- Month 2: May -->
+<rect class="fill-surface-container-high" height="120" rx="3" width="22" x="150" y="80"></rect>
+<rect class="fill-primary-container" height="128" rx="3" width="22" x="176" y="72"></rect>
+<text fill="currentColor" font-size="11" opacity="0.6" text-anchor="middle" x="174" y="220">May</text>
+<!-- Month 3: Jun -->
+<rect class="fill-surface-container-high" height="105" rx="3" width="22" x="230" y="95"></rect>
+<rect class="fill-primary-container" height="110" rx="3" width="22" x="256" y="90"></rect>
+<text fill="currentColor" font-size="11" opacity="0.6" text-anchor="middle" x="254" y="220">Jun</text>
+<!-- Month 4: Jul (Term 1 Installment) -->
+<rect class="fill-surface-container-high" height="162" rx="3" width="22" x="310" y="38"></rect>
+<rect class="fill-primary-container" height="168" rx="3" width="22" x="336" y="32"></rect>
+<text fill="currentColor" font-size="11" opacity="0.6" text-anchor="middle" x="334" y="220">Jul</text>
+<!-- Month 5: Aug -->
+<rect class="fill-surface-container-high" height="85" rx="3" width="22" x="390" y="115"></rect>
+<rect class="fill-primary-container" height="95" rx="3" width="22" x="416" y="105"></rect>
+<text fill="currentColor" font-size="11" opacity="0.6" text-anchor="middle" x="414" y="220">Aug</text>
+<!-- Month 6: Sep -->
+<rect class="fill-surface-container-high" height="95" rx="3" width="22" x="470" y="105"></rect>
+<rect class="fill-primary-container" height="102" rx="3" width="22" x="496" y="98"></rect>
+<text fill="currentColor" font-size="11" opacity="0.6" text-anchor="middle" x="494" y="220">Sep</text>
+<!-- Month 7: Oct (Current Term 2 Installment) -->
+<rect class="fill-surface-container-high" height="158" rx="3" width="22" x="550" y="42"></rect>
+<rect class="fill-primary-container" height="140" rx="3" width="22" x="576" y="60"></rect>
+<text fill="currentColor" font-size="11" font-weight="700" opacity="0.9" text-anchor="middle" x="574" y="220">Oct (Active)</text>
+<!-- Projection Sparkline Overlay for Nov-Mar -->
+<path d="M 598 60 Q 625 75, 650 95" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-opacity="0.35" stroke-width="2"></path>
+<circle class="fill-surface-container-highest" cx="650" cy="95" r="3.5"></circle>
+</svg>
+</div>
+<div class="mt-2 pt-2 flex flex-wrap items-center justify-between font-label-sm text-label-sm text-secondary bg-surface-container-low px-3 py-2 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-tertiary">info</span>
+<span>Term 2 fee clearance surge peaked on 10th October (+₹94.2 Lakhs single-day).</span>
+</div>
+<span class="text-on-surface font-semibold">97.8% Online Gateway Uptime</span>
+</div>
+</div>
+<!-- Payment Modes & Gateway Settlements (5 cols) -->
+<div class="lg:col-span-5 rounded-xl p-space-md bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Payment Channels & Settlements</h2>
+<p class="font-body-sm text-body-sm text-secondary">Real-time aggregate split across gateways</p>
+</div>
+<span class="material-symbols-outlined text-secondary">account_balance</span>
+</div>
+<div class="my-auto py-2 space-y-3.5">
+<!-- Channel 1: UPI -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">UPI (GooglePay / PhonePe / QR)</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">58%</span>
+<span class="text-secondary text-body-sm font-body-sm ml-1.5">₹2,81,41,600</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-primary-container h-2 rounded-full" style="width: 58%;"></div>
+</div>
+</div>
+<!-- Channel 2: Net Banking -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md text-on-surface">Net Banking / NEFT / RTGS</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">24%</span>
+<span class="text-secondary text-body-sm font-body-sm ml-1.5">₹1,16,44,800</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-tertiary h-2 rounded-full" style="width: 24%;"></div>
+</div>
+</div>
+<!-- Channel 3: Cards -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Debit & Credit Cards (POS / Portal)</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">12%</span>
+<span class="text-secondary text-body-sm font-body-sm ml-1.5">₹58,22,400</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 12%;"></div>
+</div>
+</div>
+<!-- Channel 4: Offline Cash/DD -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-label-md text-label-md text-on-surface">Offline Cash Counters & DDs</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface">6%</span>
+<span class="text-secondary text-body-sm font-body-sm ml-1.5">₹29,11,200</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2">
+<div class="bg-outline h-2 rounded-full" style="width: 6%;"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs grid grid-cols-2 gap-2 text-center">
+<div class="bg-surface-container-low p-2 rounded-lg">
+<div class="font-label-sm text-label-sm text-secondary">Daily Gateway Payout</div>
+<div class="font-label-md text-label-md font-bold text-on-surface">T+1 Auto Escrow</div>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg">
+<div class="font-label-sm text-label-sm text-secondary">Bank Reconciled</div>
+<div class="font-label-md text-label-md font-bold text-tertiary">99.4% Automated</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Transaction & Fee Invoices Ledger (Data Table Container) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm flex flex-col">
+<!-- Table Header Bar with Tabs -->
+<div class="p-space-md pb-space-sm">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Fee Invoices & Student Ledgers</h2>
+<p class="font-body-sm text-body-sm text-secondary">Search, audit partial fees, download receipts, and process student remittances</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-base">filter_list</span>
+<span>Advanced Filter</span>
+</button>
+<button class="h-8 px-3 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Filter Segmented Tabs -->
+<div class="mt-space-md flex flex-wrap items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center gap-1.5 shadow-sm">
+<span>All Invoices</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-lowest text-secondary text-label-sm font-label-sm">3,240</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-secondary hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md flex items-center gap-1.5">
+<span>Paid</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-secondary text-label-sm font-label-sm">2,410</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-secondary hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md flex items-center gap-1.5">
+<span>Partially Paid</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-secondary text-label-sm font-label-sm">488</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-colors font-label-md text-label-md flex items-center gap-1.5 font-semibold">
+<span>Overdue</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container text-label-sm font-label-sm">342</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-secondary hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md flex items-center gap-1.5">
+<span>Refunded</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-secondary text-label-sm font-label-sm">18</span>
+</button>
+</div>
+</div>
+<!-- Live Search & Query Bar -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-1 flex-wrap items-center gap-space-sm min-w-[280px]">
+<!-- Input -->
+<div class="relative flex-1 min-w-[220px]">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-secondary text-base">search</span>
+<input class="w-full h-8 pl-8 pr-3 text-body-sm font-body-sm bg-surface-container-lowest rounded-lg border-0 focus:outline-none focus:ring-1 focus:ring-primary-container text-on-surface placeholder-secondary shadow-sm" placeholder="Search by Invoice ID, Student Name, Roll No..." type="text"/>
+</div>
+<!-- Class Selector -->
+<div class="relative">
+<select class="h-8 pl-2.5 pr-7 text-body-sm font-body-sm bg-surface-container-lowest rounded-lg border-0 focus:outline-none focus:ring-1 focus:ring-primary-container text-on-surface shadow-sm cursor-pointer appearance-none">
+<option value="">All Classes (Grades 1-12)</option>
+<option value="10">Grade 10 (All Sections)</option>
+<option value="9">Grade 9 (All Sections)</option>
+<option value="8">Grade 8 (All Sections)</option>
+<option value="11">Grade 11 - Science/Commerce</option>
+<option value="12">Grade 12 - Science/Commerce</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-xs text-secondary pointer-events-none">expand_more</span>
+</div>
+<!-- Term/Date Range -->
+<div class="relative">
+<select class="h-8 pl-2.5 pr-7 text-body-sm font-body-sm bg-surface-container-lowest rounded-lg border-0 focus:outline-none focus:ring-1 focus:ring-primary-container text-on-surface shadow-sm cursor-pointer appearance-none">
+<option value="term2">Term 2 (Oct 2026 - Dec 2026)</option>
+<option value="term1">Term 1 (Apr 2026 - Sep 2026)</option>
+<option value="annual">Full Annual Cycle 2026-27</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-xs text-secondary pointer-events-none">calendar_today</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary">
+<span>Showing <strong class="text-on-surface">1 - 6</strong> of 3,240 records</span>
+</div>
+</div>
+<!-- Ledger Table (Responsive Horizontal Scroll) -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-md text-label-md uppercase tracking-wider">
+<th class="py-2.5 px-4">Invoice ID</th>
+<th class="py-2.5 px-4">Student & Class</th>
+<th class="py-2.5 px-4">Fee Structure Category</th>
+<th class="py-2.5 px-4">Total Fee</th>
+<th class="py-2.5 px-4">Paid</th>
+<th class="py-2.5 px-4">Balance Due</th>
+<th class="py-2.5 px-4">Due Date</th>
+<th class="py-2.5 px-4">Channel</th>
+<th class="py-2.5 px-4">Status</th>
+<th class="py-2.5 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-sm font-body-sm">
+<!-- Row 1: Overdue Record -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface flex items-center gap-1.5">
+<span>INV-2026-0892</span>
+<button class="text-secondary hover:text-on-surface" onclick="navigator.clipboard.writeText('INV-2026-0892')" title="Copy Invoice ID">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold text-on-secondary-fixed">
+                    TM
+                  </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate block">Tanvi Mukherjee</span>
+<span class="text-secondary text-label-sm font-label-sm truncate block">Grade 9-B • #GW-9042</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-on-surface truncate max-w-[180px]">Term 2 Tuition + Transport + Lab</td>
+<td class="py-3 px-4 font-medium text-on-surface">₹38,500</td>
+<td class="py-3 px-4 text-on-surface">₹20,000</td>
+<td class="py-3 px-4 font-semibold text-error">₹18,500</td>
+<td class="py-3 px-4 text-secondary">15 Oct 2026</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">UPI Portal</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Overdue
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container transition-colors" onclick="openRecordPaymentModal('INV-2026-0892', 'Tanvi Mukherjee', '₹18,500')" title="Record Cash/Cheque Settlement" type="button">
+<span class="material-symbols-outlined text-base">payments</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" onclick="alert('Sent WhatsApp and SMS payment link to Tanvi\\'s registered parent contact +91 98450 XXXXX')" title="Send Remittance Notice" type="button">
+<span class="material-symbols-outlined text-base">outgoing_mail</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" title="View Detailed Breakdown" type="button">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Paid in Full Record -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-3 px-4 font-mono font-medium text-on-surface flex items-center gap-1.5">
+<span>INV-2026-0891</span>
+<button class="text-secondary hover:text-on-surface" onclick="navigator.clipboard.writeText('INV-2026-0891')" title="Copy Invoice ID">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold text-on-tertiary-fixed">
+                    AS
+                  </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate block">Aarav Singhania</span>
+<span class="text-secondary text-label-sm font-label-sm truncate block">Grade 10-A • #GW-1011</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-on-surface truncate max-w-[180px]">Term 2 Composite Annual Fee</td>
+<td class="py-3 px-4 font-medium text-on-surface">₹42,000</td>
+<td class="py-3 px-4 font-semibold text-tertiary">₹42,000</td>
+<td class="py-3 px-4 text-secondary">₹0.00</td>
+<td class="py-3 px-4 text-secondary">10 Oct 2026</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Net Banking</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" onclick="alert('Generating Greenwood Official Signed PDF Receipt for INV-2026-0891')" title="Download Signed PDF Receipt" type="button">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-base">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Partial Payment Record -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface flex items-center gap-1.5">
+<span>INV-2026-0890</span>
+<button class="text-secondary hover:text-on-surface" onclick="navigator.clipboard.writeText('INV-2026-0890')" title="Copy Invoice ID">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center font-label-sm text-label-sm font-bold text-on-surface-variant">
+                    DI
+                  </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate block">Diya Iyer</span>
+<span class="text-secondary text-label-sm font-label-sm truncate block">Grade 12-C • #GW-1284</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-on-surface truncate max-w-[180px]">Term 2 STEM Lab + Tuition</td>
+<td class="py-3 px-4 font-medium text-on-surface">₹46,500</td>
+<td class="py-3 px-4 text-on-surface">₹25,000</td>
+<td class="py-3 px-4 font-semibold text-primary">₹21,500</td>
+<td class="py-3 px-4 text-secondary">25 Oct 2026</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Counter Cheque</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Part Paid
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container transition-colors" onclick="openRecordPaymentModal('INV-2026-0890', 'Diya Iyer', '₹21,500')" title="Collect Balance Payment" type="button">
+<span class="material-symbols-outlined text-base">payments</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" onclick="alert('Payment Reminder dispatched via SMS')" title="Send Reminder Notice" type="button">
+<span class="material-symbols-outlined text-base">outgoing_mail</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" title="More options" type="button">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Sibling Concession Adjusted -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-3 px-4 font-mono font-medium text-on-surface flex items-center gap-1.5">
+<span>INV-2026-0889</span>
+<button class="text-secondary hover:text-on-surface" onclick="navigator.clipboard.writeText('INV-2026-0889')" title="Copy Invoice ID">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold text-on-primary-fixed">
+                    RN
+                  </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate block">Rohan Nambiar</span>
+<span class="text-secondary text-label-sm font-label-sm truncate block">Grade 6-A • #GW-6102</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-on-surface truncate max-w-[180px]">
+<span>Term 2 Tuition (25% Sibling Disc.)</span>
+</td>
+<td class="py-3 px-4 font-medium text-on-surface">₹27,750</td>
+<td class="py-3 px-4 font-semibold text-tertiary">₹27,750</td>
+<td class="py-3 px-4 text-secondary">₹0.00</td>
+<td class="py-3 px-4 text-secondary">08 Oct 2026</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Razorpay UPI</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" onclick="alert('Receipt downloaded')" title="Download Signed PDF Receipt" type="button">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" title="View Concession Voucher" type="button">
+<span class="material-symbols-outlined text-base">high_res</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Overdue Hosteller -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-mono font-medium text-on-surface flex items-center gap-1.5">
+<span>INV-2026-0888</span>
+<button class="text-secondary hover:text-on-surface" onclick="navigator.clipboard.writeText('INV-2026-0888')" title="Copy Invoice ID">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold text-on-secondary-fixed">
+                    KB
+                  </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate block">Karan Bhatia</span>
+<span class="text-secondary text-label-sm font-label-sm truncate block">Grade 11-A • #GW-1104</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-on-surface truncate max-w-[180px]">Term 2 Hostel + Boarding + Academics</td>
+<td class="py-3 px-4 font-medium text-on-surface">₹74,000</td>
+<td class="py-3 px-4 text-on-surface">₹30,000</td>
+<td class="py-3 px-4 font-semibold text-error">₹44,000</td>
+<td class="py-3 px-4 text-error font-medium">30 Sep 2026</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Direct RTGS</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Overdue (42d)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-primary hover:bg-surface-container transition-colors" onclick="openRecordPaymentModal('INV-2026-0888', 'Karan Bhatia', '₹44,000')" title="Record Clearance Payment" type="button">
+<span class="material-symbols-outlined text-base">payments</span>
+</button>
+<button class="p-1 rounded text-error hover:bg-error-container transition-colors" onclick="alert('Defaulter escalate notice issued to Bursar office')" title="Escalate Defaulter Notice" type="button">
+<span class="material-symbols-outlined text-base">notification_important</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Fully Paid Cash Deposit -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-3 px-4 font-mono font-medium text-on-surface flex items-center gap-1.5">
+<span>INV-2026-0887</span>
+<button class="text-secondary hover:text-on-surface" onclick="navigator.clipboard.writeText('INV-2026-0887')" title="Copy Invoice ID">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center font-label-sm text-label-sm font-bold text-on-surface">
+                    PR
+                  </div>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate block">Pooja Reddy</span>
+<span class="text-secondary text-label-sm font-label-sm truncate block">Grade 7-C • #GW-7391</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-on-surface truncate max-w-[180px]">Term 2 Tuition + Arts & Music</td>
+<td class="py-3 px-4 font-medium text-on-surface">₹32,000</td>
+<td class="py-3 px-4 font-semibold text-tertiary">₹32,000</td>
+<td class="py-3 px-4 text-secondary">₹0.00</td>
+<td class="py-3 px-4 text-secondary">05 Oct 2026</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Cash Counter</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary">check_circle</span> Settled
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" onclick="alert('Receipt downloaded')" title="Download Cash Receipt" type="button">
+<span class="material-symbols-outlined text-base">receipt</span>
+</button>
+<button class="p-1 rounded text-secondary hover:bg-surface-container transition-colors" title="View Audit Trail" type="button">
+<span class="material-symbols-outlined text-base">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="p-space-md border-t-0 bg-surface-container-lowest flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-secondary">
+<span>Rows per page:</span>
+<select class="h-7 px-2 text-body-sm bg-surface-container-low rounded border-0 text-on-surface">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+<span>Page 1 of 324</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="h-8 px-2.5 rounded bg-surface-container-low text-secondary hover:bg-surface-container hover:text-on-surface transition-colors font-label-sm text-label-sm flex items-center gap-1 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">first_page</span>
+</button>
+<button class="h-8 px-2.5 rounded bg-surface-container-low text-secondary hover:bg-surface-container hover:text-on-surface transition-colors font-label-sm text-label-sm flex items-center gap-1 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="h-8 px-3 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">1</button>
+<button class="h-8 px-3 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm">2</button>
+<button class="h-8 px-3 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm">3</button>
+<span class="px-1 text-secondary">...</span>
+<button class="h-8 px-3 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm">324</button>
+<button class="h-8 px-2.5 rounded bg-surface-container-low text-secondary hover:bg-surface-container hover:text-on-surface transition-colors font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+<button class="h-8 px-2.5 rounded bg-surface-container-low text-secondary hover:bg-surface-container hover:text-on-surface transition-colors font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">last_page</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Record Payment Modal Mockup Component -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm transition-opacity" id="recordPaymentModal">
+<div class="relative w-full max-w-xl rounded-xl bg-surface-container-lowest shadow-2xl p-space-lg flex flex-col space-y-space-md">
+<!-- Modal Header -->
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">OFFLINE & COUNTER SETTLEMENT</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Record Student Payment</h3>
+<p class="font-body-sm text-body-sm text-secondary">Reconcile fee installment with Greenwood institutional accounts ledger</p>
+</div>
+<button class="p-1 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-container transition-colors" onclick="closeRecordPaymentModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Quick Summary Card -->
+<div class="p-3 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface" id="modalStudentName">Tanvi Mukherjee</div>
+<div class="text-body-sm font-body-sm text-secondary" id="modalInvoiceId">Invoice #INV-2026-0892</div>
+</div>
+<div class="text-right">
+<div class="text-label-sm font-label-sm text-secondary">Outstanding Balance</div>
+<div class="font-headline-sm text-headline-sm text-error" id="modalDueAmount">₹18,500</div>
+</div>
+</div>
+<!-- Form Elements -->
+<form class="space-y-space-md" onsubmit="event.preventDefault(); alert('Remittance recorded and computerized fee receipt logged.'); closeRecordPaymentModal();">
+<!-- Payment Method Tabs -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-2">Select Payment Method</label>
+<div class="grid grid-cols-5 gap-2">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="pay_mode" type="radio" value="upi"/>
+<div class="h-14 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-bold flex flex-col items-center justify-center p-1 text-center transition-all">
+<span class="material-symbols-outlined text-lg">qr_code_scanner</span>
+<span class="text-label-sm font-label-sm mt-0.5">UPI QR</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="pay_mode" type="radio" value="cash"/>
+<div class="h-14 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-bold flex flex-col items-center justify-center p-1 text-center transition-all">
+<span class="material-symbols-outlined text-lg">attach_money</span>
+<span class="text-label-sm font-label-sm mt-0.5">Cash</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="pay_mode" type="radio" value="cheque"/>
+<div class="h-14 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-bold flex flex-col items-center justify-center p-1 text-center transition-all">
+<span class="material-symbols-outlined text-lg">history_edu</span>
+<span class="text-label-sm font-label-sm mt-0.5">Cheque</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="pay_mode" type="radio" value="card"/>
+<div class="h-14 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-bold flex flex-col items-center justify-center p-1 text-center transition-all">
+<span class="material-symbols-outlined text-lg">credit_card</span>
+<span class="text-label-sm font-label-sm mt-0.5">POS Card</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="pay_mode" type="radio" value="neft"/>
+<div class="h-14 rounded-lg bg-surface-container-low peer-checked:bg-primary-container peer-checked:text-on-primary-container peer-checked:font-bold flex flex-col items-center justify-center p-1 text-center transition-all">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+<span class="text-label-sm font-label-sm mt-0.5">NEFT / DD</span>
+</div>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Amount Received Input -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Amount Receiving (₹)</label>
+<div class="relative">
+<span class="absolute left-3 top-2 text-secondary font-semibold">₹</span>
+<input class="w-full h-9 pl-7 pr-3 text-body-md font-body-md bg-surface-container-low rounded-lg border-0 focus:ring-1 focus:ring-primary-container text-on-surface" type="text" value="18,500"/>
+</div>
+</div>
+<!-- Transaction / Reference ID -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Bank Ref / UTR / Cheque #</label>
+<input class="w-full h-9 px-3 text-body-md font-body-md bg-surface-container-low rounded-lg border-0 focus:ring-1 focus:ring-primary-container text-on-surface placeholder-secondary" placeholder="e.g. 42890192301" type="text"/>
+</div>
+</div>
+<!-- Concession / Waiver adjustment toggle -->
+<div class="p-2.5 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">card_membership</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface block">Apply Authorized Concession</span>
+<span class="text-secondary text-label-sm font-label-sm block">Subject to Bursar Head approval</span>
+</div>
+</div>
+<input class="h-4 w-4 rounded accent-primary-container cursor-pointer" type="checkbox"/>
+</div>
+<!-- Remarks / Internal Accounting Notes -->
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Accounting Notes / Remarks</label>
+<input class="w-full h-9 px-3 text-body-md font-body-md bg-surface-container-low rounded-lg border-0 focus:ring-1 focus:ring-primary-container text-on-surface placeholder-secondary" placeholder="e.g. Cleared via HDFC School Operating A/c 50100..." type="text"/>
+</div>
+<!-- Actions -->
+<div class="pt-2 flex items-center justify-end gap-2">
+<button class="h-9 px-4 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-lg text-label-lg" onclick="closeRecordPaymentModal()" type="button">
+            Cancel
+          </button>
+<button class="h-9 px-5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim transition-all font-label-lg text-label-lg font-semibold flex items-center gap-1.5 shadow-sm" type="submit">
+<span class="material-symbols-outlined text-base font-bold">check</span>
+<span>Confirm & Generate Receipt</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Inline Script for UI State Handling -->
+<script>
+    function openRecordPaymentModal(invoiceId, studentName, dueAmount) {
+      document.getElementById('modalInvoiceId').innerText = 'Invoice #' + invoiceId;
+      document.getElementById('modalStudentName').innerText = studentName;
+      document.getElementById('modalDueAmount').innerText = dueAmount;
+      document.getElementById('recordPaymentModal').classList.remove('hidden');
+    }
+
+    function closeRecordPaymentModal() {
+      document.getElementById('recordPaymentModal').classList.add('hidden');
+    }
+
+    // Close dropdown on outside click
+    document.addEventListener('click', function(event) {
+      const wrapper = document.getElementById('reportsMenuWrapper');
+      const dropdown = document.getElementById('reportsDropdown');
+      if (wrapper && dropdown && !wrapper.contains(event.target)) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  </script>
+</div></main></div></body></html>

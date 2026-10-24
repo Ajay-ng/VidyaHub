@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"error-container":"#ffdad6","on-primary-container":"#cad3ff","on-tertiary-fixed-variant":"#004c6e","on-error":"#ffffff","surface":"#f8f9ff","on-background":"#0b1c30","tertiary-fixed-dim":"#89ceff","surface-tint":"#2151da","outline-variant":"#c4c5d7","surface-variant":"#d3e4fe","on-primary":"#ffffff","on-tertiary":"#ffffff","primary-fixed-dim":"#b7c4ff","primary":"#0037b0","on-secondary":"#ffffff","secondary-fixed":"#dae2fd","secondary":"#565e74","on-secondary-fixed-variant":"#3f465c","surface-bright":"#f8f9ff","surface-container":"#e5eeff","secondary-fixed-dim":"#bec6e0","on-secondary-container":"#5c647a","surface-container-highest":"#d3e4fe","inverse-primary":"#b7c4ff","on-tertiary-fixed":"#001e2f","on-tertiary-container":"#abdaff","primary-container":"#1d4ed8","surface-container-lowest":"#ffffff","tertiary-container":"#00628d","inverse-surface":"#213145","on-secondary-fixed":"#131b2e","inverse-on-surface":"#eaf1ff","error":"#ba1a1a","secondary-container":"#dae2fd","on-surface-variant":"#434655","tertiary-fixed":"#c9e6ff","outline":"#747686","on-surface":"#0b1c30","on-primary-fixed":"#001551","on-primary-fixed-variant":"#0039b5","primary-fixed":"#dce1ff","surface-dim":"#cbdbf5","tertiary":"#00496b","surface-container-low":"#eff4ff","on-error-container":"#93000a","background":"#f8f9ff","surface-container-high":"#dce9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-sm":"1rem","space-md":"1rem","space-xs":"0.25rem","margin":"2rem","gutter-sm":"1rem","gutter":"1.5rem","space-xl":"2rem","space-sm":"0.5rem","space-lg":"1.5rem"},"fontFamily":{"headline-sm":["Manrope"],"headline-xl-mobile":["Manrope"],"headline-2xl":["Manrope"],"headline-2xl-mobile":["Manrope"],"headline-lg":["Manrope"],"body-md":["Hanken Grotesk"],"headline-xl":["Manrope"],"body-sm":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"label-md":["Hanken Grotesk"],"headline-md":["Manrope"],"body-lg":["Hanken Grotesk"],"label-lg":["Hanken Grotesk"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-2xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-2xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-lg"><div class="flex items-center gap-space-sm pb-space-lg"><img alt="Apex Academy Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Uk2wS39AT_u1CXEF5yDk1CeyYeQYHOw-a8fSjPGkjjStFVF0k6EbRN5P1-1TSbe44X16vTpvarCzyz7EpxQFhWVFtOSagds8L2wnYg7m3Ujb5_iUZwYnYahyJThVfiD7c0fqdgFAE5Oyp-gbtjArY5XYaadJvD8AUB-lPw_g6nD1Q8EeQqjZqoSxsq0FFzlRPp5kZ8iNhKlwIxT2fbuRXVO-fqFT8R0Qs0CGmp-iABgOyU5Zw7bngX8D4H"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">Apex Academy</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Student Portal</span></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-3 py-2 transition-all bg-primary-container text-on-primary font-bold rounded-lg shadow-sm" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span>My Profile</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="attendance" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span>Attendance</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="timetable" href="#"><span class="material-symbols-outlined text-[20px]">calendar_view_week</span><span>Timetable</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="subjects" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Subjects</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assignments</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="exams-results" href="#"><span class="material-symbols-outlined text-[20px]">grade</span><span>Exams &amp; Results</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="study-materials" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Study Materials</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="fees-payments" href="#"><span class="material-symbols-outlined text-[20px]">payments</span><span>Fees &amp; Payments</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="notices" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Notices</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="messages" href="#"><span class="material-symbols-outlined text-[20px]">chat</span><span>Messages</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="events-calendar" href="#"><span class="material-symbols-outlined text-[20px]">event</span><span>Events &amp; Calendar</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="leave-requests" href="#"><span class="material-symbols-outlined text-[20px]">assignment_return</span><span>Leave Requests</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="certificates-documents" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Certificates &amp; Docs</span></a></nav></div><div class="p-space-lg flex flex-col gap-1"><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-bold rounded-lg"><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="help-support" href="#"><span class="material-symbols-outlined text-[20px]">help</span><span>Help &amp; Support</span></a><a class="flex items-center gap-space-sm px-3 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-md"><div class="flex-1 max-w-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant pointer-events-none text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Search subjects, assignments, notices..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-sm"><div class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">AY 2026–27 • Term 1</div><div class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">today</span><span>Monday, Sep 22, 2026</span></div></div><div class="flex items-center gap-1"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">mail</span><span class="absolute top-1 right-1 px-1 min-w-[16px] h-4 rounded-full bg-primary text-on-primary font-label-sm text-[10px] leading-tight flex items-center justify-center ring-2 ring-surface-container-lowest">3</span></button></div><div class="flex items-center gap-space-sm pl-2 cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtN4w9P3Tz2Le-1DnUFJA-4pGxITPzpvhEfsx5n4NutnghtGNbb39lL6iKPad2GJ8QjB07b_8ON_kI2ySiiYUzvpGP4Uj1lZaEkFPMyoK1b25oG9DFjW7LawTXF-BZ_EadFJjhcNaVsGiP-gcJGS1JxHZQUCIoaquhBe13sT0Azsb8cqYT2NBs7u3KW9caR58yPa1rBP52vNgPt3kRKzuU7MZMHoPU08tmtU0f1GK3QIQ7IDDrhsZgnQ"/><div class="hidden md:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Rahul Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">STU-2026-1024 • Grade 10-A</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-space-xl space-y-space-lg max-w-[1400px] mx-auto w-full">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg lg:p-space-xl shadow-sm">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 pointer-events-none blur-3xl"></div>
+<div class="absolute -left-12 -bottom-12 w-64 h-64 rounded-full bg-secondary-container/40 pointer-events-none blur-2xl"></div>
+<div class="relative z-10 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-lg min-w-0">
+<div class="relative group">
+<div class="w-28 h-28 lg:w-32 lg:h-32 rounded-xl overflow-hidden bg-surface-container shadow-md flex-shrink-0">
+<img alt="Rahul Sharma - Student Portrait" class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtN4w9P3Tz2Le-1DnUFJA-4pGxITPzpvhEfsx5n4NutnghtGNbb39lL6iKPad2GJ8QjB07b_8ON_kI2ySiiYUzvpGP4Uj1lZaEkFPMyoK1b25oG9DFjW7LawTXF-BZ_EadFJjhcNaVsGiP-gcJGS1JxHZQUCIoaquhBe13sT0Azsb8cqYT2NBs7u3KW9caR58yPa1rBP52vNgPt3kRKzuU7MZMHoPU08tmtU0f1GK3QIQ7IDDrhsZgnQ"/>
+</div>
+<span class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary text-label-sm font-label-sm shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span> Active
+            </span>
+</div>
+<div class="space-y-1.5 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Rahul Sharma</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm tracking-wide uppercase">House Captain</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">AY 2026-27</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex flex-wrap items-center gap-x-3 gap-y-1">
+<span class="font-semibold text-on-surface">ID: STU-2026-1024</span>
+<span>•</span>
+<span>Grade 10 — Section A</span>
+<span>•</span>
+<span>Roll No: 24</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">shield</span> Blue Falcons House
+              </span>
+</p>
+<div class="pt-1 flex flex-wrap items-center gap-2 text-label-md font-label-md text-secondary">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">school</span> Class of 2028
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span> CBSE Curriculum
+              </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Verified Profile
+              </span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2.5 w-full xl:w-auto xl:justify-end">
+<button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-lg text-label-lg shadow-sm transition-all duration-150" onclick="handleEditRequest()" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Edit Request</span>
+</button>
+<button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg shadow-sm transition-all duration-150" onclick="handleDownloadID()" type="button">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>Download ID Card</span>
+</button>
+<button class="p-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm transition-colors" onclick="window.print()" title="Print Profile" type="button">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md grid grid-cols-2 sm:grid-cols-4 gap-4 bg-surface-container-low/60 rounded-xl p-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cumulative GPA</span>
+<div class="flex items-baseline gap-1.5 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">9.2</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 10.0</span>
+<span class="ml-2 px-1.5 py-0.5 rounded bg-surface-container text-on-primary-fixed font-label-sm text-label-sm">A1</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Term Attendance</span>
+<div class="flex items-baseline gap-1.5 mt-0.5">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">92.4%</span>
+<span class="text-emerald-700 font-label-sm text-label-sm font-semibold">Exemplary</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Discipline Log</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-emerald-600 text-[20px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Zero Infractions</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">House Role</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-primary text-[20px]">military_tech</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Falcons Vice-Captain</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-1.5 shadow-sm overflow-x-auto">
+<nav class="flex items-center gap-1 min-w-max">
+<button class="tab-btn px-4 py-2 rounded-lg font-label-lg text-label-lg bg-primary-container text-on-primary shadow-sm flex items-center gap-2" data-tab="personal" type="button">
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span>Personal Details</span>
+</button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-2" data-tab="academic" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Academic Profile</span>
+</button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-2" data-tab="guardians" type="button">
+<span class="material-symbols-outlined text-[18px]">family_restroom</span>
+<span>Parents &amp; Guardians</span>
+</button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-2" data-tab="documents" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_shared</span>
+<span>Documents &amp; Health</span>
+</button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-2" data-tab="emergency" type="button">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+<span>Emergency Contacts</span>
+</button>
+</nav>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<div class="xl:col-span-8 space-y-space-lg">
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Personal Information</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Demographic and primary communication records</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">KYC Verified</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-space-md gap-y-4 pt-2">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Full Legal Name</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Rahul Sharma</p>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Date of Birth</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">14 August 2010 <span class="font-normal text-on-surface-variant text-body-sm">(16 Years)</span></p>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Gender &amp; Blood Group</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Male</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">B+ Positive</span>
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Nationality</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">Indian</p>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Languages Known</span>
+<p class="font-headline-sm text-headline-sm text-on-surface">English, Hindi</p>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Mobile Contact</span>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">+91 98765 43210</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="navigator.clipboard.writeText('+91 98765 43210')" title="Copy Mobile" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="space-y-1 sm:col-span-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Apex Institutional Email</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary underline underline-offset-2">rahul.sharma@apexacademy.edu.in</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="navigator.clipboard.writeText('rahul.sharma@apexacademy.edu.in')" title="Copy Email" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="space-y-1 sm:col-span-2 lg:col-span-3 pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Residential Address</span>
+<div class="p-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 flex-shrink-0">location_on</span>
+<div>
+<p class="font-semibold">402, Lotus Residency, Green Valley Road</p>
+<p class="text-on-surface-variant">Sector 45, Gurugram, Haryana — 122003, India</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Academic Records &amp; Enrollment</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Curricular standing, electives, and advisory assignment</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">8th Year in Apex</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-2">
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Admission Number</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold">ADM-2018-0492</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface">Joined Apex Academy: Grade 3</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Date of Matriculation: 10 April 2018</p>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Class Section:</span>
+<span class="font-semibold text-on-surface">Grade 10 - Section A (Senior Secondary)</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Assigned Academic Advisor</span>
+<span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">Senior Faculty</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface">Mr. Rajesh Verma</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Head of Mathematics &amp; STEM Coordinator</p>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Email:</span>
+<span class="font-semibold text-primary">r.verma@apexacademy.edu.in</span>
+</div>
+</div>
+</div>
+<div class="pt-2 space-y-3">
+<h3 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Electives &amp; Cohort Specializations</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">translate</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Second Language</span>
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">Sanskrit / French Elective</p>
+<span class="font-label-sm text-label-sm text-emerald-700">Course Code: LAN-104</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">terminal</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Optional Subject</span>
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">Computer Apps (Python)</p>
+<span class="font-label-sm text-label-sm text-primary">Course Code: CS-202</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">sports_soccer</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Athletics &amp; Activity</span>
+<p class="font-headline-sm text-headline-sm text-on-surface truncate">Football Varsity Team</p>
+<span class="font-label-sm text-label-sm text-secondary">Starting Midfielder</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 p-space-md rounded-xl bg-surface-container-low space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Academic Syllabus Completion Track (Term 1)</span>
+<span class="font-label-md text-label-md text-primary font-bold">78% Complete</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 78%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant pt-1">
+<span>Term Mid-Terms Completed</span>
+<span>Final Board Preparatory: 44 Days Left</span>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">family_restroom</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Parent &amp; Guardian Registry</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Designated custodians with authorized communication &amp; custody rights</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">2 Guardians Listed</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Primary Guardian</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Father</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Dr. Vikram Sharma</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Senior Consultant Physician, Fortis Hospital Gurugram</p>
+</div>
+<div class="space-y-2 pt-2 border-t-0 bg-surface-container-lowest/80 p-3 rounded-lg">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">phone</span> Phone
+                  </span>
+<span class="font-semibold text-on-surface">+91 98111 22334</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span> Email
+                  </span>
+<span class="font-semibold text-primary truncate max-w-[180px]">vikram.sharma@medcare.org</span>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Secondary Guardian</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Mother</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Mrs. Sunita Sharma</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Senior Principal Architect, Urban Designs Studio</p>
+</div>
+<div class="space-y-2 pt-2 border-t-0 bg-surface-container-lowest/80 p-3 rounded-lg">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">phone</span> Phone
+                  </span>
+<span class="font-semibold text-on-surface">+91 98222 33445</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">mail</span> Email
+                  </span>
+<span class="font-semibold text-primary truncate max-w-[180px]">sunita.arch@gmail.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">no_crash</span>
+</span>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface">Campus Gate Pickup Security Pass</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Authorized escorts: Dr. Vikram Sharma, Mrs. Sunita Sharma, Driver Ramesh (DL-HR26-2019088)</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 font-label-sm text-label-sm font-bold flex-shrink-0">Biometric Card Issued</span>
+</div>
+</section>
+</div>
+<div class="xl:col-span-4 space-y-space-lg">
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center gap-2.5 pb-2">
+<span class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">emoji_events</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Honors &amp; Badges</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recognized distinction &amp; house standings</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-gradient-to-br from-surface-container to-surface-container-high space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">House Distinction</span>
+<span class="material-symbols-outlined text-primary text-[20px]">military_tech</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Blue Falcons House</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elected House Vice-Captain for Academic Year 2026-27</p>
+</div>
+<div class="flex items-center gap-2 pt-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">stars</span> 420 House Points Earned This Term
+            </div>
+</div>
+<div class="space-y-2.5 pt-1">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3 transition-colors hover:bg-surface-container">
+<div class="w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Academic Excellence Award</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Apex High Honor Roll 2024-25 (Top 3% Cohort)</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Conferred: April 2025</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3 transition-colors hover:bg-surface-container">
+<div class="w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">military_tech</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Math Olympiad Gold Medalist</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inter-School State Mathematics League - Senior Div</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Conferred: November 2025</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-3 transition-colors hover:bg-surface-container">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">science</span>
+</div>
+<div class="min-w-0">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Junior Science Fair 1st Prize</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Project: Autonomous Hydroponic Monitoring</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Conferred: January 2026</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<span class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Health &amp; Emergency</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Campus infirmary protocol card</p>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-error-container/20 space-y-3">
+<div class="flex items-center gap-2 text-on-error-container">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Priority 1 Responder</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">Dr. Vikram Sharma (Father)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immediate contact reachable 24/7</p>
+</div>
+<a class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-on-error-container text-on-error font-label-md text-label-md font-semibold transition-opacity hover:opacity-90" href="tel:+919811122334">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>Direct Dial: +91 98111 22334</span>
+</a>
+</div>
+<div class="space-y-2 pt-1">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Known Allergies:</span>
+<span class="font-semibold text-emerald-700">None Reported (NKA)</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Infirmary Clearance:</span>
+<span class="font-semibold text-on-surface">Full Sports &amp; Lab Access</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Medical Insurance ID:</span>
+<span class="font-semibold text-on-surface">MAX-H-882910-26</span>
+</div>
+</div>
+</section>
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-3">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Institutional Credentials</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Secure access tokens and academic verifications on file.</p>
+<div class="space-y-2 pt-1">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">picture_as_pdf</span>
+<span class="font-label-md text-label-md text-on-surface">Birth Certificate &amp; Aadhaar</span>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">picture_as_pdf</span>
+<span class="font-label-md text-label-md text-on-surface">Prior School Leaving Certificate</span>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">picture_as_pdf</span>
+<span class="font-label-md text-label-md text-on-surface">CBSE Enrollment Form IX &amp; X</span>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-inverse-surface/40 backdrop-blur-sm" id="modal-container">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg shadow-2xl space-y-space-md transform transition-all">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">edit_document</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Student Profile Edit Request</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="closeModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Changes to official personal data, legal names, or medical records require registrar review and verification.
+      </p>
+<form class="space-y-3 pt-2" onsubmit="submitEditRequest(event)">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Section to Modify</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20">
+<option>Residential Address Change</option>
+<option>Guardian Contact Update</option>
+<option>Medical / Dietary Record</option>
+<option>Elective Subject Adjustment</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Reason &amp; Proposed Details</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Describe the requested correction along with references..." required="" rows="3"></textarea>
+</div>
+<div class="pt-2 flex items-center justify-end gap-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" onclick="closeModal()" type="button">
+            Cancel
+          </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors" type="submit">
+            Submit for Registrar Approval
+          </button>
+</div>
+</form>
+</div>
+</div>
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-4 py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-lg font-label-md text-label-md" id="toast">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+<span id="toast-message">Action processed successfully</span>
+</div>
+<script>
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      if (toast && msgEl) {
+        msgEl.textContent = msg;
+        toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+          toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        }, 3000);
+      }
+    }
+
+    function handleEditRequest() {
+      const modal = document.getElementById('modal-container');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal-container');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function submitEditRequest(e) {
+      e.preventDefault();
+      closeModal();
+      showToast('Profile change request submitted to Registrar Office (Req #PR-2026-901)');
+    }
+
+    function handleDownloadID() {
+      showToast('Generating official encrypted Student ID card (PDF)...');
+      setTimeout(() => {
+        showToast('Student ID Card for Rahul Sharma downloaded.');
+      }, 1200);
+    }
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+        showToast(`Viewing: ${btn.textContent.trim()} section`);
+      });
+    });
+  </script>
+</div></main></div></body></html>

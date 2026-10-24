@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"background":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-primary":"#ffffff","surface-container-low":"#eff4ff","on-secondary-fixed":"#131b2e","tertiary-fixed-dim":"#93ccff","secondary-fixed":"#dae2fd","on-background":"#0b1c30","surface-variant":"#d3e4fe","primary-container":"#eab308","on-secondary-fixed-variant":"#3f465c","secondary-fixed-dim":"#bec6e0","surface-bright":"#f8f9ff","surface":"#f8f9ff","tertiary-fixed":"#cce5ff","inverse-primary":"#f7be1d","surface-container":"#e5eeff","on-primary-container":"#604700","outline":"#817660","on-tertiary":"#ffffff","error":"#ba1a1a","on-primary-fixed-variant":"#5a4300","inverse-surface":"#213145","on-surface-variant":"#4f4633","on-tertiary-container":"#004f7a","surface-container-lowest":"#ffffff","tertiary-container":"#78c2ff","on-secondary":"#ffffff","tertiary":"#006398","primary-fixed-dim":"#f7be1d","on-secondary-container":"#5c647a","secondary":"#565e74","surface-tint":"#785a00","surface-container-high":"#dce9ff","on-surface":"#0b1c30","on-primary-fixed":"#251a00","on-error":"#ffffff","secondary-container":"#dae2fd","primary":"#785a00","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","surface-dim":"#cbdbf5","on-error-container":"#93000a","primary-fixed":"#ffdf9a","outline-variant":"#d3c5ac","on-tertiary-fixed":"#001d31"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"headline-xl":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.025em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-surface-container-high"><div class="flex items-center gap-space-sm"><img alt="Greenwood International School Crest Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V57aiJ9MtRuKyLMKpK-ZEcWO73gHyDUmQMJw29e5RDXyLSvGcPkzfndBk_RXOQuf11m-C-ejzm7qXIpqDzcuKcj07BfQx5xPQPyhWhv02O5HDq_GVc0AYTG0KW6YT-71inLcd-iTusMTgNJgqp4owigF9GnGg4EIt062b3lZ3mSHegm-bIo8yuRMS1MnLw9try9tZL8J-X4BsUUgnqH3Xbw1Lo-M3IxjkrxcevFlJ6Em182VQs2jrD6VI"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Greenwood Int. School</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin Portal</span></div></div><div class="mt-space-sm inline-flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>AY 2026-27 Active</div></div><nav class="px-space-sm py-space-md space-y-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-lg border-l-4 border-primary-container pl-space-sm"><div class="px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Main</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Dashboard</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Academic Management</div><a aria-current="page" class="flex items-center justify-between px-space-md py-space-xs rounded transition-colors bg-surface-container-high text-on-surface font-label-lg border-l-4 border-primary-container pl-space-sm" data-path="students" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">school</span><span>Students</span></div><span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">2,845</span></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="teachers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">cast_for_education</span><span>Teachers</span></div><span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">184</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="staff-directory" href="#"><span class="material-symbols-outlined text-base">badge</span><span>Staff</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="classes-and-sections" href="#"><span class="material-symbols-outlined text-base">meeting_room</span><span>Classes & Sections</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="subjects-curriculum" href="#"><span class="material-symbols-outlined text-base">auto_stories</span><span>Subjects</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="master-timetable" href="#"><span class="material-symbols-outlined text-base">calendar_month</span><span>Timetable</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="attendance-registry" href="#"><span class="material-symbols-outlined text-base">fact_check</span><span>Attendance</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="examination-center" href="#"><span class="material-symbols-outlined text-base">assignment_turned_in</span><span>Exams</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="assignments-homework" href="#"><span class="material-symbols-outlined text-base">draw</span><span>Assignments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="results-transcripts" href="#"><span class="material-symbols-outlined text-base">grade</span><span>Results</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Administration</div><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="admissions" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">how_to_reg</span><span>Admissions</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold">12 new</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="leave-management" href="#"><span class="material-symbols-outlined text-base">event_busy</span><span>Leave Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="events-calendar" href="#"><span class="material-symbols-outlined text-base">event</span><span>Events & Calendar</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="announcements-bulletin" href="#"><span class="material-symbols-outlined text-base">campaign</span><span>Announcements</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="document-repository" href="#"><span class="material-symbols-outlined text-base">folder</span><span>Documents</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Finance</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="fee-management" href="#"><span class="material-symbols-outlined text-base">payments</span><span>Fee Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="payments-ledger" href="#"><span class="material-symbols-outlined text-base">receipt_long</span><span>Payments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="expenses" href="#"><span class="material-symbols-outlined text-base">account_balance_wallet</span><span>Expenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="payroll-system" href="#"><span class="material-symbols-outlined text-base">request_quote</span><span>Payroll</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="financial-reports" href="#"><span class="material-symbols-outlined text-base">analytics</span><span>Financial Reports</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Resources</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="library-catalog" href="#"><span class="material-symbols-outlined text-base">local_library</span><span>Library</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="transportation-fleet" href="#"><span class="material-symbols-outlined text-base">directions_bus</span><span>Transport</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="hostel-management" href="#"><span class="material-symbols-outlined text-base">domain</span><span>Hostel</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="inventory-assets" href="#"><span class="material-symbols-outlined text-base">inventory_2</span><span>Inventory</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Communication</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="messages-inbox" href="#"><span class="material-symbols-outlined text-base">chat</span><span>Messages</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="notifications-center" href="#"><span class="material-symbols-outlined text-base">notifications</span><span>Notifications</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="email-sms-center" href="#"><span class="material-symbols-outlined text-base">send</span><span>Email/SMS Center</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">System & Security</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="user-accounts" href="#"><span class="material-symbols-outlined text-base">manage_accounts</span><span>Users</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="roles-and-permissions" href="#"><span class="material-symbols-outlined text-base">shield_person</span><span>Roles & Permissions</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-base">history</span><span>Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="portal-settings" href="#"><span class="material-symbols-outlined text-base">settings</span><span>Settings</span></a></nav></div><div class="p-space-sm border-t border-surface-container-high space-y-space-xs bg-surface-container-lowest"><div class="flex items-center justify-between px-space-sm py-1"><a class="text-label-sm font-label-sm text-secondary hover:text-on-surface" data-path="help-support" href="#">Help & Support</a><a class="text-label-sm font-label-sm text-secondary hover:text-on-surface" data-path="documentation" href="#">Docs</a></div><div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNhNu5kgwFNIh69AvsVORbb9iP5dcd5KHaDoBuGryvGEOvuNECAXbMnZM59LRm9Lf6qH223mYntOJ6FA6rd7jNbdL2LLvndqu3H35uzCgIkUaEcuhQxUwgJpa3dPlXBXdTrvt2tX_EZAtf4ATgIqfgA34LSfV80IWTnqeLNHfQ9DMXkFmrtG5e8IW1hu7Ui5g3XiVKv1oBIQUwHvqtGAMV9CsiKdoFtz7UrSvIYi1-SJwYBxjh5nI-A"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">Dr. R. Malhotra</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin</span></div></div><a class="text-on-surface-variant hover:text-error transition-colors p-1" data-path="login" href="#" title="Sign Out"><span class="material-symbols-outlined text-lg">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-gutter-desktop border-b border-surface-container-high"><div class="flex items-center gap-space-md"><button class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container p-1 rounded transition-colors" title="Toggle Sidebar" type="button"><span class="material-symbols-outlined">menu_open</span></button><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary"><a class="hover:text-on-surface" href="#">Greenwood</a><span>/</span><a class="hover:text-on-surface" href="#">Admin Portal</a><span>/</span><span class="text-on-surface font-semibold">Executive Dashboard</span></div></div><div class="flex-1 max-w-md mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full h-9 pl-9 pr-12 text-body-sm font-body-sm bg-surface-container-low rounded border border-surface-container-high focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container placeholder-secondary text-on-surface" placeholder="Search students, faculty, invoices, exams... (⌘K)" type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant rounded">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-sm text-secondary">apartment</span><span>Main Campus (Bengaluru)</span></div><div class="hidden md:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-sm text-secondary">event_repeat</span><span>AY 2026-2027</span></div><button class="relative p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 bg-primary-container text-on-primary-container text-label-sm font-label-sm w-4 h-4 rounded-full flex items-center justify-center font-bold">12</span></button><button class="relative p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Messages" type="button"><span class="material-symbols-outlined text-xl">mail</span><span class="absolute top-1.5 right-1.5 bg-tertiary-container text-on-tertiary-container text-label-sm font-label-sm w-4 h-4 rounded-full flex items-center justify-center font-bold">4</span></button><button class="p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-surface-container-high mx-space-xs"></div><div class="flex items-center gap-space-sm cursor-pointer p-1 rounded hover:bg-surface-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNhNu5kgwFNIh69AvsVORbb9iP5dcd5KHaDoBuGryvGEOvuNECAXbMnZM59LRm9Lf6qH223mYntOJ6FA6rd7jNbdL2LLvndqu3H35uzCgIkUaEcuhQxUwgJpa3dPlXBXdTrvt2tX_EZAtf4ATgIqfgA34LSfV80IWTnqeLNHfQ9DMXkFmrtG5e8IW1hu7Ui5g3XiVKv1oBIQUwHvqtGAMV9CsiKdoFtz7UrSvIYi1-SJwYBxjh5nI-A"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Dr. Rajesh Malhotra</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin</span></div><span class="material-symbols-outlined text-sm text-secondary hidden lg:block">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="px-space-gutter-desktop py-space-lg flex flex-col gap-space-lg max-w-[1600px] w-full mx-auto">
+<!-- Top Action Bar & Title Block -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">groups</span>
+</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Student Directory</h1>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary text-label-sm font-label-sm">AY 2026-27</span>
+</div>
+<p class="font-body-md text-body-md text-secondary truncate">
+          Manage 2,845 enrolled students, monitor academic standing, fee statuses, and parent contacts.
+        </p>
+</div>
+<div class="flex items-center flex-wrap gap-space-xs sm:gap-space-sm">
+<div class="relative inline-block text-left">
+<button class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-lg text-label-lg shadow-sm" id="bulkActionBtn" type="button">
+<span class="material-symbols-outlined text-base text-secondary">tune</span>
+<span>Bulk Actions</span>
+<span class="material-symbols-outlined text-sm text-secondary">expand_more</span>
+</button>
+</div>
+<div class="relative inline-block text-left">
+<button class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-lg text-label-lg shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-secondary">ios_share</span>
+<span>Export Roster</span>
+<span class="material-symbols-outlined text-sm text-secondary">expand_more</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim transition-colors font-label-lg text-label-lg shadow-sm font-semibold" type="button">
+<span class="material-symbols-outlined text-base">person_add</span>
+<span>+ New Student Registration</span>
+</button>
+</div>
+</div>
+<!-- Metric KPI Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total Enrolled</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">2,845</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">+4.2%</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">Across 42 Class Sections</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">school</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Avg. Daily Attendance</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">94.6%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Normal</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">72 on excused leave</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">event_available</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Fee Collection</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">91.8%</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Q2 Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">₹2.41M outstanding balance</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Attendance Alerts</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-lg text-headline-lg text-error">38</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">< 75%</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">Parent notices dispatched</span>
+</div>
+<div class="w-10 h-10 rounded-xl bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">warning</span>
+</div>
+</div>
+</div>
+<!-- Filter & Query Control Center -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Search bar -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-base">search</span>
+<input class="w-full h-10 pl-10 pr-24 text-body-sm font-body-sm bg-surface-container-low rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container text-on-surface placeholder-secondary" placeholder="Search by Student Name, Admission ID (GIS-...), Parent name, phone..." type="text"/>
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-label-sm font-label-sm text-secondary">Esc to clear</span>
+</div>
+</div>
+<!-- Filters group -->
+<div class="flex items-center flex-wrap gap-space-xs">
+<!-- Grade Select -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer">
+<option>All Grades</option>
+<option>Grade 8</option>
+<option>Grade 9</option>
+<option>Grade 10</option>
+<option>Grade 11</option>
+<option>Grade 12</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-secondary text-sm pointer-events-none">expand_more</span>
+</div>
+<!-- Section Select -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer">
+<option>All Sections</option>
+<option>Section A</option>
+<option>Section B</option>
+<option>Section C</option>
+<option>Section D</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-secondary text-sm pointer-events-none">expand_more</span>
+</div>
+<!-- Fee Standing Select -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer">
+<option>Fee: All</option>
+<option>Paid in Full</option>
+<option>Partially Paid</option>
+<option>Overdue</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-secondary text-sm pointer-events-none">expand_more</span>
+</div>
+<!-- Attendance Filter -->
+<div class="relative">
+<select class="appearance-none h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface hover:bg-surface-container focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer">
+<option>Attendance: All</option>
+<option>> 90% (Optimal)</option>
+<option>75% - 90% (Average)</option>
+<option>< 75% (Low Warning)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-secondary text-sm pointer-events-none">expand_more</span>
+</div>
+<!-- Column Visibility Toggle -->
+<button class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors flex items-center gap-1.5 font-label-md text-label-md" title="Customize Columns" type="button">
+<span class="material-symbols-outlined text-base">view_column</span>
+<span class="hidden sm:inline">Columns</span>
+</button>
+</div>
+</div>
+<!-- Active Filters Tag Bar -->
+<div class="flex items-center flex-wrap gap-2 pt-2 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-secondary">Active Filters:</span>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm">
+<span>Academic Year: 2026-27</span>
+<span class="material-symbols-outlined text-xs cursor-pointer hover:text-error">close</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span>Campus: Main Bengaluru</span>
+<span class="material-symbols-outlined text-xs cursor-pointer hover:text-error">close</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span>Status: Active Only</span>
+<span class="material-symbols-outlined text-xs cursor-pointer hover:text-error">close</span>
+</div>
+<button class="text-label-sm font-label-sm text-error hover:underline ml-1" type="button">
+          Clear All Filters
+        </button>
+</div>
+</div>
+<!-- Enterprise Data Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70">
+<th class="py-3 px-4 w-12 text-center" scope="col">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" id="selectAll" type="checkbox"/>
+</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider" scope="col">
+<div class="flex items-center gap-1 cursor-pointer hover:text-on-surface">
+<span>Student ID</span>
+<span class="material-symbols-outlined text-sm">unfold_more</span>
+</div>
+</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider" scope="col">
+<div class="flex items-center gap-1 cursor-pointer hover:text-on-surface">
+<span>Student Name & Profile</span>
+<span class="material-symbols-outlined text-sm">unfold_more</span>
+</div>
+</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider" scope="col">Grade & Section</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider text-center" scope="col">Roll</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider" scope="col">Guardian / Parent Contact</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider" scope="col">Attendance</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider" scope="col">Fee Standing</th>
+<th class="py-3 px-3 font-label-md text-label-md text-secondary uppercase tracking-wider" scope="col">Status</th>
+<th class="py-3 px-4 font-label-md text-label-md text-secondary uppercase tracking-wider text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Selected state mockup -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors">
+<td class="py-3.5 px-4 text-center">
+<input checked="" class="row-checkbox w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center font-label-md text-label-md font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface">GIS-2026-1042</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-label-md font-semibold text-sm shrink-0">
+                    AD
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Ananya Deshmukh</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Female • 14 Mar 2011 (15y)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Grade 10</span>
+<span class="font-body-sm text-body-sm text-secondary">Section A (Science Stream)</span>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-md text-label-md text-secondary font-medium">#18</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Dr. Vikram Deshmukh</span>
+<span class="text-label-sm font-label-sm px-1 rounded bg-surface-container text-secondary">Father</span>
+</div>
+<div class="flex items-center gap-2 text-secondary mt-0.5">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">call</span> +91 98450 23114
+                    </span>
+<button class="hover:text-primary transition-colors" title="Send Email" type="button">
+<span class="material-symbols-outlined text-xs">mail</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between text-label-sm font-label-sm font-semibold text-on-surface">
+<span>96.8%</span>
+<span class="text-tertiary">Optimal</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 96.8%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container/30 text-on-tertiary-container text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Paid in Full
+                </span>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Profile Dossier" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Edit Student Record" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Fee Ledger & Receipts" type="button">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Options" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Selected item -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors">
+<td class="py-3.5 px-4 text-center">
+<input checked="" class="row-checkbox w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center font-label-md text-label-md font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface">GIS-2026-0981</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md font-semibold text-sm shrink-0">
+                    RN
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Rohan V. Nair</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Male • 05 Jul 2009 (17y)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Grade 11</span>
+<span class="font-body-sm text-body-sm text-secondary">Science (PCMC)</span>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-md text-label-md text-secondary font-medium">#04</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Sunita Nair</span>
+<span class="text-label-sm font-label-sm px-1 rounded bg-surface-container text-secondary">Mother</span>
+</div>
+<div class="flex items-center gap-2 text-secondary mt-0.5">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">call</span> +91 97412 88201
+                    </span>
+<button class="hover:text-primary transition-colors" title="Send Email" type="button">
+<span class="material-symbols-outlined text-xs">mail</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between text-label-sm font-label-sm font-semibold text-on-surface">
+<span>91.2%</span>
+<span class="text-secondary">Good</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 91.2%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Pending ₹18,000
+                </span>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Profile Dossier" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Edit Student Record" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Fee Ledger & Receipts" type="button">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Options" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center font-label-md text-label-md font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface">GIS-2026-1120</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md font-semibold text-sm shrink-0">
+                    TM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Tanvi Mukherjee</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Female • 22 Nov 2011 (14y)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Grade 9</span>
+<span class="font-body-sm text-body-sm text-secondary">Section B</span>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-md text-label-md text-secondary font-medium">#27</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Alok Mukherjee</span>
+<span class="text-label-sm font-label-sm px-1 rounded bg-surface-container text-secondary">Father</span>
+</div>
+<div class="flex items-center gap-2 text-secondary mt-0.5">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">call</span> +91 99001 54320
+                    </span>
+<button class="hover:text-primary transition-colors" title="Send Email" type="button">
+<span class="material-symbols-outlined text-xs">mail</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between text-label-sm font-label-sm font-semibold text-on-surface">
+<span>88.5%</span>
+<span class="text-secondary">Average</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 88.5%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container/30 text-on-tertiary-container text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Paid in Full
+                </span>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Profile Dossier" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Edit Student Record" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Fee Ledger & Receipts" type="button">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Options" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center font-label-md text-label-md font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface">GIS-2026-0845</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md font-semibold text-sm shrink-0">
+                    MZ
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Mohammed Zeeshan</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Male • 18 Jan 2008 (18y)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Grade 12</span>
+<span class="font-body-sm text-body-sm text-secondary">Commerce (Economics/Math)</span>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-md text-label-md text-secondary font-medium">#12</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Farooq Zeeshan</span>
+<span class="text-label-sm font-label-sm px-1 rounded bg-surface-container text-secondary">Guardian</span>
+</div>
+<div class="flex items-center gap-2 text-secondary mt-0.5">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">call</span> +91 98860 11993
+                    </span>
+<button class="hover:text-primary transition-colors" title="Send Email" type="button">
+<span class="material-symbols-outlined text-xs">mail</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between text-label-sm font-label-sm font-semibold text-on-surface">
+<span>98.1%</span>
+<span class="text-tertiary">Optimal</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 98.1%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container/30 text-on-tertiary-container text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Paid in Full
+                </span>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Profile Dossier" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Edit Student Record" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Fee Ledger & Receipts" type="button">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Options" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Low Attendance & Overdue Notice -->
+<tr class="hover:bg-surface-container-low transition-colors bg-error-container/10">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center font-label-md text-label-md font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface">GIS-2026-1205</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-label-md font-semibold text-sm shrink-0">
+                    PR
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Priya Ramachandran</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Female • 09 Oct 2012 (13y)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Grade 8</span>
+<span class="font-body-sm text-body-sm text-secondary">Section C</span>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-md text-label-md text-secondary font-medium">#31</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">K. Ramachandran</span>
+<span class="text-label-sm font-label-sm px-1 rounded bg-surface-container text-secondary">Father</span>
+</div>
+<div class="flex items-center gap-2 text-secondary mt-0.5">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">call</span> +91 94481 77652
+                    </span>
+<button class="hover:text-primary transition-colors" title="Send Email" type="button">
+<span class="material-symbols-outlined text-xs">mail</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between text-label-sm font-label-sm font-semibold text-error">
+<span>74.0%</span>
+<span>Warning</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 74%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Overdue ₹24,000
+                </span>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Profile Dossier" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Edit Student Record" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Fee Ledger & Receipts" type="button">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Options" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center font-label-md text-label-md font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface">GIS-2026-0774</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md font-semibold text-sm shrink-0">
+                    AS
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Aditya Sen</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Male • 16 Apr 2011 (15y)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Grade 10</span>
+<span class="font-body-sm text-body-sm text-secondary">Section A</span>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-md text-label-md text-secondary font-medium">#02</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Meera Sen</span>
+<span class="text-label-sm font-label-sm px-1 rounded bg-surface-container text-secondary">Mother</span>
+</div>
+<div class="flex items-center gap-2 text-secondary mt-0.5">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">call</span> +91 98451 90214
+                    </span>
+<button class="hover:text-primary transition-colors" title="Send Email" type="button">
+<span class="material-symbols-outlined text-xs">mail</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between text-label-sm font-label-sm font-semibold text-on-surface">
+<span>94.5%</span>
+<span class="text-tertiary">Optimal</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 94.5%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-container/30 text-on-tertiary-container text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Paid in Full
+                </span>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Active
+                </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Profile Dossier" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Edit Student Record" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Fee Ledger & Receipts" type="button">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Options" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: On Leave -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 text-center">
+<input class="row-checkbox w-4 h-4 rounded text-primary-container focus:ring-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center font-label-md text-label-md font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface">GIS-2026-0619</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-md font-semibold text-sm shrink-0">
+                    DK
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Devansh Kulkarni</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Male • 11 Aug 2010 (16y)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-medium text-on-surface">Grade 11</span>
+<span class="font-body-sm text-body-sm text-secondary">Humanities</span>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-md text-label-md text-secondary font-medium">#15</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-medium text-on-surface">Naveen Kulkarni</span>
+<span class="text-label-sm font-label-sm px-1 rounded bg-surface-container text-secondary">Father</span>
+</div>
+<div class="flex items-center gap-2 text-secondary mt-0.5">
+<span class="font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">call</span> +91 96112 04871
+                    </span>
+<button class="hover:text-primary transition-colors" title="Send Email" type="button">
+<span class="material-symbols-outlined text-xs">mail</span>
+</button>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex items-center justify-between text-label-sm font-label-sm font-semibold text-on-surface">
+<span>82.4%</span>
+<span class="text-secondary">Medical</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82.4%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Pending ₹6,200
+                </span>
+</td>
+<td class="py-3.5 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  On Leave
+                </span>
+</td>
+<td class="py-3.5 px-4 whitespace-nowrap text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Profile Dossier" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Edit Student Record" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Fee Ledger & Receipts" type="button">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+</button>
+<button class="p-1.5 rounded text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Options" type="button">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer & Comprehensive Pagination Controls -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md p-space-md bg-surface-container-low/50">
+<div class="flex items-center gap-space-md">
+<span class="font-body-sm text-body-sm text-secondary">
+            Showing <strong class="text-on-surface font-semibold">1</strong> to <strong class="text-on-surface font-semibold">7</strong> of <strong class="text-on-surface font-semibold">2,845</strong> students
+          </span>
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-secondary">Rows per page:</span>
+<select class="h-8 px-2 rounded-lg bg-surface-container-lowest text-label-sm font-label-sm text-on-surface shadow-sm focus:outline-none">
+<option>10</option>
+<option selected="">25</option>
+<option>50</option>
+<option>100</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-1.5 self-end sm:self-auto">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-secondary opacity-60 cursor-not-allowed text-label-sm font-label-sm flex items-center gap-1" disabled="" type="button">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold flex items-center justify-center shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center justify-center transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center justify-center transition-colors" type="button">3</button>
+<span class="px-1 text-secondary font-label-sm">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center justify-center transition-colors" type="button">285</button>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors text-label-sm font-label-sm flex items-center gap-1" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Batch Selected Actions Bottom Bar (Interactive) -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-sm rounded-xl shadow-xl flex items-center gap-space-lg transition-transform duration-200" id="floatingBatchBar">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-label-sm font-label-sm font-bold">2</span>
+<span class="font-label-lg text-label-lg font-semibold whitespace-nowrap">Students Selected</span>
+</div>
+<div class="h-5 w-px bg-on-surface-variant/30"></div>
+<div class="flex items-center gap-space-xs sm:gap-space-sm">
+<button class="px-3 py-1.5 rounded-lg bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-inverse-on-surface transition-colors font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">sms</span>
+<span>Send SMS / Notice</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-inverse-on-surface/10 hover:bg-inverse-on-surface/20 text-inverse-on-surface transition-colors font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">forward_to_inbox</span>
+<span>Fee Reminder</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim transition-colors font-label-md text-label-md font-semibold flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Export Selected</span>
+</button>
+<button class="p-1 rounded text-inverse-on-surface/70 hover:text-inverse-on-surface ml-1 transition-colors" id="clearSelectionBtn" title="Deselect all" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const selectAllCheckbox = document.getElementById('selectAll');
+    const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+    const batchBar = document.getElementById('floatingBatchBar');
+    const clearBtn = document.getElementById('clearSelectionBtn');
+
+    function updateBatchBar() {
+      const selectedCount = document.querySelectorAll('.row-checkbox:checked').length;
+      if (selectedCount > 0) {
+        batchBar.style.transform = 'translate(-50%, 0)';
+        batchBar.style.opacity = '1';
+        batchBar.style.pointerEvents = 'auto';
+        const countSpan = batchBar.querySelector('span.w-6');
+        if (countSpan) countSpan.textContent = selectedCount;
+      } else {
+        batchBar.style.transform = 'translate(-50%, 120%)';
+        batchBar.style.opacity = '0';
+        batchBar.style.pointerEvents = 'none';
+      }
+    }
+
+    if (selectAllCheckbox) {
+      selectAllCheckbox.addEventListener('change', function() {
+        rowCheckboxes.forEach(cb => {
+          cb.checked = selectAllCheckbox.checked;
+          const tr = cb.closest('tr');
+          if (tr) {
+            if (cb.checked) {
+              tr.classList.add('bg-primary-fixed/20');
+            } else {
+              tr.classList.remove('bg-primary-fixed/20');
+            }
+          }
+        });
+        updateBatchBar();
+      });
+    }
+
+    rowCheckboxes.forEach(cb => {
+      cb.addEventListener('change', function() {
+        const tr = cb.closest('tr');
+        if (tr) {
+          if (cb.checked) {
+            tr.classList.add('bg-primary-fixed/20');
+          } else {
+            tr.classList.remove('bg-primary-fixed/20');
+          }
+        }
+        updateBatchBar();
+      });
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function() {
+        rowCheckboxes.forEach(cb => {
+          cb.checked = false;
+          const tr = cb.closest('tr');
+          if (tr) tr.classList.remove('bg-primary-fixed/20');
+        });
+        if (selectAllCheckbox) selectAllCheckbox.checked = false;
+        updateBatchBar();
+      });
+    }
+
+    // Initialize state
+    updateBatchBar();
+  })();
+</script></main></div></body></html>

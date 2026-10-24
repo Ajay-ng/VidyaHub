@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"background":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-primary":"#ffffff","surface-container-low":"#eff4ff","on-secondary-fixed":"#131b2e","tertiary-fixed-dim":"#93ccff","secondary-fixed":"#dae2fd","on-background":"#0b1c30","surface-variant":"#d3e4fe","primary-container":"#eab308","on-secondary-fixed-variant":"#3f465c","secondary-fixed-dim":"#bec6e0","surface-bright":"#f8f9ff","surface":"#f8f9ff","tertiary-fixed":"#cce5ff","inverse-primary":"#f7be1d","surface-container":"#e5eeff","on-primary-container":"#604700","outline":"#817660","on-tertiary":"#ffffff","error":"#ba1a1a","on-primary-fixed-variant":"#5a4300","inverse-surface":"#213145","on-surface-variant":"#4f4633","on-tertiary-container":"#004f7a","surface-container-lowest":"#ffffff","tertiary-container":"#78c2ff","on-secondary":"#ffffff","tertiary":"#006398","primary-fixed-dim":"#f7be1d","on-secondary-container":"#5c647a","secondary":"#565e74","surface-tint":"#785a00","surface-container-high":"#dce9ff","on-surface":"#0b1c30","on-primary-fixed":"#251a00","on-error":"#ffffff","secondary-container":"#dae2fd","primary":"#785a00","on-tertiary-fixed-variant":"#004b73","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","surface-dim":"#cbdbf5","on-error-container":"#93000a","primary-fixed":"#ffdf9a","outline-variant":"#d3c5ac","on-tertiary-fixed":"#001d31"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","margin-desktop":"2rem","margin":"1rem","gutter":"1rem","space-lg":"1.5rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2rem","space-md":"1rem"},"fontFamily":{"headline-xl-mobile":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"headline-xl":["Inter"],"label-md":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"]},"fontSize":{"headline-xl-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"label-sm":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.05em","fontWeight":"600"}],"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["1rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.025em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"headline-lg-mobile":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md border-b border-surface-container-high"><div class="flex items-center gap-space-sm"><img alt="Greenwood International School Crest Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V57aiJ9MtRuKyLMKpK-ZEcWO73gHyDUmQMJw29e5RDXyLSvGcPkzfndBk_RXOQuf11m-C-ejzm7qXIpqDzcuKcj07BfQx5xPQPyhWhv02O5HDq_GVc0AYTG0KW6YT-71inLcd-iTusMTgNJgqp4owigF9GnGg4EIt062b3lZ3mSHegm-bIo8yuRMS1MnLw9try9tZL8J-X4BsUUgnqH3Xbw1Lo-M3IxjkrxcevFlJ6Em182VQs2jrD6VI"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate">Greenwood Int. School</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin Portal</span></div></div><div class="mt-space-sm inline-flex items-center gap-space-xs px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>AY 2026-27 Active</div></div><nav class="px-space-sm py-space-md space-y-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-lg border-l-4 border-primary-container pl-space-sm"><div class="px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Main</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="executive-dashboard" href="#"><span class="material-symbols-outlined text-base">dashboard</span><span>Dashboard</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Academic Management</div><a aria-current="page" class="flex items-center justify-between px-space-md py-space-xs rounded transition-colors bg-surface-container-high text-on-surface font-label-lg border-l-4 border-primary-container pl-space-sm" data-path="students" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">school</span><span>Students</span></div><span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">2,845</span></a><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="teachers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">cast_for_education</span><span>Teachers</span></div><span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.5 rounded">184</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="staff-directory" href="#"><span class="material-symbols-outlined text-base">badge</span><span>Staff</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="classes-and-sections" href="#"><span class="material-symbols-outlined text-base">meeting_room</span><span>Classes & Sections</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="subjects-curriculum" href="#"><span class="material-symbols-outlined text-base">auto_stories</span><span>Subjects</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="master-timetable" href="#"><span class="material-symbols-outlined text-base">calendar_month</span><span>Timetable</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="attendance-registry" href="#"><span class="material-symbols-outlined text-base">fact_check</span><span>Attendance</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="examination-center" href="#"><span class="material-symbols-outlined text-base">assignment_turned_in</span><span>Exams</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="assignments-homework" href="#"><span class="material-symbols-outlined text-base">draw</span><span>Assignments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="results-transcripts" href="#"><span class="material-symbols-outlined text-base">grade</span><span>Results</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Administration</div><a class="flex items-center justify-between px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="admissions" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">how_to_reg</span><span>Admissions</span></div><span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded font-semibold">12 new</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="leave-management" href="#"><span class="material-symbols-outlined text-base">event_busy</span><span>Leave Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="events-calendar" href="#"><span class="material-symbols-outlined text-base">event</span><span>Events & Calendar</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="announcements-bulletin" href="#"><span class="material-symbols-outlined text-base">campaign</span><span>Announcements</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="document-repository" href="#"><span class="material-symbols-outlined text-base">folder</span><span>Documents</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Finance</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="fee-management" href="#"><span class="material-symbols-outlined text-base">payments</span><span>Fee Management</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="payments-ledger" href="#"><span class="material-symbols-outlined text-base">receipt_long</span><span>Payments</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="expenses" href="#"><span class="material-symbols-outlined text-base">account_balance_wallet</span><span>Expenses</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="payroll-system" href="#"><span class="material-symbols-outlined text-base">request_quote</span><span>Payroll</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="financial-reports" href="#"><span class="material-symbols-outlined text-base">analytics</span><span>Financial Reports</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Resources</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="library-catalog" href="#"><span class="material-symbols-outlined text-base">local_library</span><span>Library</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="transportation-fleet" href="#"><span class="material-symbols-outlined text-base">directions_bus</span><span>Transport</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="hostel-management" href="#"><span class="material-symbols-outlined text-base">domain</span><span>Hostel</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="inventory-assets" href="#"><span class="material-symbols-outlined text-base">inventory_2</span><span>Inventory</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">Communication</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="messages-inbox" href="#"><span class="material-symbols-outlined text-base">chat</span><span>Messages</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="notifications-center" href="#"><span class="material-symbols-outlined text-base">notifications</span><span>Notifications</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="email-sms-center" href="#"><span class="material-symbols-outlined text-base">send</span><span>Email/SMS Center</span></a><div class="pt-space-md px-space-sm pb-space-xs text-label-sm font-label-sm uppercase tracking-wider text-secondary">System & Security</div><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="user-accounts" href="#"><span class="material-symbols-outlined text-base">manage_accounts</span><span>Users</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="roles-and-permissions" href="#"><span class="material-symbols-outlined text-base">shield_person</span><span>Roles & Permissions</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="audit-logs" href="#"><span class="material-symbols-outlined text-base">history</span><span>Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg" data-path="portal-settings" href="#"><span class="material-symbols-outlined text-base">settings</span><span>Settings</span></a></nav></div><div class="p-space-sm border-t border-surface-container-high space-y-space-xs bg-surface-container-lowest"><div class="flex items-center justify-between px-space-sm py-1"><a class="text-label-sm font-label-sm text-secondary hover:text-on-surface" data-path="help-support" href="#">Help & Support</a><a class="text-label-sm font-label-sm text-secondary hover:text-on-surface" data-path="documentation" href="#">Docs</a></div><div class="flex items-center justify-between p-space-sm rounded bg-surface-container-low"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNhNu5kgwFNIh69AvsVORbb9iP5dcd5KHaDoBuGryvGEOvuNECAXbMnZM59LRm9Lf6qH223mYntOJ6FA6rd7jNbdL2LLvndqu3H35uzCgIkUaEcuhQxUwgJpa3dPlXBXdTrvt2tX_EZAtf4ATgIqfgA34LSfV80IWTnqeLNHfQ9DMXkFmrtG5e8IW1hu7Ui5g3XiVKv1oBIQUwHvqtGAMV9CsiKdoFtz7UrSvIYi1-SJwYBxjh5nI-A"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate">Dr. R. Malhotra</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin</span></div></div><a class="text-on-surface-variant hover:text-error transition-colors p-1" data-path="login" href="#" title="Sign Out"><span class="material-symbols-outlined text-lg">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-gutter-desktop border-b border-surface-container-high"><div class="flex items-center gap-space-md"><button class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container p-1 rounded transition-colors" title="Toggle Sidebar" type="button"><span class="material-symbols-outlined">menu_open</span></button><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary"><a class="hover:text-on-surface" href="#">Greenwood</a><span>/</span><a class="hover:text-on-surface" href="#">Admin Portal</a><span>/</span><span class="text-on-surface font-semibold">Executive Dashboard</span></div></div><div class="flex-1 max-w-md mx-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-secondary text-base">search</span><input class="w-full h-9 pl-9 pr-12 text-body-sm font-body-sm bg-surface-container-low rounded border border-surface-container-high focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container placeholder-secondary text-on-surface" placeholder="Search students, faculty, invoices, exams... (⌘K)" type="text"/><kbd class="absolute right-2 px-1.5 py-0.5 text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant rounded">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><div class="hidden xl:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-sm text-secondary">apartment</span><span>Main Campus (Bengaluru)</span></div><div class="hidden md:flex items-center gap-space-xs px-2.5 py-1 rounded bg-surface-container-low border border-surface-container-high text-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-sm text-secondary">event_repeat</span><span>AY 2026-2027</span></div><button class="relative p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Notifications" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 bg-primary-container text-on-primary-container text-label-sm font-label-sm w-4 h-4 rounded-full flex items-center justify-center font-bold">12</span></button><button class="relative p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Messages" type="button"><span class="material-symbols-outlined text-xl">mail</span><span class="absolute top-1.5 right-1.5 bg-tertiary-container text-on-tertiary-container text-label-sm font-label-sm w-4 h-4 rounded-full flex items-center justify-center font-bold">4</span></button><button class="p-2 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Toggle Theme" type="button"><span class="material-symbols-outlined text-xl">light_mode</span></button><div class="h-6 w-px bg-surface-container-high mx-space-xs"></div><div class="flex items-center gap-space-sm cursor-pointer p-1 rounded hover:bg-surface-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNhNu5kgwFNIh69AvsVORbb9iP5dcd5KHaDoBuGryvGEOvuNECAXbMnZM59LRm9Lf6qH223mYntOJ6FA6rd7jNbdL2LLvndqu3H35uzCgIkUaEcuhQxUwgJpa3dPlXBXdTrvt2tX_EZAtf4ATgIqfgA34LSfV80IWTnqeLNHfQ9DMXkFmrtG5e8IW1hu7Ui5g3XiVKv1oBIQUwHvqtGAMV9CsiKdoFtz7UrSvIYi1-SJwYBxjh5nI-A"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Dr. Rajesh Malhotra</span><span class="font-label-sm text-label-sm text-secondary truncate">Super Admin</span></div><span class="material-symbols-outlined text-sm text-secondary hidden lg:block">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Sticky Context & Actions Bar -->
+<div class="sticky top-16 z-30 bg-surface-container-lowest shadow-sm px-space-md lg:px-space-xl py-space-md">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">SIS Portal • Enrollment AY 2026-27</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">Application Draft #GIS-REG-094</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mt-1 tracking-tight">New Student Admission & Registration</h1>
+<p class="font-body-md text-body-md text-secondary mt-0.5">Complete official enrollment, upload verification documents, and register student in SIS ledger.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-low text-secondary hover:text-error hover:bg-error-container/20 transition-colors font-label-lg text-label-lg flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">delete_outline</span>
+<span>Discard</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-lg text-label-lg flex items-center gap-1.5" onclick="notifyDraftSaved()" type="button">
+<span class="material-symbols-outlined text-base">bookmark_border</span>
+<span>Save Draft</span>
+</button>
+<button class="px-4 py-1.5 rounded-xl bg-primary-container text-on-primary-container hover:brightness-95 transition-all font-label-lg text-label-lg font-semibold flex items-center gap-1.5 shadow-sm" onclick="goToStep(4)" type="button">
+<span class="material-symbols-outlined text-base">fact_check</span>
+<span>Review & Commit</span>
+</button>
+</div>
+</div>
+<!-- Stepper Navigation Bar -->
+<div class="max-w-7xl mx-auto mt-space-lg pt-space-sm">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm lg:gap-space-md">
+<!-- Step 1 Tab -->
+<button class="group text-left p-3 rounded-xl bg-surface-container-low transition-all duration-200 cursor-pointer" id="tab-step-1" onclick="goToStep(1)" type="button">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center shadow-xs" id="step-icon-1">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Step 01</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1 truncate">Personal Details</p>
+<div class="w-full h-1 bg-surface-container mt-2.5 rounded-full overflow-hidden">
+<div class="w-full h-full bg-primary-container" id="step-progress-1"></div>
+</div>
+</button>
+<!-- Step 2 Tab (Active by Default) -->
+<button class="group text-left p-3 rounded-xl bg-surface-container-lowest shadow-md transition-all duration-200 cursor-pointer" id="tab-step-2" onclick="goToStep(2)" type="button">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center shadow-xs ring-2 ring-primary-container/30" id="step-icon-2">
+<span>2</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Step 02 • In Progress</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1 truncate">Academic Enrollment</p>
+<div class="w-full h-1 bg-surface-container mt-2.5 rounded-full overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container transition-all" id="step-progress-2"></div>
+</div>
+</button>
+<!-- Step 3 Tab -->
+<button class="group text-left p-3 rounded-xl bg-surface-container-low transition-all duration-200 cursor-pointer opacity-80 hover:opacity-100" id="tab-step-3" onclick="goToStep(3)" type="button">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm font-bold flex items-center justify-center" id="step-icon-3">
+<span>3</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Step 03</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-secondary mt-1 truncate">Guardian & Family</p>
+<div class="w-full h-1 bg-surface-container mt-2.5 rounded-full overflow-hidden">
+<div class="w-0 h-full bg-primary-container transition-all" id="step-progress-3"></div>
+</div>
+</button>
+<!-- Step 4 Tab -->
+<button class="group text-left p-3 rounded-xl bg-surface-container-low transition-all duration-200 cursor-pointer opacity-80 hover:opacity-100" id="tab-step-4" onclick="goToStep(4)" type="button">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm font-bold flex items-center justify-center" id="step-icon-4">
+<span>4</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Step 04</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-secondary mt-1 truncate">Documents & Fee Plan</p>
+<div class="w-full h-1 bg-surface-container mt-2.5 rounded-full overflow-hidden">
+<div class="w-0 h-full bg-primary-container transition-all" id="step-progress-4"></div>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Multi-Step Form Workspace -->
+<div class="max-w-7xl mx-auto w-full px-space-md lg:px-space-xl py-space-xl">
+<div class="grid grid-cols-12 gap-space-lg">
+<!-- Primary Form Canvas (8 Columns) -->
+<div class="col-span-12 lg:col-span-8 space-y-space-lg">
+<!-- ==============================================
+             STEP 1: PERSONAL INFORMATION
+             ============================================== -->
+<section class="step-panel hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="step-panel-1">
+<div class="flex items-start justify-between pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Section 1.0</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">Biographical Ledger</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Student Personal Information</h2>
+<p class="font-body-md text-body-md text-secondary">Ensure details match government identification (Aadhaar/Passport/Birth Certificate).</p>
+</div>
+<span class="material-symbols-outlined text-primary text-2xl">badge</span>
+</div>
+<!-- Photo Upload Bento Area -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-lg">
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-2">Student Passport Photograph *</label>
+<div class="flex flex-col sm:flex-row items-center gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="relative group shrink-0">
+<img class="w-24 h-28 object-cover rounded-lg shadow-xs" data-alt="High quality formal studio passport size portrait of a 16-year-old Indian male student with a neat haircut wearing a crisp navy blazer against a neutral off-white background, soft studio lighting, sharp focus, professional school registration photography" id="photo-preview-avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVlYRz6TWohCbxtvgR6UnvRvEqIdM2QTZ77AhX_DKJOdRM0JRqrq5XHGP04zz3IuYa8lEuukWbVgIdiIh3wqoo8Dn-SD2pDregOLN0y5bZvRkTABmGkf8aXsNTaaCoi40UNE6tnsu6RyTx7h16XK2zt108p54qhOLIZYvs-Oj8Ave-AnaFQlb4AE2Qz7GIm-nQvryM58LzsiQrrKIEeISqQODSY0aZefF_O9vpZuY323oOrKMQGWp8DQ"/>
+<div class="absolute inset-0 bg-on-surface/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-xl">photo_camera</span>
+</div>
+</div>
+<div class="flex-1 text-center sm:text-left min-w-0">
+<div class="flex items-center justify-center sm:justify-start gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-lg">cloud_upload</span>
+<span class="font-label-lg text-label-lg font-semibold">Drop photo here or click to browse</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Supported formats: JPG, PNG. Maximum file size: 2MB. Dimensions: 35mm × 45mm compliant.</p>
+<div class="mt-3 flex items-center justify-center sm:justify-start gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors" type="button">Choose Local File</button>
+<span class="font-label-sm text-label-sm text-secondary">aryan_id_photo_v2.jpg (840 KB)</span>
+<span class="material-symbols-outlined text-sm text-primary font-bold">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Name Fields -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">First Name <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container placeholder-secondary" placeholder="e.g. Aryan" type="text" value="Aryan"/>
+<span class="inline-flex items-center gap-1 mt-1 font-label-sm text-label-sm text-secondary">As per birth certificate</span>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Middle Name</label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container placeholder-secondary" placeholder="Optional" type="text" value="Sanjay"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Last Name <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container placeholder-secondary" placeholder="e.g. Kulkarni" type="text" value="Kulkarni"/>
+</div>
+</div>
+<!-- Demographics Row -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md mt-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Date of Birth <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="14/05/2011"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-secondary text-base">calendar_today</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary mt-1 inline-block">Age: 15 yrs 5 mos</span>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Gender <span class="text-error">*</span></label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">Male</option>
+<option>Female</option>
+<option>Non-Binary / Other</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Blood Group <span class="text-error">*</span></label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">O+ (Positive)</option>
+<option>A+ (Positive)</option>
+<option>B+ (Positive)</option>
+<option>AB+ (Positive)</option>
+<option>O- (Negative)</option>
+<option>A- (Negative)</option>
+<option>B- (Negative)</option>
+<option>AB- (Negative)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Nationality <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Indian"/>
+</div>
+</div>
+<!-- Contact & Address -->
+<div class="mt-space-md pt-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm font-semibold">Residential Coordinates & Direct Contact</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="md:col-span-2">
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Primary Residence Street Address <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Flat 402, Oakwood Manor, 14th Cross, Koramangala 4th Block"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Student Mobile (Optional)</label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="+91 00000 00000" type="tel" value="+91 98860 41230"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">City <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Bengaluru"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">State <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Karnataka"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Postal PIN Code <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="560034"/>
+<span class="absolute right-2.5 top-2.5 px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-secondary">Zone 2</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==============================================
+             STEP 2: ACADEMIC ENROLLMENT (Active by default)
+             ============================================== -->
+<section class="step-panel bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="step-panel-2">
+<div class="flex items-start justify-between pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Section 2.0</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-on-primary-container text-label-sm font-label-sm font-semibold">Active Ledger Allocation</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Academic Cohort & Curricular Stream</h2>
+<p class="font-body-md text-body-md text-secondary">Designate academic grade, syllabus stream, section registry, and previous schooling records.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-2xl">school</span>
+</div>
+<!-- System Auto-Allocation Badge Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-xl">qr_code_2</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Assigned SIS Enrollment UID</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-wide">GIS-2026-1489</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm">Auto-Generated</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-lg text-body-sm font-body-sm text-secondary">
+<div>
+<span class="block text-label-sm font-label-sm text-secondary">Admission Date</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">15 Oct 2026</span>
+</div>
+<div>
+<span class="block text-label-sm font-label-sm text-secondary">Academic Session</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">AY 2026 - 2027</span>
+</div>
+<div>
+<span class="block text-label-sm font-label-sm text-secondary">Ledger Status</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container text-label-sm font-label-sm font-semibold">Pending Verification</span>
+</div>
+</div>
+</div>
+<!-- Academic Cohort Inputs -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Applying Grade / Level <span class="text-error">*</span></label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container font-semibold">
+<option>Grade 9 (Secondary)</option>
+<option>Grade 10 (Secondary)</option>
+<option selected="">Grade 11 (Senior Secondary)</option>
+<option>Grade 12 (Senior Secondary)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Section Assignment <span class="text-error">*</span></label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">Section A (Science - STEM)</option>
+<option>Section B (Commerce with Applied Math)</option>
+<option>Section C (Humanities & Social Sciences)</option>
+<option>Section D (International Baccalaureate DP)</option>
+</select>
+<span class="font-label-sm text-label-sm text-primary mt-1 inline-block">Capacity: 28/32 seats filled</span>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Roll Number Allocation</label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container rounded-xl text-body-md font-body-md text-secondary cursor-not-allowed" readonly="" type="text" value="Auto-assign on fee clearance"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-secondary text-base">lock</span>
+</div>
+</div>
+</div>
+<!-- Curriculum & Stream Selection -->
+<div class="mt-space-md">
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Stream & Curricular Electives <span class="text-error">*</span></label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<label class="p-space-md rounded-xl bg-surface-container-low cursor-pointer flex flex-col justify-between hover:bg-surface-container transition-colors shadow-xs">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface block">CBSE - PCMB / CS</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1 block">Physics, Chemistry, Mathematics, Computer Science, English Core</span>
+</div>
+<input checked="" class="accent-primary-container mt-1" name="curriculum_stream" type="radio"/>
+</div>
+<div class="mt-3 flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-sm">science</span>
+<span>Lab Fees Applicable</span>
+</div>
+</label>
+<label class="p-space-md rounded-xl bg-surface-container-low cursor-pointer flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface block">CBSE - Commerce</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1 block">Accountancy, Business Studies, Economics, Applied Math, English Core</span>
+</div>
+<input class="accent-primary-container mt-1" name="curriculum_stream" type="radio"/>
+</div>
+<div class="mt-3 flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>Standard Commerce</span>
+</div>
+</label>
+<label class="p-space-md rounded-xl bg-surface-container-low cursor-pointer flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface block">Cambridge A-Levels</span>
+<span class="font-body-sm text-body-sm text-secondary mt-1 block">CIE Advanced Level Qualification Suite with Global University Credit</span>
+</div>
+<input class="accent-primary-container mt-1" name="curriculum_stream" type="radio"/>
+</div>
+<div class="mt-3 flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-sm">public</span>
+<span>Int'l Track Premium</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Prior Schooling Records -->
+<div class="mt-space-lg pt-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm font-semibold">Prior Academic Background & Transfer Credential</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Previous School Name & Board <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="St. Joseph High School - ICSE Board, Bengaluru"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Transfer Certificate (TC) Number <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="TC-2026/894"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-primary text-base">verified</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mt-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Grade 10 Aggregate / CGPA</label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="94.6% (Distinction)"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Year of Passing</label>
+<input class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container" type="text" value="March 2026"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Second Language Elective</label>
+<select class="w-full h-10 px-3 bg-surface-container-low rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">Sanskrit</option>
+<option>Hindi Core</option>
+<option>French (Foreign Lang)</option>
+<option>German</option>
+</select>
+</div>
+</div>
+<!-- Validation Info banner -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base shrink-0">info</span>
+<p class="font-body-sm text-body-sm text-secondary">
+                Stream eligibility score for Senior Secondary PCMB requires minimum 85% aggregate in Science and Mathematics in Class 10 Board. Verified aggregate: <strong class="text-on-surface">94.6% (Eligible)</strong>.
+              </p>
+</div>
+</div>
+</section>
+<!-- ==============================================
+             STEP 3: GUARDIAN & FAMILY CREDENTIALS
+             ============================================== -->
+<section class="step-panel hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="step-panel-3">
+<div class="flex items-start justify-between pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Section 3.0</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">Family & Guardian Registry</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Parent & Guardian Credentials</h2>
+<p class="font-body-md text-body-md text-secondary">Primary contacts for communications, billing notices, report cards, and emergency protocols.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-2xl">family_restroom</span>
+</div>
+<!-- Father's Record -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">person</span>
+                Father's Details
+              </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">Primary Guardian</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Full Name <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="text" value="Sanjay Kulkarni"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Occupation / Designation <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="text" value="Senior Software Architect"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Annual Income Bracket</label>
+<select class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs">
+<option selected="">₹25L - ₹50L Per Annum</option>
+<option>₹10L - ₹25L Per Annum</option>
+<option>> ₹50L Per Annum</option>
+<option>< ₹10L Per Annum</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Mobile Phone <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="tel" value="+91 98450 12890"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Work / Personal Email <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="email" value="sanjay.kulkarni@techfirm.com"/>
+</div>
+</div>
+</div>
+<!-- Mother's Record -->
+<div class="p-space-md rounded-xl bg-surface-container-low mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">person</span>
+                Mother's Details
+              </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-sm text-label-sm">Secondary Contact</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Full Name <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="text" value="Dr. Anita Joshi Kulkarni"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Occupation / Organization <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="text" value="Consultant Pediatrician, Manipal Hospital"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Mobile Phone <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="tel" value="+91 97410 88231"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Email <span class="text-error">*</span></label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="email" value="dr.anita.j@carepediatrics.in"/>
+</div>
+</div>
+</div>
+<!-- Emergency & Authorization Protocols -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Emergency Contacts & Campus Departure Security</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Emergency Contact Person</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="text" value="Rajiv Kulkarni (Uncle)"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Emergency Phone</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="tel" value="+91 99002 33419"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-medium mb-1.5">Relationship to Student</label>
+<input class="w-full h-10 px-3 bg-surface-container-lowest rounded-xl text-body-md font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container shadow-xs" type="text" value="Paternal Uncle (Local Guardian)"/>
+</div>
+</div>
+<div class="space-y-space-xs pt-2">
+<label class="flex items-start gap-2 cursor-pointer">
+<input checked="" class="accent-primary-container mt-1 rounded" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">
+                  I authorize parents and listed emergency contact for school pickup and medical emergency authorization.
+                </span>
+</label>
+<label class="flex items-start gap-2 cursor-pointer">
+<input checked="" class="accent-primary-container mt-1 rounded" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface">
+                  Send SMS/WhatsApp notifications regarding attendance, bus telemetry, and fee dues to both parents.
+                </span>
+</label>
+</div>
+</div>
+</section>
+<!-- ==============================================
+             STEP 4: DOCUMENTS & FEE COMMITMENT
+             ============================================== -->
+<section class="step-panel hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="step-panel-4">
+<div class="flex items-start justify-between pb-space-md">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Section 4.0</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">Compliance & Finance</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Document Verification & Fee Structure</h2>
+<p class="font-body-md text-body-md text-secondary">Upload certified legal proofs and commit to Greenwood institutional fee installment plan.</p>
+</div>
+<span class="material-symbols-outlined text-primary text-2xl">verified_user</span>
+</div>
+<!-- Document Upload Ledger List -->
+<div class="space-y-space-sm mb-space-lg">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Mandatory Verification Dossier</h3>
+<!-- Doc 1: Birth Certificate (Uploaded) -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-xs flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Birth Certificate</span>
+<span class="px-2 py-0.2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">Verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">birth_cert_aryan_official.pdf • 1.2 MB</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface text-label-sm font-label-sm transition-colors flex items-center gap-1 shadow-xs" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>View</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Doc 2: Transfer Certificate (Pending) -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-xs flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined">upload_file</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Original Transfer Certificate (TC)</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm">Pending Upload</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Must be countersigned by District Education Officer / Board</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container hover:brightness-95 transition-all font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-xs self-end sm:self-center" type="button">
+<span class="material-symbols-outlined text-sm">cloud_upload</span>
+<span>Upload TC (PDF)</span>
+</button>
+</div>
+<!-- Doc 3: Previous Academic Marksheet (Uploaded) -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-xs flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Grade 10 Board Marksheet / Transcript</span>
+<span class="px-2 py-0.2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">Uploaded</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">icse_grade10_marksheet_stjoseph.pdf • 2.4 MB</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface text-label-sm font-label-sm transition-colors flex items-center gap-1 shadow-xs" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>View</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Doc 4: Aadhaar Card / National ID (Uploaded) -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-xs flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Student Aadhaar / National ID Card</span>
+<span class="px-2 py-0.2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">Uploaded</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">aadhaar_masked_aryan.pdf • 680 KB</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface text-label-sm font-label-sm transition-colors flex items-center gap-1 shadow-xs" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>View</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<!-- Doc 5: Medical Fitness & Vaccination -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-xs flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Medical Fitness Certificate & Immunization Chart</span>
+<span class="px-2 py-0.2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">Uploaded</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate">pediatric_fitness_stamp.pdf • 1.1 MB</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface text-label-sm font-label-sm transition-colors flex items-center gap-1 shadow-xs" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span>
+<span>View</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary hover:text-error hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Institutional Fee Structure Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Enrolled Fee Plan Commitment</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">Tuition, lab infrastructure, smart classroom facilities, and library resource dues.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Selected Plan -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Billing Cadence</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">Recommended</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-2">Quarterly Installment Plan</h4>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">₹32,500</span>
+<span class="font-body-sm text-body-sm text-secondary">/ Quarter (4 installments)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Covers Senior Secondary STEM tuition, laboratory apparatus, and term sports dues.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span>First Due: Nov 01, 2026</span>
+<span class="font-semibold text-on-surface">Annual Sum: ₹1,30,000</span>
+</div>
+</div>
+<!-- One-Time Admission Fee -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">One-Time Registration</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Mandatory</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-2">Institutional Admission Levy</h4>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">₹15,000</span>
+<span class="font-body-sm text-body-sm text-secondary">(One-time, non-refundable)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-2">Includes SIS software license, campus RFID card, caution deposit, and PTA subscription.</p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span>Payable at Registration</span>
+<span class="font-semibold text-primary">Pre-approved by Bursar</span>
+</div>
+</div>
+</div>
+<!-- Parent Declaration Check -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-lowest flex items-start gap-2 shadow-xs">
+<input checked="" class="accent-primary-container mt-1 rounded" id="fee-consent-check" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface" for="fee-consent-check">
+                I hereby accept Greenwood International School's fee payment schedules, late surcharge policies (₹200/week after 10th of respective month), and refund terms as outlined in the Institutional Prospectus 2026-27.
+              </label>
+</div>
+</div>
+</section>
+<!-- Navigation Action Buttons Footing -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<button class="w-full sm:w-auto px-4 py-2 rounded-xl bg-surface-container-low text-secondary hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-base">arrow_back</span>
+<span>Back to Student Directory</span>
+</button>
+<div class="w-full sm:w-auto flex items-center gap-space-sm justify-end">
+<button class="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1.5 transition-colors" id="btn-prev" onclick="handlePrevStep()" type="button">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+<span>Previous Step</span>
+</button>
+<button class="flex-1 sm:flex-none px-6 py-2 rounded-xl bg-primary-container text-on-primary-container hover:brightness-95 transition-all font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1.5 shadow-sm" id="btn-next" onclick="handleNextStep()" type="button">
+<span id="next-label">Next: Guardian Details</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Auxiliary Sidebar / Inspector Panel (4 Columns) -->
+<div class="col-span-12 lg:col-span-4 space-y-space-lg">
+<!-- Live Enrollment Snapshot Bento Tile -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">SIS Registration Snapshot</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="flex items-center gap-space-md mt-space-xs">
+<img class="w-14 h-16 object-cover rounded-lg shadow-xs" data-alt="Close-up portrait of 16-year-old student Aryan Kulkarni in official school uniform shirt, gentle smile, professional lighting, pristine crisp framing for SIS profile preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATuyFRei1FJ2ajJSvno0yAnnXbxL0gL1iAXHjCjgikTk0nnqLpQ7nylq4QqD9bcOHHXT3GujWA5Ctrozdl8O_sxukdVLQ1qfFGWVXQaQZhmfwvE5l5J7F21PxwxO8tlCfMbIwlWuUYaDoLJcxZvI_wZeMO5E_FjB0QMgHPYHTN-AZvqMuIaG_x2WstiuAZkh82sg9fPY2BvZ8VmUXfZ1aQuMwRfIpuYHuqkJXgsrGPaVds1jtSJvwBqA"/>
+<div class="min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Aryan S. Kulkarni</h3>
+<p class="font-body-sm text-body-sm text-secondary truncate">Applying: Grade 11 - Science (PCMB)</p>
+<span class="inline-flex items-center gap-1 mt-1 px-2 py-0.2 rounded-full bg-surface-container text-on-surface text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Koramangala, BLR
+              </span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md space-y-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-secondary">
+<span>Application ID:</span>
+<span class="font-semibold text-on-surface">GIS-2026-1489</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Class Assigned:</span>
+<span class="font-semibold text-on-surface">11-A (Science)</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Academic Year:</span>
+<span class="font-semibold text-on-surface">2026-2027</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Primary Phone:</span>
+<span class="font-semibold text-on-surface">+91 98450 12890</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span>Registration Status:</span>
+<span class="font-semibold text-primary">In Review (75%)</span>
+</div>
+</div>
+<!-- Mini Inline Chart: Completion Gauge -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<svg class="w-10 h-10 -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface">Form Readiness</span>
+<span class="block font-body-sm text-body-sm text-secondary">3 of 4 stages fulfilled</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">75%</span>
+</div>
+</div>
+<!-- Admissions Audit Checklist Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Verification Checklist</h4>
+<span class="material-symbols-outlined text-secondary text-base">checklist</span>
+</div>
+<div class="space-y-space-sm mt-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span class="text-on-surface font-medium truncate">Age Eligibility Criteria</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary shrink-0">Pass</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span class="text-on-surface font-medium truncate">Class 10 Cut-off (85%)</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary shrink-0">94.6%</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-secondary text-base">schedule</span>
+<span class="text-on-surface font-medium truncate">TC Original Hardcopy</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary shrink-0">Pending</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+<span class="text-on-surface font-medium truncate">Address Verification Proof</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary shrink-0">Aadhaar Matched</span>
+</div>
+</div>
+<!-- Campus Transportation Add-on -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">directions_bus</span>
+                Fleet Route Opt-in
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Route #14-B</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Bus Stop: Koramangala Post Office Junction. Pickup at 07:42 AM.</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Transportation Fee</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">₹8,400 / Qtr</span>
+</div>
+</div>
+</div>
+<!-- Institutional Registrar Helpcard -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">contact_support</span>
+<div class="min-w-0">
+<h5 class="font-label-md text-label-md font-semibold text-on-surface">Registrar Assistance Office</h5>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Need curriculum exemptions or sports quota clearance? Connect with Academic Registrar Desk.</p>
+<div class="mt-2 flex items-center gap-3 font-label-sm text-label-sm text-on-surface font-semibold">
+<a class="hover:underline flex items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-sm">call</span>
+<span>Ext. 204</span>
+</a>
+<span>•</span>
+<a class="hover:underline flex items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+<span>admissions@greenwood.edu.in</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container for Draft Saved -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-4 py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="toast-draft">
+<span class="material-symbols-outlined text-primary-container text-base">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium">Application draft saved to SIS database (Ref: GIS-2026-1489)</span>
+</div>
+</div>
+<script>
+  let currentActiveStep = 2;
+
+  const stepTitles = {
+    1: { name: 'Personal Details', next: 'Next: Academic Enrollment' },
+    2: { name: 'Academic Enrollment', next: 'Next: Guardian Details' },
+    3: { name: 'Guardian & Family', next: 'Next: Documents & Fees' },
+    4: { name: 'Documents & Fee Plan', next: 'Submit & Enroll Student' }
+  };
+
+  function updateStepperUI(targetStep) {
+    for (let i = 1; i <= 4; i++) {
+      const panel = document.getElementById(`step-panel-${i}`);
+      const tab = document.getElementById(`tab-step-${i}`);
+      const icon = document.getElementById(`step-icon-${i}`);
+      const progress = document.getElementById(`step-progress-${i}`);
+
+      if (panel) {
+        if (i === targetStep) {
+          panel.classList.remove('hidden');
+        } else {
+          panel.classList.add('hidden');
+        }
+      }
+
+      if (tab) {
+        if (i === targetStep) {
+          tab.classList.remove('bg-surface-container-low', 'opacity-80');
+          tab.classList.add('bg-surface-container-lowest', 'shadow-md');
+          if (icon) {
+            icon.className = "w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center shadow-xs ring-2 ring-primary-container/30";
+            icon.innerHTML = `<span>${i}</span>`;
+          }
+          if (progress) {
+            progress.style.width = '70%';
+          }
+        } else if (i < targetStep) {
+          tab.classList.add('bg-surface-container-low');
+          tab.classList.remove('bg-surface-container-lowest', 'shadow-md', 'opacity-80');
+          if (icon) {
+            icon.className = "w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center shadow-xs";
+            icon.innerHTML = '<span class="material-symbols-outlined text-sm">check</span>';
+          }
+          if (progress) {
+            progress.style.width = '100%';
+          }
+        } else {
+          tab.classList.add('bg-surface-container-low', 'opacity-80');
+          tab.classList.remove('bg-surface-container-lowest', 'shadow-md');
+          if (icon) {
+            icon.className = "w-6 h-6 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm font-bold flex items-center justify-center";
+            icon.innerHTML = `<span>${i}</span>`;
+          }
+          if (progress) {
+            progress.style.width = '0%';
+          }
+        }
+      }
+    }
+
+    const nextLabel = document.getElementById('next-label');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+
+    if (nextLabel) {
+      nextLabel.textContent = stepTitles[targetStep].next;
+    }
+
+    if (btnPrev) {
+      if (targetStep === 1) {
+        btnPrev.classList.add('opacity-40', 'cursor-not-allowed');
+      } else {
+        btnPrev.classList.remove('opacity-40', 'cursor-not-allowed');
+      }
+    }
+
+    if (btnNext) {
+      if (targetStep === 4) {
+        btnNext.classList.remove('bg-primary-container', 'text-on-primary-container');
+        btnNext.classList.add('bg-primary-container', 'text-on-primary-container');
+      }
+    }
+
+    window.scrollTo({ top: 120, behavior: 'smooth' });
+  }
+
+  function goToStep(step) {
+    if (step < 1 || step > 4) return;
+    currentActiveStep = step;
+    updateStepperUI(currentActiveStep);
+  }
+
+  function handleNextStep() {
+    if (currentActiveStep === 4) {
+      alert("Registration submitted successfully! Student enrolled under ID: GIS-2026-1489");
+      return;
+    }
+    currentActiveStep++;
+    updateStepperUI(currentActiveStep);
+  }
+
+  function handlePrevStep() {
+    if (currentActiveStep > 1) {
+      currentActiveStep--;
+      updateStepperUI(currentActiveStep);
+    }
+  }
+
+  function notifyDraftSaved() {
+    const toast = document.getElementById('toast-draft');
+    if (!toast) return;
+    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+    }, 3200);
+  }
+
+  // Initialize on load
+  document.addEventListener('DOMContentLoaded', () => {
+    updateStepperUI(2);
+  });
+</script></main></div></body></html>
