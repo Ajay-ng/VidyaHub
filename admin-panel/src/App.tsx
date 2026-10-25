@@ -1,20 +1,39 @@
-import { Button } from "@/components/ui/button"
+import { Route, Routes } from "react-router"
+import Login from "./pages/auth/Login"
+import AuthLayout from "./Layout/auth/AuthLayout"
+import ProtectedRoute from "./Layout/common/ProtectedRoute"
+import AdminLayout from "./Layout/App/admin/AdminLayout"
+import AdminDashboard from "./pages/app/admin/AdminDashboard"
+import TeacherLayout from "./Layout/App/teacher/TeacherLayout"
+import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
 
 export function App() {
+  const user = {
+    role: "admin" as "admin" | "teacher",
+  }
+  const isAuthenticated = false
+
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <ProtectedRoute isAuthenticated={isAuthenticated} user={user} />
+        }
+      >
+        <Route path="auth" element={<AuthLayout />}>
+          <Route path="login" element={<Login />} />
+        </Route>
+
+        <Route path="admin" element={<AdminLayout />}>
+          <Route path="dashboard" element={<AdminDashboard />} />
+        </Route>
+
+        <Route path="teacher" element={<TeacherLayout />}>
+          <Route path="dashboard" element={<TeacherDashboard />} />
+        </Route>
+      </Route>
+    </Routes>
   )
 }
 
