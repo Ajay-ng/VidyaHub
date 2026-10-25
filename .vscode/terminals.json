@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "terminals": [
+    {
+      "name": "Git",
+      "workspaceFolder": ".",
+      "cwd": ".",
+      "shell": "zsh",
+      "icon": "git-branch",
+      "color": "terminal.ansiMagenta",
+      "command": "",
+      "show": true,
+      "restore": true,
+      "group": "development",
+      "order": 1,
+      "delay": 0,
+      "env": {}
+    },
+    {
+      "name": "Backend",
+      "workspaceFolder": "backend",
+      "cwd": "./backend",
+      "shell": "zsh",
+      "icon": "server",
+      "color": "terminal.ansiGreen",
+      "command": "npm run dev",
+      "show": false,
+      "restore": true,
+      "group": "backend",
+      "order": 2,
+      "delay": 0,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Studen Frontend",
+      "workspaceFolder": "student-panel",
+      "cwd": "./student-panel",
+      "shell": "zsh",
+      "icon": "globe",
+      "color": "terminal.ansiBlue",
+      "command": "npm run dev",
+      "show": false,
+      "restore": true,
+      "group": "frontend",
+      "order": 3,
+      "delay": 0,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Admin Frontend",
+      "workspaceFolder": "admin-panel",
+      "cwd": "./admin-panel",
+      "shell": "zsh",
+      "icon": "shield",
+      "color": "terminal.ansiYellow",
+      "command": "npm run dev",
+      "show": false,
+      "restore": true,
+      "group": "frontend",
+      "order": 4,
+      "delay": 0,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}
