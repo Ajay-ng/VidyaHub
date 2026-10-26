@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router"
+import { Navigate, Route, Routes } from "react-router"
 import Login from "./pages/auth/Login"
 import AuthLayout from "./Layout/auth/AuthLayout"
 import ProtectedRoute from "./Layout/common/ProtectedRoute"
@@ -21,6 +21,21 @@ export function App() {
           <ProtectedRoute isAuthenticated={isAuthenticated} user={user} />
         }
       >
+        <Route
+          index
+          element={
+            <Navigate
+              to={
+                !isAuthenticated
+                  ? "/auth/login"
+                  : user?.role === "admin"
+                    ? "/admin/dashboard"
+                    : "/teacher/dashboard"
+              }
+              replace
+            />
+          }
+        />
         <Route path="auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
         </Route>

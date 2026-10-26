@@ -11,6 +11,8 @@
     "dev:student": "npm run dev --workspace=apps/student-panel",
     "build:admin": "npm run build --workspace=apps/admin-panel",
     "build:student": "npm run build --workspace=apps/student-panel",
+    "dev:admin-desktop": "npm run dev --workspace=admin-desktop",
+    "dev:student-desktop": "npm run dev --workspace=student-desktop",
     "dev:backend": "npm run start:dev --workspace=apps/backend"
   }
 }
