@@ -1,15 +1,11 @@
 
-import type { ReactNode } from "react";
 import { SidebarInset } from "@/components/ui/sidebar";
+import { Outlet } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 
-export default function Layout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function Layout() {
   return (
     <>
       <Sidebar />
@@ -18,7 +14,7 @@ export default function Layout({
         <Header />
 
         <main className="flex-1 p-6">
-          {children}
+          <Outlet />
         </main>
       </SidebarInset>
     </>

@@ -27,14 +27,14 @@ export default function Login() {
     const password = formData.get("password")?.toString();
 
     if (studentId === "student" && password === "Student@123") {
-      navigate("/dashboard");
+      navigate("/");
     } else {
       setError("Invalid Student ID or password.");
     }
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-background px-4 py-10 text-foreground">
+    <main className="flex min-h-screen w-full items-center justify-center bg-background px-4 py-10 text-foreground">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="items-center space-y-3 text-center">
           <div className="flex size-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
