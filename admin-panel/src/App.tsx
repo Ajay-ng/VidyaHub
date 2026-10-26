@@ -11,7 +11,7 @@ export function App() {
   const user = {
     role: "admin" as "admin" | "teacher",
   }
-  const isAuthenticated = false
+  const isAuthenticated = true
 
   return (
     <Routes>
