@@ -1,0 +1,16 @@
+{
+  "name": "student-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:electron\"",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5",
+    "electron": "^41.7.1",
+    "wait-on": "^9.5.1"
+  }
+}
