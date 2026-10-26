@@ -12,5 +12,13 @@
     "build:admin": "npm run build --workspace=apps/admin-panel",
     "build:student": "npm run build --workspace=apps/student-panel",
     "dev:backend": "npm run start:dev --workspace=apps/backend"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.2.15",
+    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3",
+    "lightningcss-win32-x64-msvc": "^1.33.0"
   }
 }
