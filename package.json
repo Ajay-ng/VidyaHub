@@ -1,0 +1,16 @@
+{
+  "name": "school-management",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:admin": "npm run dev --workspace=apps/admin-panel",
+    "dev:student": "npm run dev --workspace=apps/student-panel",
+    "build:admin": "npm run build --workspace=apps/admin-panel",
+    "build:student": "npm run build --workspace=apps/student-panel",
+    "dev:backend": "npm run start:dev --workspace=apps/backend"
+  }
+}
