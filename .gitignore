@@ -3,3 +3,12 @@ dist/
 .env
 .env.*
 !.env.example
+
+
+# Electron build output
+apps/admin-desktop/release/
+apps/student-desktop/release/
+
+# Vite production output
+apps/admin-panel/dist/
+apps/student-panel/dist/
