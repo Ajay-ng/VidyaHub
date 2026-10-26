@@ -1,9 +1,6 @@
 
 import type { ReactNode } from "react";
-import {
-  SidebarProvider,
-  SidebarInset,
-} from "@/components/ui/sidebar";
+import { SidebarInset } from "@/components/ui/sidebar";
 
 import Sidebar from "./Sidebar";
 import Header from "./Header";
@@ -14,7 +11,7 @@ export default function Layout({
   children: ReactNode;
 }) {
   return (
-    <SidebarProvider>
+    <>
       <Sidebar />
 
       <SidebarInset>
@@ -24,6 +21,6 @@ export default function Layout({
           {children}
         </main>
       </SidebarInset>
-    </SidebarProvider>
+    </>
   );
 }
