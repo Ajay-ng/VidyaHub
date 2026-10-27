@@ -1,21 +1,35 @@
-import { Button } from "@/components/ui/button"
 
-export function App() {
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+import Layout from "./Layout/Layout";
+import Login from "./pages/login";
+import ProtectedRoute from "./components/ProtectedRoute";
+
+export default function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        {/* Public authentication routes */}
+        <Route path="/auth/login" element={<Login />} />
 
-export default App
+        {/* Protected application routes */}
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<Layout />}>
+            {/* Add protected child routes here */}
+          </Route>
+        </Route>
+
+        {/* Handle unknown URLs */}
+        <Route
+          path="*"
+          element={<Navigate to="/auth/login" replace />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+}
