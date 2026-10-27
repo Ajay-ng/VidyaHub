@@ -11,10 +11,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public authentication routes */}
-        <Route path="/auth/login" element={<Login />} />
+        {/* Default page: Login */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* Protected application routes */}
+        {/* Public route */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Protected dashboard route */}
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Layout />}>
             <Route path="/classes" element={<MyClasses />} />

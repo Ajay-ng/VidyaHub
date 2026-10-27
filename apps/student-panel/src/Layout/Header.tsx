@@ -23,7 +23,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Search */}
+      {/* Search
       <div className="relative hidden max-w-sm flex-1 md:block">
         <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
 
@@ -32,7 +32,7 @@ export default function Header() {
           className="pl-9"
           aria-label="Search"
         />
-      </div>
+      </div> */}
 
       {/* Right section */}
       <div className="flex items-center gap-3">
@@ -53,9 +53,9 @@ export default function Header() {
 </Avatar>
 
         <div className="hidden sm:block">
-          <p className="text-sm font-semibold">Hemanth Kumar</p>
+          <p className="text-sm font-semibold">Hemanth</p>
           <p className="text-xs text-muted-foreground">
-            Hemanth
+            1SY260021
           </p>
         </div>
       </div>
