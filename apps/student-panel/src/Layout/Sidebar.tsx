@@ -1,4 +1,5 @@
-
+import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard,
   BookOpen,
@@ -24,7 +25,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-
 const navigation = [
   { label: "Dashboard", icon: LayoutDashboard },
   { label: "My Classes", icon: BookOpen },
@@ -38,8 +38,15 @@ const navigation = [
 ];
 
 export default function Sidebar() {
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    localStorage.removeItem("isLoggedIn");
+    navigate("/login", { replace: true });
+  }
+
   return (
-    <ShadcnSidebar collapsible="icon">
+    <ShadcnSidebar collapsible="icon"  className="pb-12">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -82,7 +89,10 @@ export default function Sidebar() {
           </SidebarMenuItem>
 
           <SidebarMenuItem>
-            <SidebarMenuButton tooltip="Logout">
+            <SidebarMenuButton
+              tooltip="Logout"
+              onClick={handleLogout}
+            >
               <LogOut />
               <span>Logout</span>
             </SidebarMenuButton>

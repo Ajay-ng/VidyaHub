@@ -26,12 +26,13 @@ export default function Login() {
     const studentId = formData.get("studentId")?.toString().trim();
     const password = formData.get("password")?.toString();
 
-    if (studentId === "student" && password === "Student@123") {
-      navigate("/");
-    } else {
-      setError("Invalid Student ID or password.");
-    }
+  if (studentId === "student123@gmail.com" && password === "123456") {
+    localStorage.setItem("isLoggedIn", "true");
+    navigate("/dashboard", { replace: true });
+  } else {
+    alert("Invalid email or password");
   }
+};
 
   return (
     <main className="flex min-h-screen w-full items-center justify-center bg-background px-4 py-10 text-foreground">

@@ -1,16 +1,9 @@
-
 import { Navigate, Outlet } from "react-router-dom";
 
-// true = login required
-// false = allow everyone
-const AUTH_REQUIRED = false;
+const ProtectedRoute = () => {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
-export default function ProtectedRoute() {
-  const token = localStorage.getItem("token");
+  return isLoggedIn ? <Outlet /> : <Navigate to="/login" replace />;
+};
 
-  if (AUTH_REQUIRED && !token) {
-    return <Navigate to="/login" replace />;
-  }
-
-  return <Outlet />;
-}
+export default ProtectedRoute;

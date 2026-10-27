@@ -1,34 +1,29 @@
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-
-import Layout from "./Layout/Layout";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/login";
+import Dashboard from "./pages/dashboard";
+import Layout from "./Layout/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public authentication routes */}
-        <Route path="/auth/login" element={<Login />} />
+        {/* Default page: Login */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
-        {/* Protected application routes */}
+        {/* Public route */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Protected dashboard route */}
         <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<Layout />}>
-            {/* Add protected child routes here */}
+          <Route element={<Layout />}>
+            <Route path="/dashboard" element={<Dashboard />} />
           </Route>
         </Route>
 
-        {/* Handle unknown URLs */}
-        <Route
-          path="*"
-          element={<Navigate to="/auth/login" replace />}
-        />
+        {/* Unknown routes */}
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>
   );
