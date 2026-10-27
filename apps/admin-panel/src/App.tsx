@@ -9,7 +9,7 @@ import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
 
 export function App() {
   const user = {
-    role: "admin" as "admin" | "teacher",
+    role: "teacher" as "admin" | "teacher",
   }
   const isAuthenticated = true
 
@@ -46,6 +46,7 @@ export function App() {
 
         <Route path="teacher" element={<TeacherLayout />}>
           <Route path="dashboard" element={<TeacherDashboard />} />
+
         </Route>
       </Route>
     </Routes>

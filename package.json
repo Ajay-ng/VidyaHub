@@ -14,5 +14,9 @@
     "dev:admin-desktop": "npm run dev --workspace=admin-desktop",
     "dev:student-desktop": "npm run dev --workspace=student-desktop",
     "dev:backend": "npm run start:dev --workspace=apps/backend"
+  },
+  "devDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.2.15",
+    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3"
   }
 }
