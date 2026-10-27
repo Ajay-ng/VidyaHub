@@ -1,34 +1,25 @@
-import Layout from "../Layout/Layout";
 type DashboardCardProps = {
-  title: string;
-  value: string;
-  description: string;
-};
+  title: string
+  value: string
+  description: string
+}
 
-function DashboardCard(props: DashboardCardProps) {
+function DashboardCard({ title, value, description }: DashboardCardProps) {
   return (
     <div className="rounded-xl border bg-card p-5">
-      <h2 className="text-lg font-semibold">
-        {props.title}
-      </h2>
+      <h2 className="text-lg font-semibold">{title}</h2>
 
-      <p className="mt-3 text-3xl font-bold">
-        {props.value}
-      </p>
+      <p className="mt-3 text-3xl font-bold">{value}</p>
 
-      <p className="mt-2 text-sm text-muted-foreground">
-        {props.description}
-      </p>
+      <p className="mt-2 text-sm text-muted-foreground">{description}</p>
     </div>
-  );
+  )
 }
 
 export default function Dashboard() {
   return (
-    <Layout>
-      <h1 className="text-3xl font-bold">
-        Welcome to Vidyahub
-      </h1>
+    <div>
+      <h1 className="text-3xl font-bold">Welcome to Vidyahub</h1>
 
       <p className="mt-2 text-muted-foreground">
         Here is your student dashboard.
@@ -47,12 +38,8 @@ export default function Dashboard() {
           description="Pending assignments"
         />
 
-        <DashboardCard
-          title="Exams"
-          value="2"
-          description="Upcoming exams"
-        />
+        <DashboardCard title="Exams" value="2" description="Upcoming exams" />
       </div>
-    </Layout>
-  );
+    </div>
+  )
 }
