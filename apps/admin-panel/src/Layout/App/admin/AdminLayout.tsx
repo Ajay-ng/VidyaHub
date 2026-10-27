@@ -3,19 +3,27 @@ import AdminFooter from "./AdminFooter"
 import AdminHeader from "./AdminHeader"
 import AdminSidebar from "./AdminSidebar"
 
-function AdminLayout() {
+export default function AdminLayout() {
   return (
-    <div>
-      <AdminSidebar />
-      <div>
+    <div className="flex h-screen w-full overflow-hidden">
+      {/* Sidebar */}
+      <aside>
+        <AdminSidebar />
+      </aside>
+
+      {/* Main content area */}
+      <div className="flex min-w-0 flex-1 flex-col">
+        {/* Header */}
         <AdminHeader />
-        <main>
+
+        {/* Page content */}
+        <main className="min-h-0 flex-1 overflow-y-auto p-2 md:p-4">
           <Outlet />
         </main>
+
+        {/* Footer */}
         <AdminFooter />
       </div>
     </div>
   )
 }
-
-export default AdminLayout

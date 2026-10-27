@@ -129,6 +129,22 @@ function SectionHeading({
       <CardDescription>{description}</CardDescription>
     </>
   );
+type DashboardCardProps = {
+  title: string
+  value: string
+  description: string
+}
+
+function DashboardCard({ title, value, description }: DashboardCardProps) {
+  return (
+    <div className="rounded-xl border bg-card p-5">
+      <h2 className="text-lg font-semibold">{title}</h2>
+
+      <p className="mt-3 text-3xl font-bold">{value}</p>
+
+      <p className="mt-2 text-sm text-muted-foreground">{description}</p>
+    </div>
+  )
 }
 
 // Reusable status badge
@@ -191,6 +207,8 @@ export default function Dashboard() {
             Welcome back! Here is your academic overview.
           </p>
         </div>
+    <div>
+      <h1 className="text-3xl font-bold">Welcome to Vidyahub</h1>
 
         <Badge
           variant="outline"

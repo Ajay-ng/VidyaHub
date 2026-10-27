@@ -8,7 +8,7 @@
       "shell": "zsh",
       "icon": "git-branch",
       "color": "terminal.ansiMagenta",
-      "command": "",
+      "command": "git status",
       "show": true,
       "restore": true,
       "group": "development",
@@ -17,55 +17,79 @@
       "env": {}
     },
     {
-      "name": "Backend",
-      "workspaceFolder": "backend",
-      "cwd": "./backend",
-      "shell": "zsh",
-      "icon": "server",
-      "color": "terminal.ansiGreen",
-      "command": "npm run dev",
-      "show": false,
-      "restore": true,
-      "group": "backend",
-      "order": 2,
-      "delay": 0,
-      "env": {
-        "NODE_ENV": "development"
-      }
-    },
-    {
-      "name": "Studen Frontend",
-      "workspaceFolder": "student-panel",
-      "cwd": "./student-panel",
+      "name": "Admin Web",
+      "workspaceFolder": ".",
+      "cwd": ".",
       "shell": "zsh",
       "icon": "globe",
-      "color": "terminal.ansiBlue",
-      "command": "npm run dev",
-      "show": false,
+      "color": "terminal.ansiGreen",
+      "command": "npm run dev:admin",
+      "show": true,
       "restore": true,
-      "group": "frontend",
-      "order": 3,
+      "group": "development",
+      "order": 2,
       "delay": 0,
-      "env": {
-        "NODE_ENV": "development"
-      }
+      "env": {}
     },
     {
-      "name": "Admin Frontend",
-      "workspaceFolder": "admin-panel",
-      "cwd": "./admin-panel",
+      "name": "Admin Desktop",
+      "workspaceFolder": ".",
+      "cwd": ".",
       "shell": "zsh",
-      "icon": "shield",
-      "color": "terminal.ansiYellow",
-      "command": "npm run dev",
-      "show": false,
+      "icon": "vm-small",
+      "color": "terminal.ansiBlue",
+      "command": "npm run dev:admin-desktop",
+      "show": true,
       "restore": true,
-      "group": "frontend",
+      "group": "development",
+      "order": 3,
+      "delay": 2,
+      "env": {}
+    },
+    {
+      "name": "Student Web",
+      "workspaceFolder": ".",
+      "cwd": ".",
+      "shell": "zsh",
+      "icon": "globe",
+      "color": "terminal.ansiCyan",
+      "command": "npm run dev:student",
+      "show": true,
+      "restore": true,
+      "group": "development",
       "order": 4,
       "delay": 0,
-      "env": {
-        "NODE_ENV": "development"
-      }
+      "env": {}
+    },
+    {
+      "name": "Student Desktop",
+      "workspaceFolder": ".",
+      "cwd": ".",
+      "shell": "zsh",
+      "icon": "vm-small",
+      "color": "terminal.ansiYellow",
+      "command": "npm run dev:student-desktop",
+      "show": true,
+      "restore": true,
+      "group": "development",
+      "order": 5,
+      "delay": 2,
+      "env": {}
+    },
+    {
+      "name": "Backend",
+      "workspaceFolder": ".",
+      "cwd": ".",
+      "shell": "zsh",
+      "icon": "server",
+      "color": "terminal.ansiRed",
+      "command": "npm run dev:backend",
+      "show": true,
+      "restore": true,
+      "group": "development",
+      "order": 6,
+      "delay": 0,
+      "env": {}
     }
   ]
 }
