@@ -11,7 +11,7 @@ export function App() {
   const user = {
     role: "teacher" as "admin" | "teacher",
   }
-  const isAuthenticated = true
+  const isAuthenticated = false
 
   return (
     <Routes>
@@ -42,6 +42,7 @@ export function App() {
 
         <Route path="admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
+          {/* <Route path="reports" element={<AdminReports />} /> */}
         </Route>
 
         <Route path="teacher" element={<TeacherLayout />}>

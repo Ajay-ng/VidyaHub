@@ -1,12 +1,11 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("node:path");
+const fs = require("node:fs");
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 1440,
     height: 900,
-    minWidth: 1000,
-    minHeight: 650,
     title: "School Management - Admin",
     webPreferences: {
       contextIsolation: true,
@@ -15,22 +14,39 @@ function createWindow() {
     },
   });
 
+  win.webContents.on("did-fail-load", (_event, code, description, url) => {
+    console.error("Failed to load:", {
+      code,
+      description,
+      url,
+    });
+  });
+
   if (app.isPackaged) {
-    win.loadFile(path.join(__dirname, "../../admin-panel/dist/index.html"));
+    const indexPath = path.join(
+      process.resourcesPath,
+      "admin-panel",
+      "index.html",
+    );
+
+    console.log("Loading frontend:", indexPath);
+    console.log("File exists:", fs.existsSync(indexPath));
+
+    if (!fs.existsSync(indexPath)) {
+      console.error("Packaged frontend index.html is missing.");
+      return;
+    }
+
+    win.loadFile(indexPath);
   } else {
     win.loadURL("http://localhost:5173");
   }
+
+  // Keep DevTools open temporarily while debugging.
+  win.webContents.openDevTools();
 }
 
-app.whenReady().then(() => {
-  createWindow();
-
-  app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
-    }
-  });
-});
+app.whenReady().then(createWindow);
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {

@@ -9,14 +9,23 @@
   "scripts": {
     "dev:admin": "npm run dev --workspace=apps/admin-panel",
     "dev:student": "npm run dev --workspace=apps/student-panel",
-    "build:admin": "npm run build --workspace=apps/admin-panel",
-    "build:student": "npm run build --workspace=apps/student-panel",
     "dev:admin-desktop": "npm run dev --workspace=admin-desktop",
     "dev:student-desktop": "npm run dev --workspace=student-desktop",
-    "dev:backend": "npm run start:dev --workspace=apps/backend"
-  },
-  "devDependencies": {
-    "@rolldown/binding-win32-x64-msvc": "^1.2.15",
-    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3"
+    "dev:backend": "npm run start:dev --workspace=apps/backend",
+    "test:admin": "npm run test --workspace=apps/admin-panel",
+    "test:student": "npm run test --workspace=apps/student-panel",
+    "test:admin-desktop": "npm run test --workspace=admin-desktop",
+    "test:student-desktop": "npm run test --workspace=student-desktop",
+    "test:backend": "npm run test --workspace=apps/backend",
+    "test:all": "npm run test --workspaces --if-present",
+    "build:admin": "npm run build --workspace=apps/admin-panel",
+    "build:student": "npm run build --workspace=apps/student-panel",
+    "build:admin-desktop": "npm run build --workspace=apps/admin-panel",
+    "build:student-desktop": "npm run build --workspace=apps/student-panel",
+    "build:backend": "npm run build --workspace=apps/backend",
+    "build:all": "npm run build --workspaces --if-present",
+    "version:patch": "npm version patch --workspace=apps/admin-panel --workspace=apps/student-panel --workspace=admin-desktop --workspace=student-desktop --workspace=apps/backend --no-git-tag-version",
+    "version:minor": "npm version minor --workspace=apps/admin-panel --workspace=apps/student-panel --workspace=admin-desktop --workspace=student-desktop --workspace=apps/backend --no-git-tag-version",
+    "version:major": "npm version major --workspace=apps/admin-panel --workspace=apps/student-panel --workspace=admin-desktop --workspace=student-desktop --workspace=apps/backend --no-git-tag-version"
   }
 }

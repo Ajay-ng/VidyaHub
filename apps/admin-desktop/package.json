@@ -6,11 +6,42 @@
   "scripts": {
     "dev": "concurrently -k \"npm:dev:electron\"",
     "dev:electron": "wait-on http://localhost:5173 && electron .",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "npm run build --workspace=admin-panel && electron-builder",
+    "dist:mac": "npm run build --workspace=admin-panel && electron-builder --mac dmg",
+    "dist:win": "npm run build --workspace=admin-panel && electron-builder --win nsis"
   },
   "devDependencies": {
     "concurrently": "^9.2.5",
-    "electron": "^41.7.1",
+    "electron": "41.7.1",
+    "electron-builder": "^26.18.0",
     "wait-on": "^9.5.1"
+  },
+  "build": {
+    "appId": "com.simcasys.schoolmanagement.admin",
+    "productName": "School Management Admin",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../admin-panel/dist",
+        "to": "admin-panel"
+      }
+    ],
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
   }
 }
