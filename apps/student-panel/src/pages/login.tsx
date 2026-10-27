@@ -1,7 +1,6 @@
-
-import { useState, type FormEvent } from "react";
-import { useNavigate } from "react-router-dom";
-import { GraduationCap, Eye, EyeOff } from "lucide-react";
+import { useState, type FormEvent } from "react"
+import { useNavigate } from "react-router-dom"
+import { GraduationCap, Eye, EyeOff } from "lucide-react"
 
 import {
   Card,
@@ -9,27 +8,27 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button"
 
 export default function Login() {
-  const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState("");
+  const navigate = useNavigate()
+  const [showPassword, setShowPassword] = useState(false)
+  const [error, setError] = useState("")
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const formData = new FormData(event.currentTarget);
-    const studentId = formData.get("studentId")?.toString().trim();
-    const password = formData.get("password")?.toString();
+    const formData = new FormData(event.currentTarget)
+    const studentId = formData.get("studentId")?.toString().trim()
+    const password = formData.get("password")?.toString()
 
     if (studentId === "student" && password === "Student@123") {
-      navigate("/");
+      navigate("/")
     } else {
-      setError("Invalid Student ID or password.");
+      setError("Invalid Student ID or password.")
     }
   }
 
@@ -41,9 +40,7 @@ export default function Login() {
             <GraduationCap className="size-12" />
           </div>
 
-          <CardTitle className="text-3xl font-bold">
-            Vidyahub
-          </CardTitle>
+          <CardTitle className="text-3xl font-bold">Vidyahub</CardTitle>
 
           <CardDescription>
             Student Portal — Sign in to continue
@@ -51,10 +48,7 @@ export default function Login() {
         </CardHeader>
 
         <CardContent>
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-5"
-          >
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-2">
               <Label htmlFor="studentId">Student ID or Email</Label>
               <Input
@@ -87,7 +81,7 @@ export default function Login() {
                   type="button"
                   aria-label={showPassword ? "Hide password" : "Show password"}
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+                  className="absolute top-1/2 right-3 -translate-y-1/2 text-muted-foreground"
                 >
                   {showPassword ? (
                     <EyeOff className="size-6" />
@@ -115,5 +109,5 @@ export default function Login() {
         </CardContent>
       </Card>
     </main>
-  );
+  )
 }
