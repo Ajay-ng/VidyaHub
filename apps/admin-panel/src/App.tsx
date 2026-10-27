@@ -6,6 +6,7 @@ import AdminLayout from "./Layout/App/admin/AdminLayout"
 import AdminDashboard from "./pages/app/admin/AdminDashboard"
 import TeacherLayout from "./Layout/App/teacher/TeacherLayout"
 import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
+import StudentManagement from "./pages/app/admin/AcademicManagement/StudentManagement"
 
 export function App() {
   const user = {
@@ -42,7 +43,7 @@ export function App() {
 
         <Route path="admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
-          {/* <Route path="reports" element={<AdminReports />} /> */}
+          <Route path="student-management" element={<StudentManagement />} />
         </Route>
 
         <Route path="teacher" element={<TeacherLayout />}>

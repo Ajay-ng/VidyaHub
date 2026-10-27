@@ -33,7 +33,7 @@ import {
   CreditCard,
 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
-import { NavLink } from "react-router"
+import { NavLink, type NavLinkProps } from "react-router"
 import packageJson from "../../../../package.json"
 
 interface DAS {
@@ -68,7 +68,7 @@ function AdminSidebar() {
       items: [
         {
           title: "Students",
-          url: "/admin/students",
+          url: "/admin/student-management",
           icon: GraduationCap,
         },
         {
@@ -217,7 +217,7 @@ function AdminSidebar() {
                         <NavLink
                           to={item.url}
                           end
-                          className={({ isActive }) =>
+                          className={({ isActive }: NavLinkProps) =>
                             `flex w-full flex-row items-center gap-2 px-4 py-2 ${
                               isActive
                                 ? "bg-primary text-primary-foreground"
