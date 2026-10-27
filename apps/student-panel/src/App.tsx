@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute"
 import MyClasses from "./pages/classes"
 import Attendence from "./pages/attendence"
 import Assignments from "./pages/assignment"
+import Results from "./pages/exsams-results"
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/classes" element={<MyClasses />} />
             <Route path="/attendance" element={<Attendence />} />
             <Route path="/assignments" element={<Assignments />} />
+            <Route path="/results" element={<Results />} />
           </Route>
         </Route>
 
