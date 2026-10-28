@@ -6,12 +6,13 @@ import AdminLayout from "./Layout/App/admin/AdminLayout"
 import AdminDashboard from "./pages/app/admin/AdminDashboard"
 import TeacherLayout from "./Layout/App/teacher/TeacherLayout"
 import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
+import TeacherAttendancePage from "./pages/app/teacher/attendance/TeacherAttendancePage";
 
 export function App() {
   const user = {
     role: "teacher" as "admin" | "teacher",
   }
-  const isAuthenticated = false
+  const isAuthenticated = true
 
   return (
     <Routes>
@@ -47,6 +48,10 @@ export function App() {
 
         <Route path="teacher" element={<TeacherLayout />}>
           <Route path="dashboard" element={<TeacherDashboard />} />
+           <Route
+          path="attendance"
+          element={<TeacherAttendancePage />}
+        />
 
         </Route>
       </Route>
