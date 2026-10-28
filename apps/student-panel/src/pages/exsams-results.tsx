@@ -192,79 +192,83 @@ export default function Results() {
       </div>
 
       {/* Responsive summary cards */}
-      <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
+      <div className="grid grid-cols-2 gap-2 xl:grid-cols-4">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-start gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <GraduationCap className="size-4 text-primary" />
+            </div>
+
             <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+              <p className="text-xs font-medium text-muted-foreground">
                 Total Exams
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="mt-0.5 text-lg font-semibold tracking-tight tabular-nums">
                 {exams.length}
               </p>
-              <p className="mt-1 hidden text-xs text-muted-foreground sm:block">
+              <p className="mt-0.5 text-[11px] text-muted-foreground">
                 All scheduled exams
               </p>
             </div>
-            <div className="shrink-0 rounded-lg bg-primary/10 p-2 sm:p-3">
-              <GraduationCap className="size-5 text-primary sm:size-6" />
-            </div>
           </CardContent>
         </Card>
 
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-start gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <CalendarDays className="size-4 text-blue-600" />
+            </div>
+
             <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+              <p className="text-xs font-medium text-muted-foreground">
                 Upcoming
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="mt-0.5 text-lg font-semibold tracking-tight tabular-nums">
                 {upcomingCount}
               </p>
-              <p className="mt-1 hidden text-xs text-muted-foreground sm:block">
+              <p className="mt-0.5 text-[11px] text-muted-foreground">
                 Exams to prepare for
               </p>
             </div>
-            <div className="shrink-0 rounded-lg bg-blue-500/10 p-2 sm:p-3">
-              <CalendarDays className="size-5 text-blue-600 sm:size-6" />
-            </div>
           </CardContent>
         </Card>
 
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-start gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <Trophy className="size-4 text-green-600" />
+            </div>
+
             <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+              <p className="text-xs font-medium text-muted-foreground">
                 Completed
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="mt-0.5 text-lg font-semibold tracking-tight tabular-nums">
                 {completedExams.length}
               </p>
-              <p className="mt-1 hidden text-xs text-muted-foreground sm:block">
+              <p className="mt-0.5 text-[11px] text-muted-foreground">
                 Results available
               </p>
             </div>
-            <div className="shrink-0 rounded-lg bg-green-500/10 p-2 sm:p-3">
-              <Trophy className="size-5 text-green-600 sm:size-6" />
-            </div>
           </CardContent>
         </Card>
 
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-start gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <Trophy className="size-4 text-amber-600" />
+            </div>
+
             <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+              <p className="text-xs font-medium text-muted-foreground">
                 Average Score
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="mt-0.5 text-lg font-semibold tracking-tight tabular-nums">
                 {averageScore}%
               </p>
-              <p className="mt-1 hidden text-xs text-muted-foreground sm:block">
+              <p className="mt-0.5 text-[11px] text-muted-foreground">
                 Across completed exams
               </p>
-            </div>
-            <div className="shrink-0 rounded-lg bg-amber-500/10 p-2 sm:p-3">
-              <Trophy className="size-5 text-amber-600 sm:size-6" />
             </div>
           </CardContent>
         </Card>

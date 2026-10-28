@@ -1,5 +1,4 @@
-
-import { useMemo, useState } from "react";
+import { useMemo, useState } from "react"
 import {
   CalendarDays,
   CheckCircle2,
@@ -8,20 +7,20 @@ import {
   Plus,
   Search,
   XCircle,
-} from "lucide-react";
+} from "lucide-react"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Badge } from "@/components/ui/badge"
 import {
   Table,
   TableBody,
@@ -29,20 +28,20 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/table"
 
-type LeaveStatus = "Pending" | "Approved" | "Rejected";
+type LeaveStatus = "Pending" | "Approved" | "Rejected"
 
 type LeaveRequest = {
-  id: number;
-  type: string;
-  from: string;
-  to: string;
-  days: number;
-  reason: string;
-  appliedOn: string;
-  status: LeaveStatus;
-};
+  id: number
+  type: string
+  from: string
+  to: string
+  days: number
+  reason: string
+  appliedOn: string
+  status: LeaveStatus
+}
 
 const initialRequests: LeaveRequest[] = [
   {
@@ -85,34 +84,34 @@ const initialRequests: LeaveRequest[] = [
     appliedOn: "2026-08-18",
     status: "Approved",
   },
-];
+]
 
 const leaveTypes = [
   "Medical Leave",
   "Personal Leave",
   "Emergency Leave",
   "Other",
-];
+]
 
-type FilterType = "All" | LeaveStatus;
+type FilterType = "All" | LeaveStatus
 
 function formatDate(date: string) {
-  if (!date) return "—";
+  if (!date) return "—"
 
   return new Date(`${date}T00:00:00`).toLocaleDateString("en-IN", {
     day: "2-digit",
     month: "short",
     year: "numeric",
-  });
+  })
 }
 
 function getLeaveDays(from: string, to: string) {
-  if (!from || !to) return 0;
+  if (!from || !to) return 0
 
-  const start = new Date(`${from}T00:00:00`);
-  const end = new Date(`${to}T00:00:00`);
+  const start = new Date(`${from}T00:00:00`)
+  const end = new Date(`${to}T00:00:00`)
 
-  return Math.round((end.getTime() - start.getTime()) / 86400000) + 1;
+  return Math.round((end.getTime() - start.getTime()) / 86400000) + 1
 }
 
 function StatusBadge({ status }: { status: LeaveStatus }) {
@@ -122,7 +121,7 @@ function StatusBadge({ status }: { status: LeaveStatus }) {
         <CheckCircle2 className="size-3" />
         Approved
       </Badge>
-    );
+    )
   }
 
   if (status === "Rejected") {
@@ -131,7 +130,7 @@ function StatusBadge({ status }: { status: LeaveStatus }) {
         <XCircle className="size-3" />
         Rejected
       </Badge>
-    );
+    )
   }
 
   return (
@@ -139,24 +138,23 @@ function StatusBadge({ status }: { status: LeaveStatus }) {
       <Clock3 className="size-3" />
       Pending
     </Badge>
-  );
+  )
 }
 
 export default function LeaveRequestPage() {
-  const [requests, setRequests] =
-    useState<LeaveRequest[]>(initialRequests);
+  const [requests, setRequests] = useState<LeaveRequest[]>(initialRequests)
 
-  const [filter, setFilter] = useState<FilterType>("All");
-  const [search, setSearch] = useState("");
-  const [showForm, setShowForm] = useState(false);
+  const [filter, setFilter] = useState<FilterType>("All")
+  const [search, setSearch] = useState("")
+  const [showForm, setShowForm] = useState(false)
 
-  const [leaveType, setLeaveType] = useState("Medical Leave");
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
-  const [reason, setReason] = useState("");
-  const [error, setError] = useState("");
+  const [leaveType, setLeaveType] = useState("Medical Leave")
+  const [from, setFrom] = useState("")
+  const [to, setTo] = useState("")
+  const [reason, setReason] = useState("")
+  const [error, setError] = useState("")
 
-  const today = new Date().toLocaleDateString("en-CA");
+  const today = new Date().toLocaleDateString("en-CA")
 
   const stats = useMemo(() => {
     return {
@@ -167,57 +165,56 @@ export default function LeaveRequestPage() {
       approvedDays: requests
         .filter((r) => r.status === "Approved")
         .reduce((sum, r) => sum + r.days, 0),
-    };
-  }, [requests]);
+    }
+  }, [requests])
 
   const filteredRequests = requests.filter((request) => {
-    const matchesStatus =
-      filter === "All" || request.status === filter;
+    const matchesStatus = filter === "All" || request.status === filter
 
     const searchText =
-      `${request.type} ${request.reason} ${request.status}`.toLowerCase();
+      `${request.type} ${request.reason} ${request.status}`.toLowerCase()
 
-    return matchesStatus && searchText.includes(search.toLowerCase());
-  });
+    return matchesStatus && searchText.includes(search.toLowerCase())
+  })
 
   function resetForm() {
-    setLeaveType("Medical Leave");
-    setFrom("");
-    setTo("");
-    setReason("");
-    setError("");
+    setLeaveType("Medical Leave")
+    setFrom("")
+    setTo("")
+    setReason("")
+    setError("")
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setError("");
+    event.preventDefault()
+    setError("")
 
     if (!from || !to || !reason.trim()) {
-      setError("Please complete all required fields.");
-      return;
+      setError("Please complete all required fields.")
+      return
     }
 
     if (from < today) {
-      setError("The start date cannot be in the past.");
-      return;
+      setError("The start date cannot be in the past.")
+      return
     }
 
     if (to < from) {
-      setError("The end date must be on or after the start date.");
-      return;
+      setError("The end date must be on or after the start date.")
+      return
     }
 
     const overlaps = requests.some((request) => {
-      if (request.status === "Rejected") return false;
+      if (request.status === "Rejected") return false
 
-      return from <= request.to && to >= request.from;
-    });
+      return from <= request.to && to >= request.from
+    })
 
     if (overlaps) {
       setError(
         "These dates overlap with an existing pending or approved leave."
-      );
-      return;
+      )
+      return
     }
 
     const newRequest: LeaveRequest = {
@@ -229,13 +226,13 @@ export default function LeaveRequestPage() {
       reason: reason.trim(),
       appliedOn: today,
       status: "Pending",
-    };
+    }
 
-    setRequests((previous) => [newRequest, ...previous]);
-    setFilter("All");
-    setSearch("");
-    resetForm();
-    setShowForm(false);
+    setRequests((previous) => [newRequest, ...previous])
+    setFilter("All")
+    setSearch("")
+    resetForm()
+    setShowForm(false)
   }
 
   return (
@@ -258,68 +255,91 @@ export default function LeaveRequestPage() {
       </section>
 
       {/* Summary cards */}
-      <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardDescription>Total Applied</CardDescription>
-            <FileText className="size-5 text-primary" />
-          </CardHeader>
-          <CardContent>
-            <p className="text-3xl font-bold">{stats.total}</p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              All leave applications
-            </p>
+      <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 xl:grid-cols-4">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <FileText className="size-4 text-primary" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-xs font-medium text-muted-foreground">
+                Total Applied
+              </p>
+              <p className="mt-0.5 text-lg font-semibold tabular-nums">
+                {stats.total}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                All leave applications
+              </p>
+            </div>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardDescription>Approved</CardDescription>
-            <CheckCircle2 className="size-5 text-emerald-600" />
-          </CardHeader>
-          <CardContent>
-            <p className="text-3xl font-bold">{stats.approved}</p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              {stats.approvedDays} approved calendar days
-            </p>
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <CheckCircle2 className="size-4 text-emerald-600" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-xs font-medium text-muted-foreground">
+                Approved
+              </p>
+              <p className="mt-0.5 text-lg font-semibold tabular-nums">
+                {stats.approved}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                {stats.approvedDays} approved calendar days
+              </p>
+            </div>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardDescription>Pending</CardDescription>
-            <Clock3 className="size-5 text-amber-600" />
-          </CardHeader>
-          <CardContent>
-            <p className="text-3xl font-bold">{stats.pending}</p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Waiting for a decision
-            </p>
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <Clock3 className="size-4 text-amber-600" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-xs font-medium text-muted-foreground">
+                Pending
+              </p>
+              <p className="mt-0.5 text-lg font-semibold tabular-nums">
+                {stats.pending}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                Waiting for a decision
+              </p>
+            </div>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardDescription>Rejected</CardDescription>
-            <XCircle className="size-5 text-destructive" />
-          </CardHeader>
-          <CardContent>
-            <p className="text-3xl font-bold">{stats.rejected}</p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Applications not approved
-            </p>
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-2.5">
+            <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <XCircle className="size-4 text-destructive" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-xs font-medium text-muted-foreground">
+                Rejected
+              </p>
+              <p className="mt-0.5 text-lg font-semibold tabular-nums">
+                {stats.rejected}
+              </p>
+              <p className="text-[11px] text-muted-foreground">
+                Applications not approved
+              </p>
+            </div>
           </CardContent>
         </Card>
       </section>
-
       {/* Apply form */}
       {showForm && (
         <Card>
           <CardHeader>
             <CardTitle>Apply for Leave</CardTitle>
             <CardDescription>
-              Enter your leave details. Your application will be marked
-              as pending until it is reviewed.
+              Enter your leave details. Your application will be marked as
+              pending until it is reviewed.
             </CardDescription>
           </CardHeader>
 
@@ -332,7 +352,7 @@ export default function LeaveRequestPage() {
                     id="leaveType"
                     value={leaveType}
                     onChange={(event) => setLeaveType(event.target.value)}
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                   >
                     {leaveTypes.map((type) => (
                       <option key={type} value={type}>
@@ -414,8 +434,8 @@ export default function LeaveRequestPage() {
                   type="button"
                   variant="outline"
                   onClick={() => {
-                    resetForm();
-                    setShowForm(false);
+                    resetForm()
+                    setShowForm(false)
                   }}
                 >
                   Cancel
@@ -438,7 +458,7 @@ export default function LeaveRequestPage() {
         <CardContent className="space-y-4">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div className="relative w-full md:max-w-xs">
-              <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+              <Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
@@ -460,7 +480,6 @@ export default function LeaveRequestPage() {
                     {item}
                   </Button>
                 )
-                
               )}
             </div>
           </div>
@@ -494,9 +513,7 @@ export default function LeaveRequestPage() {
                       </TableCell>
                       <TableCell>{request.days}</TableCell>
                       <TableCell className="max-w-48">
-                        <span className="line-clamp-2">
-                          {request.reason}
-                        </span>
+                        <span className="line-clamp-2">{request.reason}</span>
                       </TableCell>
                       <TableCell className="whitespace-nowrap">
                         {formatDate(request.appliedOn)}
@@ -522,5 +539,5 @@ export default function LeaveRequestPage() {
         </CardContent>
       </Card>
     </main>
-  );
+  )
 }

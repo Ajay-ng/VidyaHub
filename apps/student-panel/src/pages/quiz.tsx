@@ -222,72 +222,67 @@ export default function QuizPage() {
       </div>
 
       {/* Summary cards */}
-      <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-            <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+      <div className="grid grid-cols-2 gap-2 xl:grid-cols-4">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-3 sm:gap-3 sm:p-4">
+            <BookOpen className="size-5 shrink-0 text-primary sm:size-6" />
+
+            <div className="min-w-0 space-y-1">
+              <p className="text-xs leading-tight font-medium text-muted-foreground sm:text-sm">
                 Total Quizzes
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                 {quizzes.length}
               </p>
             </div>
-            <div className="shrink-0 rounded-lg bg-primary/10 p-2 sm:p-3">
-              <BookOpen className="size-5 text-primary sm:size-6" />
-            </div>
           </CardContent>
         </Card>
 
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-            <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-3 sm:gap-3 sm:p-4">
+            <Clock className="size-5 shrink-0 text-blue-600 sm:size-6" />
+
+            <div className="min-w-0 space-y-1">
+              <p className="text-xs leading-tight font-medium text-muted-foreground sm:text-sm">
                 Available
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                 {availableCount}
               </p>
             </div>
-            <div className="shrink-0 rounded-lg bg-blue-500/10 p-2 sm:p-3">
-              <Clock className="size-5 text-blue-600 sm:size-6" />
-            </div>
           </CardContent>
         </Card>
 
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-            <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-3 sm:gap-3 sm:p-4">
+            <CheckCircle2 className="size-5 shrink-0 text-green-600 sm:size-6" />
+
+            <div className="min-w-0 space-y-1">
+              <p className="text-xs leading-tight font-medium text-muted-foreground sm:text-sm">
                 Completed
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                 {completedQuizzes.length}
               </p>
             </div>
-            <div className="shrink-0 rounded-lg bg-green-500/10 p-2 sm:p-3">
-              <CheckCircle2 className="size-5 text-green-600 sm:size-6" />
-            </div>
           </CardContent>
         </Card>
 
-        <Card className="min-w-0">
-          <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-            <div className="min-w-0">
-              <p className="text-xs text-muted-foreground sm:text-sm">
+        <Card className="min-w-0 gap-0 py-0">
+          <CardContent className="flex items-center gap-2 p-3 sm:gap-3 sm:p-4">
+            <Trophy className="size-5 shrink-0 text-amber-600 sm:size-6" />
+
+            <div className="min-w-0 space-y-1">
+              <p className="text-xs leading-tight font-medium text-muted-foreground sm:text-sm">
                 Average Score
               </p>
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                 {averageScore}%
               </p>
-            </div>
-            <div className="shrink-0 rounded-lg bg-amber-500/10 p-2 sm:p-3">
-              <Trophy className="size-5 text-amber-600 sm:size-6" />
             </div>
           </CardContent>
         </Card>
       </div>
-
       {/* Quiz list */}
       <Card className="min-w-0">
         <CardHeader className="p-4 sm:p-6">

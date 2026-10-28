@@ -228,64 +228,70 @@ export default function MaterialsPage() {
 
         {/* Summary cards */}
         <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-          <Card className="min-w-0">
-            <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-              <div>
-                <p className="text-xs text-muted-foreground sm:text-sm">
+          <Card className="min-w-0 gap-0 py-0">
+            <CardContent className="flex items-start gap-3 p-3 sm:p-4">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-muted">
+                <BookOpen className="size-5 text-primary" />
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-xs font-medium text-muted-foreground sm:text-sm">
                   Total Materials
                 </p>
-                <p className="mt-2 text-xl font-bold sm:text-2xl">
+                <p className="mt-1 text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                   {materials.length}
                 </p>
               </div>
-              <div className="rounded-lg bg-primary/10 p-2 sm:p-3">
-                <BookOpen className="size-5 text-primary sm:size-6" />
-              </div>
             </CardContent>
           </Card>
 
-          <Card className="min-w-0">
-            <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-              <div>
-                <p className="text-xs text-muted-foreground sm:text-sm">
+          <Card className="min-w-0 gap-0 py-0">
+            <CardContent className="flex items-start gap-3 p-3 sm:p-4">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-muted">
+                <FileText className="size-5 text-red-600" />
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-xs font-medium text-muted-foreground sm:text-sm">
                   PDF Notes
                 </p>
-                <p className="mt-2 text-xl font-bold sm:text-2xl">{pdfCount}</p>
-              </div>
-              <div className="rounded-lg bg-red-500/10 p-2 sm:p-3">
-                <FileText className="size-5 text-red-600 sm:size-6" />
+                <p className="mt-1 text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
+                  {pdfCount}
+                </p>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="min-w-0">
-            <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-              <div>
-                <p className="text-xs text-muted-foreground sm:text-sm">
+          <Card className="min-w-0 gap-0 py-0">
+            <CardContent className="flex items-start gap-3 p-3 sm:p-4">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-muted">
+                <FileVideo className="size-5 text-blue-600" />
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-xs font-medium text-muted-foreground sm:text-sm">
                   Video Lessons
                 </p>
-                <p className="mt-2 text-xl font-bold sm:text-2xl">
+                <p className="mt-1 text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                   {videoCount}
                 </p>
               </div>
-              <div className="rounded-lg bg-blue-500/10 p-2 sm:p-3">
-                <FileVideo className="size-5 text-blue-600 sm:size-6" />
-              </div>
             </CardContent>
           </Card>
 
-          <Card className="min-w-0">
-            <CardContent className="flex items-center justify-between gap-2 p-3 sm:p-5">
-              <div>
-                <p className="text-xs text-muted-foreground sm:text-sm">
+          <Card className="min-w-0 gap-0 py-0">
+            <CardContent className="flex items-start gap-3 p-3 sm:p-4">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-muted">
+                <BookOpen className="size-5 text-green-600" />
+              </div>
+
+              <div className="min-w-0">
+                <p className="text-xs font-medium text-muted-foreground sm:text-sm">
                   Subjects
                 </p>
-                <p className="mt-2 text-xl font-bold sm:text-2xl">
+                <p className="mt-1 text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                   {new Set(materials.map((item) => item.subject)).size}
                 </p>
-              </div>
-              <div className="rounded-lg bg-green-500/10 p-2 sm:p-3">
-                <BookOpen className="size-5 text-green-600 sm:size-6" />
               </div>
             </CardContent>
           </Card>

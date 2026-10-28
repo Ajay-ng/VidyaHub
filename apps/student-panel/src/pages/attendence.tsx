@@ -224,27 +224,27 @@ export default function Attendance() {
       </Card>
 
       {/* Summary cards */}
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div className="grid grid-cols-1 justify-items-start gap-2 sm:grid-cols-3">
         {summaryCards.map((item) => {
           const Icon = item.icon
 
           return (
-            <Card key={item.label} className="gap-0 py-0">
-              <CardContent className="flex items-center gap-3 p-4">
-                <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-muted">
-                  <Icon className={`size-5 ${item.iconClass}`} />
+            <Card key={item.label} className="w-full max-w-sm gap-0 py-0">
+              <CardContent className="flex items-center gap-2 p-2.5">
+                <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+                  <Icon className={`size-4 ${item.iconClass}`} />
                 </div>
 
                 <div className="min-w-0">
-                  <p className="text-sm font-medium text-muted-foreground">
+                  <p className="text-xs font-medium text-muted-foreground">
                     {item.label}
                   </p>
 
-                  <p className="mt-1 text-2xl font-semibold tracking-tight tabular-nums">
+                  <p className="mt-0.5 text-lg font-semibold tracking-tight tabular-nums">
                     {item.count}
                   </p>
 
-                  <p className="mt-1 text-xs text-muted-foreground">
+                  <p className="mt-0.5 text-[11px] text-muted-foreground">
                     {item.description}
                   </p>
                 </div>

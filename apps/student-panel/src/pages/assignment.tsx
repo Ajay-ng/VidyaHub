@@ -209,7 +209,7 @@ export default function Assignments() {
           const Icon = item.icon
 
           return (
-            <Card key={item.label} className="gap-0 py-0">
+            <Card key={item.label} className="min-w-0 gap-0 py-0">
               <CardContent className="flex items-start gap-3 p-3 sm:p-4">
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-muted">
                   <Icon className={`size-5 ${item.iconClass}`} />
@@ -219,9 +219,11 @@ export default function Assignments() {
                   <p className="text-xs font-medium text-muted-foreground sm:text-sm">
                     {item.label}
                   </p>
+
                   <p className="mt-1 text-xl font-semibold tracking-tight tabular-nums sm:text-2xl">
                     {item.count}
                   </p>
+
                   <p className="mt-1 text-xs text-muted-foreground">
                     {item.description}
                   </p>
@@ -231,7 +233,6 @@ export default function Assignments() {
           )
         })}
       </div>
-
       {/* Assignment list */}
       <Card className="gap-0 py-0">
         <CardHeader className="gap-1 p-4">
