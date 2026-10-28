@@ -129,22 +129,6 @@ function SectionHeading({
       <CardDescription>{description}</CardDescription>
     </>
   );
-type DashboardCardProps = {
-  title: string
-  value: string
-  description: string
-}
-
-function DashboardCard({ title, value, description }: DashboardCardProps) {
-  return (
-    <div className="rounded-xl border bg-card p-5">
-      <h2 className="text-lg font-semibold">{title}</h2>
-
-      <p className="mt-3 text-3xl font-bold">{value}</p>
-
-      <p className="mt-2 text-sm text-muted-foreground">{description}</p>
-    </div>
-  )
 }
 
 // Reusable status badge
@@ -153,7 +137,7 @@ function StatusBadge({ status }: { status: string }) {
     return <Badge variant="destructive">{status}</Badge>;
   }
 
-  if (status === "Submitted") {
+  if (status === "Submitted" || status === "Completed") {
     return <Badge variant="default">{status}</Badge>;
   }
 
@@ -207,15 +191,13 @@ export default function Dashboard() {
             Welcome back! Here is your academic overview.
           </p>
         </div>
-    <div>
-      <h1 className="text-3xl font-bold">Welcome to Vidyahub</h1>
 
         <Badge
           variant="outline"
           className="self-start gap-2 px-2 py-1.5"
         >
           <CalendarCheck className="size-4 text-primary" />
-          Today's overview
+          Today&apos;s overview
         </Badge>
       </section>
 
@@ -268,6 +250,7 @@ export default function Dashboard() {
                   <p className="text-xl font-bold">
                     {attendance.percentage}%
                   </p>
+
                   <p className="text-xs text-muted-foreground">
                     Attendance
                   </p>
@@ -347,25 +330,27 @@ export default function Dashboard() {
 
       {/* Assignments */}
       <Card className="gap-3 py-4">
-<CardHeader className="px-4 py-3">
-  <div className="flex flex-col gap-2">
-    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-      <div className="space-y-1">
-        <CardTitle className="text-lg">Assignments</CardTitle>
-        <CardDescription>
-          Track your coursework and deadlines
-        </CardDescription>
-      </div>
+        <CardHeader className="px-4 py-0">
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div className="space-y-1">
+                <CardTitle className="text-lg">
+                  Assignments
+                </CardTitle>
 
-      <Badge variant="secondary" className="self-start sm:self-center">
-        {pendingAssignments} pending
-      </Badge>
-    </div>
+                <CardDescription>
+                  Track your coursework and deadlines
+                </CardDescription>
+              </div>
 
-    {/* Horizontal divider */}
-    <div className="h-px w-full bg-border" />
-  </div>
-</CardHeader>
+              <Badge variant="secondary" className="self-start sm:self-center">
+                {pendingAssignments} pending
+              </Badge>
+            </div>
+
+            <div className="h-px w-full bg-border" />
+          </div>
+        </CardHeader>
 
         <CardContent className="divide-y divide-border px-4 py-0">
           {assignments.map((assignment) => (

@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./Layout/Layout"
 import Login from "./pages/login"
 import ProtectedRoute from "./components/ProtectedRoute"
@@ -8,6 +8,15 @@ import Attendence from "./pages/attendence"
 import Assignments from "./pages/assignment"
 import Results from "./pages/exsams-results"
 
+import Layout from "./Layout/Layout";
+import Login from "./pages/login";
+import ProtectedRoute from "./components/ProtectedRoute";
+import MyClasses from "./pages/classes";
+import Attendence from "./pages/attendence";
+import Assignments from "./pages/assignment";
+import Dashboard from "./pages/dashboard";
+import LeaveRequest from "./pages/LeaveRequest";
+import EventsCalendar from "./pages/eventsCalendar";
 export default function App() {
   return (
     <BrowserRouter>
@@ -18,8 +27,33 @@ export default function App() {
         {/* Public route */}
         <Route path="/login" element={<Login />} />
 
-        {/* Protected dashboard route */}
+        {/* Protected routes */}
         <Route element={<ProtectedRoute />}>
+          <Route element={<Layout />}>
+            <Route
+              path="/dashboard"
+              element={<Dashboard />}
+            />
+            <Route
+              path="/classes"
+              element={<MyClasses />}
+            />
+            <Route
+              path="/attendance"
+              element={<Attendence />}
+            />
+            <Route
+              path="/assignments"
+              element={<Assignments />}
+            />
+            <Route
+              path="/leave-requests"
+              element={<LeaveRequest />}
+            />
+            <Route
+              path="/events"
+              element={<EventsCalendar />}
+            />
           <Route path="/" element={<Layout />}>
             <Route path="/classes" element={<MyClasses />} />
             <Route path="/attendance" element={<Attendence />} />
@@ -29,8 +63,11 @@ export default function App() {
         </Route>
 
         {/* Handle unknown URLs */}
-        <Route path="*" element={<Navigate to="/auth/login" replace />} />
+        <Route
+          path="*"
+          element={<Navigate to="/login" replace />}
+        />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
