@@ -1,3 +1,4 @@
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent } from "@/components/ui/card"
 import { SidebarTrigger } from "@/components/ui/sidebar"
@@ -13,7 +14,8 @@ function AdminHeader() {
     <header className="flex w-full items-center justify-between px-4 py-2 shadow-sm">
       <SidebarTrigger />
 
-      <div>
+      <div className="justify-cneter flex items-center gap-2">
+        <AnimatedThemeToggler />
         <Card className="border-none p-0 shadow-none">
           <CardContent className="flex items-center justify-center gap-2 p-2">
             <Avatar>

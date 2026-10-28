@@ -6,7 +6,7 @@ import AdminLayout from "./Layout/App/admin/AdminLayout"
 import AdminDashboard from "./pages/app/admin/AdminDashboard"
 import TeacherLayout from "./Layout/App/teacher/TeacherLayout"
 import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
-import TeacherAttendancePage from "./pages/app/teacher/attendance/TeacherAttendancePage";
+import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard";
 
 export function App() {
   const user = {

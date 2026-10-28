@@ -17,7 +17,7 @@ export default function AdminLayout() {
         <AdminHeader />
 
         {/* Page content */}
-        <main className="min-h-0 flex-1 overflow-y-auto p-4 md:p-6">
+        <main className="min-h-0 flex-1 overflow-y-auto p-2 md:p-4">
           <Outlet />
         </main>
 
