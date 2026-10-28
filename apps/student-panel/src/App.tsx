@@ -7,6 +7,8 @@ import MyClasses from "./pages/classes"
 import Attendence from "./pages/attendence"
 import Assignments from "./pages/assignment"
 import Results from "./pages/exsams-results"
+import QuizPage from "./pages/quiz"
+import MaterialsPage from "./pages/study-materials"
 
 import Layout from "./Layout/Layout";
 import Login from "./pages/login";
@@ -59,6 +61,8 @@ export default function App() {
             <Route path="/attendance" element={<Attendence />} />
             <Route path="/assignments" element={<Assignments />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/quiz" element={<QuizPage />} />
+            <Route path="/materials" element={<MaterialsPage />} />
           </Route>
         </Route>
 

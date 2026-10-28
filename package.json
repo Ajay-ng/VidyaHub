@@ -27,5 +27,10 @@
     "version:patch": "npm version patch --workspace=apps/admin-panel --workspace=apps/student-panel --workspace=admin-desktop --workspace=student-desktop --workspace=apps/backend --no-git-tag-version",
     "version:minor": "npm version minor --workspace=apps/admin-panel --workspace=apps/student-panel --workspace=admin-desktop --workspace=student-desktop --workspace=apps/backend --no-git-tag-version",
     "version:major": "npm version major --workspace=apps/admin-panel --workspace=apps/student-panel --workspace=admin-desktop --workspace=student-desktop --workspace=apps/backend --no-git-tag-version"
+  },
+  "dependencies": {
+    "lucide-react": "^1.63.0",
+    "react-icons": "^5.7.0",
+    "sonner": "^2.0.8"
   }
 }
