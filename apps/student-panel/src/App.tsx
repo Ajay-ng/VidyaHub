@@ -1,5 +1,12 @@
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./Layout/Layout"
+import Login from "./pages/login"
+import ProtectedRoute from "./components/ProtectedRoute"
+import MyClasses from "./pages/classes"
+import Attendence from "./pages/attendence"
+import Assignments from "./pages/assignment"
+import Results from "./pages/exsams-results"
 
 import Layout from "./Layout/Layout";
 import Login from "./pages/login";
@@ -47,6 +54,11 @@ export default function App() {
               path="/events"
               element={<EventsCalendar />}
             />
+          <Route path="/" element={<Layout />}>
+            <Route path="/classes" element={<MyClasses />} />
+            <Route path="/attendance" element={<Attendence />} />
+            <Route path="/assignments" element={<Assignments />} />
+            <Route path="/results" element={<Results />} />
           </Route>
         </Route>
 
