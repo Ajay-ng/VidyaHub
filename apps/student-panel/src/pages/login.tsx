@@ -105,6 +105,7 @@ export default function Login() {
 
             <p className="text-center text-xs text-muted-foreground">
               Having trouble signing in? Contact your school administrator.
+              
             </p>
           </form>
         </CardContent>

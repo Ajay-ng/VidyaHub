@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
   BookOpen,
@@ -11,9 +11,7 @@ import {
   ClipboardCheck,
   Settings,
   LogOut,
-} from "lucide-react"
-
-import { useLocation, useNavigate } from "react-router-dom"
+} from "lucide-react";
 
 import {
   Sidebar as ShadcnSidebar,
@@ -36,19 +34,31 @@ const navigation = [
   { label: "Quiz", path: "/quiz", icon: ListChecks },
   { label: "Study Materials", path: "/materials", icon: BookOpen },
   { label: "Events & Calendar", path: "/events", icon: CalendarDays },
-  { label: "Leave Requests", path: "/leave-requests", icon: ClipboardCheck },
-]
+  {
+    label: "Leave Requests",
+    path: "/leave-requests",
+    icon: ClipboardCheck,
+  },
+];
 
 export default function Sidebar() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   function handleLogout() {
     localStorage.removeItem("isLoggedIn");
     navigate("/login", { replace: true });
   }
 
+  const activeClass =
+    "bg-blue-600 font-medium text-white hover:bg-blue-700 hover:text-white";
+
+  const inactiveClass =
+    "text-foreground hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-950 dark:hover:text-blue-300";
+
   return (
-    <ShadcnSidebar collapsible="icon"  className="pb-12">
+    <ShadcnSidebar collapsible="icon" className="pb-12">
+      {/* Sidebar header */}
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -56,6 +66,11 @@ export default function Sidebar() {
               size="lg"
               tooltip="Vidyahub"
               onClick={() => navigate("/dashboard")}
+              className={
+                location.pathname === "/dashboard"
+                  ? activeClass
+                  : inactiveClass
+              }
             >
               <GraduationCap className="size-6" />
               <span className="font-bold">Vidyahub</span>
@@ -71,25 +86,22 @@ export default function Sidebar() {
 
           <SidebarMenu>
             {navigation.map((item) => {
-              const Icon = item.icon
-              const isActive = location.pathname === item.path
+              const Icon = item.icon;
+
+              const isActive = location.pathname === item.path;
 
               return (
                 <SidebarMenuItem key={item.path}>
                   <SidebarMenuButton
                     tooltip={item.label}
                     onClick={() => navigate(item.path)}
-                    className={
-                      isActive
-                        ? "bg-sidebar-accent font-medium text-sidebar-accent-foreground"
-                        : ""
-                    }
+                    className={isActive ? activeClass : inactiveClass}
                   >
                     <Icon />
                     <span>{item.label}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-              )
+              );
             })}
           </SidebarMenu>
         </SidebarGroup>
@@ -99,26 +111,27 @@ export default function Sidebar() {
       <SidebarFooter>
         <SidebarMenu>
           {/* Settings */}
-          <SidebarMenuItem>
+          {/* <SidebarMenuItem>
             <SidebarMenuButton
               tooltip="Settings"
               onClick={() => navigate("/settings")}
               className={
                 location.pathname === "/settings"
-                  ? "bg-sidebar-accent font-medium text-sidebar-accent-foreground"
-                  : ""
+                  ? activeClass
+                  : inactiveClass
               }
             >
               <Settings />
               <span>Settings</span>
             </SidebarMenuButton>
-          </SidebarMenuItem>
+          </SidebarMenuItem> */}
 
           {/* Logout */}
           <SidebarMenuItem>
             <SidebarMenuButton
               tooltip="Logout"
               onClick={handleLogout}
+              className={inactiveClass}
             >
               <LogOut />
               <span>Logout</span>
@@ -127,5 +140,5 @@ export default function Sidebar() {
         </SidebarMenu>
       </SidebarFooter>
     </ShadcnSidebar>
-  )
+  );
 }
