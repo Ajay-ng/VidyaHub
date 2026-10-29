@@ -6,11 +6,14 @@ import AdminLayout from "./Layout/App/admin/AdminLayout"
 import AdminDashboard from "./pages/app/admin/AdminDashboard"
 import TeacherLayout from "./Layout/App/teacher/TeacherLayout"
 import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
-import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard";
+import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard"
+import StudentManagement from "./pages/app/admin/AcademicManagement/StudentManagement"
+import Classes from "./pages/app/admin/AcademicManagement/ClassesManagement"
+import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
 
 export function App() {
   const user = {
-    role: "teacher" as "admin" | "teacher",
+    role: "admin" as "admin" | "teacher",
   }
   const isAuthenticated = true
 
@@ -41,18 +44,22 @@ export function App() {
           <Route path="login" element={<Login />} />
         </Route>
 
+        {/*ADMIN ROUTES*/}
         <Route path="admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
+          <Route
+            path="/admin/student-management"
+            element={<StudentManagement />}
+          />
+          <Route path="/admin/classes" element={<Classes />} />
+          <Route path="/admin/subjects" element={<SubjectManagement />} />
           {/* <Route path="reports" element={<AdminReports />} /> */}
         </Route>
 
+        {/*STUDENT ROUTES*/}
         <Route path="teacher" element={<TeacherLayout />}>
           <Route path="dashboard" element={<TeacherDashboard />} />
-           <Route
-          path="attendance"
-          element={<TeacherAttendancePage />}
-        />
-
+          <Route path="attendance" element={<TeacherAttendancePage />} />
         </Route>
       </Route>
     </Routes>
