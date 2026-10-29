@@ -7,10 +7,11 @@ import AdminDashboard from "./pages/app/admin/AdminDashboard"
 import TeacherLayout from "./Layout/App/teacher/TeacherLayout"
 import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
 import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard";
-
+import TeachersManagement from "./pages/app/admin/AcademicManagement/TeachersManagement"
+import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManagement"
 export function App() {
   const user = {
-    role: "teacher" as "admin" | "teacher",
+    role: "admin" as "admin" | "teacher",
   }
   const isAuthenticated = true
 
@@ -44,6 +45,8 @@ export function App() {
         <Route path="admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
           {/* <Route path="reports" element={<AdminReports />} /> */}
+          <Route path="/admin/teachers" element={<TeachersManagement />} />
+          <Route path="/admin/library" element={<LibraryManagement/>}/>
         </Route>
 
         <Route path="teacher" element={<TeacherLayout />}>
