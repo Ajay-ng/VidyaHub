@@ -73,10 +73,10 @@ export function UpcomingEvents() {
         {events.map((event) => (
           <div
             key={event.id}
-            className="flex items-start justify-between rounded-lg border p-4 transition-all hover:bg-slate-50"
+            className="flex items-start justify-between  border p-4 transition-all"
           >
             <div className="flex gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+              <div className="flex h-11 w-11 items-center justify-center  bg-blue-100 text-blue-600">
                 <CalendarDays className="h-5 w-5" />
               </div>
 

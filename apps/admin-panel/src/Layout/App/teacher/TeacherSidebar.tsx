@@ -54,7 +54,7 @@ const menuItems = [
 
 export default function TeacherSidebar() {
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar>
       <SidebarHeader className=" px-4 py-5">
         <div className="flex items-center gap-3">
           <div className="rounded-lg bg-sky-600 p-2 text-white">
@@ -70,7 +70,7 @@ export default function TeacherSidebar() {
         </div>
       </SidebarHeader>
 
-      <SidebarContent className="py-4">
+      <SidebarContent className="py-4 text-sm">
         <SidebarMenu>
           {menuItems.map((item) => (
             <SidebarMenuItem key={item.title}>
@@ -79,7 +79,7 @@ export default function TeacherSidebar() {
                 className={({ isActive }) =>
                   `flex items-center gap-3 rounded-lg px-3 py-2 mx-2 transition ${
                     isActive
-                      ? "bg-sky-600 text-white"
+                      ? "bg-sky-600 text-white "
                       : "hover:bg-slate-100 dark:hover:bg-slate-800"
                   }`
                 }

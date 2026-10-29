@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 
 import {
   Card,
@@ -53,7 +53,7 @@ const students = [
   },
 ];
 
-type AttendanceStatus = "Present" | "Absent" | "Late";
+type AttendanceStatus = "Present" | "Absent" | "";
 
 export function AttendanceTable() {
   const [attendance, setAttendance] = useState<
@@ -73,9 +73,7 @@ export function AttendanceTable() {
   return (
     <Card className="border shadow-sm">
       <CardHeader>
-        <CardTitle>
-          Student Attendance
-        </CardTitle>
+        <CardTitle>Student Attendance</CardTitle>
       </CardHeader>
 
       <CardContent>
@@ -89,9 +87,17 @@ export function AttendanceTable() {
 
                 <TableHead>Gender</TableHead>
 
-                <TableHead>Status</TableHead>
+                <TableHead className="w-24 text-center">
+                  Present
+                </TableHead>
 
-                <TableHead>Remarks</TableHead>
+                <TableHead className="w-24 text-center">
+                  Absent
+                </TableHead>
+
+                <TableHead className="w-32 text-center">
+                  Status
+                </TableHead>
               </TableRow>
             </TableHeader>
 
@@ -123,66 +129,70 @@ export function AttendanceTable() {
                     {student.gender}
                   </TableCell>
 
-                  <TableCell>
-                    <div className="flex gap-2">
-                      <Badge
-                        onClick={() =>
+                  {/* Present Checkbox */}
+                  <TableCell className="w-24">
+                    <div className="flex items-center justify-center">
+                      <Checkbox
+                        checked={
+                          attendance[student.id] ===
+                          "Present"
+                        }
+                        onCheckedChange={() =>
                           updateAttendance(
                             student.id,
                             "Present"
                           )
                         }
-                        className={`cursor-pointer ${
-                          attendance[student.id] ===
-                          "Present"
-                            ? "bg-green-600"
-                            : "bg-green-100 text-green-700 hover:bg-green-200"
-                        }`}
-                      >
-                        Present
-                      </Badge>
+                      />
+                    </div>
+                  </TableCell>
 
-                      <Badge
-                        onClick={() =>
+                  {/* Absent Checkbox */}
+                  <TableCell className="w-24">
+                    <div className="flex items-center justify-center">
+                      <Checkbox
+                        checked={
+                          attendance[student.id] ===
+                          "Absent"
+                        }
+                        onCheckedChange={() =>
                           updateAttendance(
                             student.id,
                             "Absent"
                           )
                         }
-                        className={`cursor-pointer ${
-                          attendance[student.id] ===
-                          "Absent"
-                            ? "bg-red-600"
-                            : "bg-red-100 text-red-700 hover:bg-red-200"
-                        }`}
-                      >
-                        Absent
-                      </Badge>
-
-                      <Badge
-                        onClick={() =>
-                          updateAttendance(
-                            student.id,
-                            "Late"
-                          )
-                        }
-                        className={`cursor-pointer ${
-                          attendance[student.id] ===
-                          "Late"
-                            ? "bg-yellow-500 text-white"
-                            : "bg-yellow-100 text-yellow-700 hover:bg-yellow-200"
-                        }`}
-                      >
-                        Late
-                      </Badge>
+                      />
                     </div>
                   </TableCell>
 
-                  <TableCell>
-                    <Input
-                      placeholder="Remarks..."
-                    />
-                  </TableCell>
+                  {/* Status */}
+                  <TableCell className="text-center capitalize">
+  {attendance[student.id] === "Present" ? (
+    <Badge
+      variant="outline"
+      className="border-green-600 bg-green-50 text-green-700"
+    >
+      Present
+    </Badge>
+  ) : attendance[student.id] === "Absent" ? (
+    <Badge
+      variant="outline"
+      className="border-red-600 bg-red-50 text-red-700"
+    >
+      Absent
+    </Badge>
+  ) : (
+    <Badge
+      variant="secondary"
+      className="bg-gray-100 text-gray-600"
+    >
+      Not Marked
+    </Badge>
+  )}
+</TableCell>
+                  
+                     
+                     
                 </TableRow>
               ))}
             </TableBody>

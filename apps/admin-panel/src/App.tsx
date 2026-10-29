@@ -6,6 +6,18 @@ import AdminLayout from "./Layout/App/admin/AdminLayout"
 import AdminDashboard from "./pages/app/admin/AdminDashboard"
 import TeacherLayout from "./Layout/App/teacher/TeacherLayout"
 import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
+import TeacherAttendancePage from "./pages/app/teacher/attendance/TeacherAttendancePage";
+import TeacherStudentsPage from "@/pages/app/teacher/students/TeacherStudentsPage";
+import StudentDetailsPage from "./pages/app/teacher/students/StudentDetailsPage";
+import TeacherAssignmentsPage from "./pages/app/teacher/assignments/TeacherAssignmentsPage";
+import AssignmentDetailsPage from "./pages/app/teacher/assignments/AssignmentDetailsPage";
+import TeacherEditAssignmentPage from "./pages/app/teacher/assignments/TeacherEditAssignmentPage";
+import TeacherDeleteAssignmentPage from "./pages/app/teacher/assignments/TeacherDeleteAssignmentPage";
+import CreateAssignmentPage from "./pages/app/teacher/assignments/CreateAssignmentPage";
+import TeacherTimetablePage from "./pages/app/teacher/timetable/TeacherTimetablePage";
+import TeacherProfilePage from "./pages/app/teacher/profile/TeacherProfilePage";
+
+
 import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard"
 import StudentManagement from "./pages/app/admin/AcademicManagement/StudentManagement"
 import Classes from "./pages/app/admin/AcademicManagement/ClassesManagement"
@@ -84,6 +96,56 @@ export function App() {
         {/*STUDENT ROUTES*/}
         <Route path="teacher" element={<TeacherLayout />}>
           <Route path="dashboard" element={<TeacherDashboard />} />
+           <Route
+          path="attendance"
+          element={<TeacherAttendancePage />}
+        />
+         <Route
+            path="students"
+            element={<TeacherStudentsPage />}
+          />
+          <Route
+  path="/teacher/students/:id"
+  element={<StudentDetailsPage />}
+/>
+ <Route
+  path="students/:id"
+  element={<StudentDetailsPage />}
+/>
+
+<Route
+  path="assignments"
+  element={<TeacherAssignmentsPage />}
+/>
+
+<Route
+  path="assignments/details"
+  element={<AssignmentDetailsPage />}
+/>
+
+<Route
+  path="assignments/edit"
+  element={<TeacherEditAssignmentPage />}
+/>
+<Route
+  path="assignments/delete"
+  element={<TeacherDeleteAssignmentPage />}
+/>
+
+<Route
+  path="assignments/create"
+  element={<CreateAssignmentPage />}
+/>
+<Route
+  path="timetable"
+  element={<TeacherTimetablePage />}
+/>
+<Route
+  path="profile"
+  element={<TeacherProfilePage />}
+/>
+
+   </Route>
           <Route path="attendance" element={<TeacherAttendancePage />} />
         </Route>
       </Route>

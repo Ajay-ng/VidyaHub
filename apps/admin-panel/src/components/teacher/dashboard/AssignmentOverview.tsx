@@ -53,7 +53,9 @@ export function AssignmentOverview() {
           </p>
         </div>
 
-        <Button size="sm">
+        <Button size="sm"
+         className="bg-yellow-400 hover:bg-yellow-500 text-black"
+>
           New Assignment
           <ChevronRight className="ml-1 h-4 w-4" />
         </Button>
@@ -67,7 +69,7 @@ export function AssignmentOverview() {
           return (
             <div
               key={assignment.title}
-              className="rounded-lg border p-4 transition-all hover:bg-slate-50"
+              className=" border p-4 transition-all "
             >
               <div className="flex items-start justify-between">
                 <div className="space-y-1">
