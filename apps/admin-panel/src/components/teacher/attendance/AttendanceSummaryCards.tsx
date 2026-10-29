@@ -64,7 +64,7 @@ export function AttendanceSummaryCards() {
               </div>
 
               <div
-                className={`flex h-12 w-12 items-center justify-center rounded-lg ${item.iconBg}`}
+                className={`flex h-10 w-10 items-center justify-center  ${item.iconBg}`}
               >
                 <Icon
                   className={`h-6 w-6 ${item.iconColor}`}

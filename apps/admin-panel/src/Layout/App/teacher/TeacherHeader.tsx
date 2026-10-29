@@ -9,7 +9,7 @@ export default function TeacherHeader() {
   };
 
   return (
-    <header className="flex h-16 w-full items-center justify-between border-b bg-background px-6">
+    <header className="sticky top-0 z-50 flex h-16 w-full items-center justify-between border-b bg-background px-6">
       {/* Left Section */}
       <div className="flex items-center gap-3">
         <SidebarTrigger />

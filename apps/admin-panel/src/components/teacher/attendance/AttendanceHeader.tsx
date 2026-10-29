@@ -26,7 +26,7 @@ export function AttendanceHeader() {
           </p>
         </div>
 
-        <div className="rounded-lg border px-4 py-3">
+        <div className="border px-4 py-3">
           <div className="flex items-center gap-2">
             <CalendarDays className="h-4 w-4 text-blue-600" />
 

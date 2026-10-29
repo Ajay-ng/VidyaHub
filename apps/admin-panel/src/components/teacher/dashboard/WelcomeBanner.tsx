@@ -21,13 +21,13 @@ export function WelcomeBanner() {
   });
 
   return (
-    <Card className="-mt-3 border border-slate-200 shadow-sm">
+    <Card className="-mt-3  shadow-sm">
       <CardContent className="flex flex-col gap-4 p-4 lg:flex-row lg:items-center lg:justify-between ">
         {/* Left */}
         <div className="space-y-2">
           <Badge
             variant="secondary"
-            className="w-fit gap-1 rounded-md px-2 py-1 text-xs"
+            className="w-fit gap-1 px-2 py-1 text-xs"
           >
             <Sparkles className="h-3 w-3" />
             Teacher Dashboard
@@ -46,17 +46,17 @@ export function WelcomeBanner() {
 
         {/* Right */}
         <div className="flex flex-wrap items-center gap-2">
-          <div className="flex items-center gap-2 rounded-md border bg-slate-50 px-3 py-2 text-sm text-slate-600">
+          <div className="flex items-center gap-2  border bg-slate-50 px-3 py-2 text-sm text-slate-600">
             <CalendarDays className="h-4 w-4" />
             {currentDate}
           </div>
 
-          <div className="flex items-center gap-2 rounded-md border bg-slate-50 px-3 py-2 text-sm text-slate-600">
+          <div className="flex items-center gap-2 border bg-slate-50 px-3 py-2 text-sm text-slate-600">
             <Clock3 className="h-4 w-4" />
             {currentTime}
           </div>
 
-          <Button className="bg-yellow-300 text-black px-5 hover:bg-yallow-700">
+          <Button className="bg-yellow-400 text-black px-5 hover:bg-yellow-500">
             View Schedule
           </Button>
         </div>

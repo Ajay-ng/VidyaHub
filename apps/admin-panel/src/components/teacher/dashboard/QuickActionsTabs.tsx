@@ -38,7 +38,7 @@ export function QuickActions() {
             <Button
               key={action.title}
               variant="outline"
-              className="group flex flex-1 min-w-[180px] items-center justify-center gap-2  border border-slate-200  px-4 py-3 transition-all duration-200 capitalize"
+              className="group flex flex-1 min-w-[180px] items-center justify-center gap-2  border   px-4 py-3 transition-all duration-200 capitalize"
             >
               <Icon className="h-5 w-5 text-blue-600" />
 
