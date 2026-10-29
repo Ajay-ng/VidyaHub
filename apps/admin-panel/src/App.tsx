@@ -10,6 +10,8 @@ import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard"
 import StudentManagement from "./pages/app/admin/AcademicManagement/StudentManagement"
 import Classes from "./pages/app/admin/AcademicManagement/ClassesManagement"
 // import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
+import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
+import ResultsGrades from "./pages/app/admin/AcademicManagement/ResultsAndGrades"
 import TeachersManagement from "./pages/app/admin/AcademicManagement/TeachersManagement"
 import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManagement"
 import TimetableManagement from "./pages/app/admin/AcademicManagement/TimeTableManagement"
@@ -64,6 +66,8 @@ export function App() {
             path="/admin/examinations"
             element={<ExaminationManagement />}
           />
+          <Route path="/admin/library" element={<LibraryManagement/>}/>
+          <Route path="/admin/results" element={<ResultsGrades/>}/>
         </Route>
 
         {/*STUDENT ROUTES*/}
