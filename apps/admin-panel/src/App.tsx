@@ -31,6 +31,9 @@ import TimetableManagement from "./pages/app/admin/AcademicManagement/TimeTableM
 import ExaminationManagement from "./pages/app/admin/AcademicManagement/ExaminationManagement"
 import FeesManagement from "./pages/app/admin/FinanceManagement/FeesManagement"
 import Payments from "./pages/app/admin/FinanceManagement/Payments"
+import Transport from "./pages/app/admin/Attendance & Activities/Transport"
+import Assignments from "./pages/app/admin/Attendance & Activities/Assignments"
+import Attendance from "./pages/app/admin/Attendance & Activities/Attendance"
 export function App() {
   const user = {
     role: "admin" as "admin" | "teacher",
@@ -91,6 +94,11 @@ export function App() {
           {/* FESS MANAGEMENT */}
           <Route path="/admin/fees" element={<FeesManagement />} />
           <Route path="/admin/payments" element={<Payments />} />
+
+          {/* Attendance & Activities */}
+          <Route path="/admin/transport" element={<Transport/>}/>
+          <Route path="/admin/attendance" element={<Attendance/>}/>
+          <Route path="/admin/assignments" element={<Assignments/>}/>
         </Route>
 
         {/*STUDENT ROUTES*/}
