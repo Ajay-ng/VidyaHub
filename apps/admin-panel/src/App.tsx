@@ -13,6 +13,7 @@ import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManag
 import ResultsGrades from "./pages/app/admin/AcademicManagement/ResultsAndGrades"
 import TeachersManagement from "./pages/app/admin/AcademicManagement/TeachersManagement"
 import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManagement"
+import ParentsGuardians from "./pages/app/admin/PeopleManagment/parentsManagement"
 export function App() {
   const user = {
     role: "admin" as "admin" | "teacher",
@@ -59,6 +60,7 @@ export function App() {
           <Route path="/admin/teachers" element={<TeachersManagement />} />
           <Route path="/admin/library" element={<LibraryManagement/>}/>
           <Route path="/admin/results" element={<ResultsGrades/>}/>
+          <Route path="/admin/parents" element={<ParentsGuardians/>}/>
         </Route>
 
         {/*STUDENT ROUTES*/}
