@@ -17,6 +17,8 @@ import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManag
 import ParentsGuardians from "./pages/app/admin/PeopleManagment/parentsManagement"
 import TimetableManagement from "./pages/app/admin/AcademicManagement/TimeTableManagement"
 import ExaminationManagement from "./pages/app/admin/AcademicManagement/ExaminationManagement"
+import FeesManagement from "./pages/app/admin/FinanceManagement/FeesManagement"
+import Payments from "./pages/app/admin/FinanceManagement/Payments"
 export function App() {
   const user = {
     role: "admin" as "admin" | "teacher",
@@ -67,10 +69,16 @@ export function App() {
             element={<ExaminationManagement />}
           />
           <Route path="/admin/results" element={<ResultsGrades />} />
-          <Route path="/admin/parents" element={<ParentsGuardians />} />
           <Route path="/admin/library" element={<LibraryManagement />} />
           <Route path="/admin/results" element={<ResultsGrades />} />
+
+          {/* PEOPLE MANAGMENT */}
+          <Route path="/admin/parents" element={<ParentsGuardians />} />
           <Route path="/admin/staff" element={<StaffManagement />} />
+
+          {/* FESS MANAGEMENT */}
+          <Route path="/admin/fees" element={<FeesManagement />} />
+          <Route path="/admin/payments" element={<Payments />} />
         </Route>
 
         {/*STUDENT ROUTES*/}
