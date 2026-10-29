@@ -56,11 +56,11 @@ function AdminSidebar() {
           url: "/admin/dashboard",
           icon: LayoutDashboard,
         },
-        {
-          title: "Analytics & Reports",
-          url: "/admin/reports",
-          icon: BarChart3,
-        },
+        // {
+        //   title: "Analytics & Reports",
+        //   url: "/admin/reports",
+        //   icon: BarChart3,
+        // },
       ],
     },
     {
