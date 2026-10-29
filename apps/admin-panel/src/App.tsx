@@ -18,9 +18,22 @@ import TeacherTimetablePage from "./pages/app/teacher/timetable/TeacherTimetable
 import TeacherProfilePage from "./pages/app/teacher/profile/TeacherProfilePage";
 
 
+import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard"
+import StudentManagement from "./pages/app/admin/AcademicManagement/StudentManagement"
+import Classes from "./pages/app/admin/AcademicManagement/ClassesManagement"
+// import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
+import StaffManagement from "./pages/app/admin/PeopleManagment/StaffManagement"
+import ResultsGrades from "./pages/app/admin/AcademicManagement/ResultsAndGrades"
+import TeachersManagement from "./pages/app/admin/AcademicManagement/TeachersManagement"
+import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManagement"
+import ParentsGuardians from "./pages/app/admin/PeopleManagment/parentsManagement"
+import TimetableManagement from "./pages/app/admin/AcademicManagement/TimeTableManagement"
+import ExaminationManagement from "./pages/app/admin/AcademicManagement/ExaminationManagement"
+import FeesManagement from "./pages/app/admin/FinanceManagement/FeesManagement"
+import Payments from "./pages/app/admin/FinanceManagement/Payments"
 export function App() {
   const user = {
-    role: "teacher" as "admin" | "teacher",
+    role: "admin" as "admin" | "teacher",
   }
   const isAuthenticated = true
 
@@ -51,11 +64,36 @@ export function App() {
           <Route path="login" element={<Login />} />
         </Route>
 
+        {/*ADMIN ROUTES*/}
         <Route path="admin" element={<AdminLayout />}>
           <Route path="dashboard" element={<AdminDashboard />} />
+          <Route
+            path="/admin/student-management"
+            element={<StudentManagement />}
+          />
+          <Route path="/admin/classes" element={<Classes />} />
+          {/* <Route path="/admin/subjects" element={<SubjectManagement />} /> */}
           {/* <Route path="reports" element={<AdminReports />} /> */}
+          <Route path="/admin/teachers" element={<TeachersManagement />} />
+          <Route path="/admin/timetable" element={<TimetableManagement />} />
+          <Route
+            path="/admin/examinations"
+            element={<ExaminationManagement />}
+          />
+          <Route path="/admin/results" element={<ResultsGrades />} />
+          <Route path="/admin/library" element={<LibraryManagement />} />
+          <Route path="/admin/results" element={<ResultsGrades />} />
+
+          {/* PEOPLE MANAGMENT */}
+          <Route path="/admin/parents" element={<ParentsGuardians />} />
+          <Route path="/admin/staff" element={<StaffManagement />} />
+
+          {/* FESS MANAGEMENT */}
+          <Route path="/admin/fees" element={<FeesManagement />} />
+          <Route path="/admin/payments" element={<Payments />} />
         </Route>
 
+        {/*STUDENT ROUTES*/}
         <Route path="teacher" element={<TeacherLayout />}>
           <Route path="dashboard" element={<TeacherDashboard />} />
            <Route
@@ -108,6 +146,8 @@ export function App() {
 />
 
    </Route>
+          <Route path="attendance" element={<TeacherAttendancePage />} />
+        </Route>
       </Route>
     </Routes>
   )
