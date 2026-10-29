@@ -186,11 +186,11 @@ function AdminSidebar() {
           url: "/admin/roles",
           icon: ShieldCheck,
         },
-        {
-          title: "Settings",
-          url: "/admin/settings",
-          icon: Settings,
-        },
+        // {
+        //   title: "Settings",
+        //   url: "/admin/settings",
+        //   icon: Settings,
+        // },
       ],
     },
   ]

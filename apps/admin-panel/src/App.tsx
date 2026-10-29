@@ -22,6 +22,8 @@ import Payments from "./pages/app/admin/FinanceManagement/Payments"
 import Transport from "./pages/app/admin/Attendance & Activities/Transport"
 import Assignments from "./pages/app/admin/Attendance & Activities/Assignments"
 import Attendance from "./pages/app/admin/Attendance & Activities/Attendance"
+import RolesPermissions from "./pages/app/admin/AdministrationManagement/roles&Permission"
+import UserManagement from "./pages/app/admin/AdministrationManagement/userManagement"
 export function App() {
   const user = {
     role: "admin" as "admin" | "teacher",
@@ -87,6 +89,10 @@ export function App() {
           <Route path="/admin/transport" element={<Transport/>}/>
           <Route path="/admin/attendance" element={<Attendance/>}/>
           <Route path="/admin/assignments" element={<Assignments/>}/>
+
+          {/* AdministrationManagement */}
+          <Route path="/admin/roles" element={<RolesPermissions/>}/>
+          <Route path="/admin/users" element={<UserManagement/>}/>
         </Route>
 
         {/*STUDENT ROUTES*/}
