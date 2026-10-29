@@ -14,6 +14,7 @@ import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManag
 import ResultsGrades from "./pages/app/admin/AcademicManagement/ResultsAndGrades"
 import TeachersManagement from "./pages/app/admin/AcademicManagement/TeachersManagement"
 import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManagement"
+import ParentsGuardians from "./pages/app/admin/PeopleManagment/parentsManagement"
 import TimetableManagement from "./pages/app/admin/AcademicManagement/TimeTableManagement"
 import ExaminationManagement from "./pages/app/admin/AcademicManagement/ExaminationManagement"
 export function App() {
@@ -68,6 +69,7 @@ export function App() {
           />
           <Route path="/admin/library" element={<LibraryManagement/>}/>
           <Route path="/admin/results" element={<ResultsGrades/>}/>
+          <Route path="/admin/parents" element={<ParentsGuardians/>}/>
         </Route>
 
         {/*STUDENT ROUTES*/}
