@@ -9,11 +9,11 @@ import TeacherDashboard from "./pages/app/teacher/TeacherDashboard"
 import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard"
 import StudentManagement from "./pages/app/admin/AcademicManagement/StudentManagement"
 import Classes from "./pages/app/admin/AcademicManagement/ClassesManagement"
-import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
-
-import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard";
+// import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
 import TeachersManagement from "./pages/app/admin/AcademicManagement/TeachersManagement"
 import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManagement"
+import TimetableManagement from "./pages/app/admin/AcademicManagement/TimeTableManagement"
+import ExaminationManagement from "./pages/app/admin/AcademicManagement/ExaminationManagement"
 export function App() {
   const user = {
     role: "admin" as "admin" | "teacher",
@@ -55,13 +55,19 @@ export function App() {
             element={<StudentManagement />}
           />
           <Route path="/admin/classes" element={<Classes />} />
-          <Route path="/admin/subjects" element={<SubjectManagement />} />
+          {/* <Route path="/admin/subjects" element={<SubjectManagement />} /> */}
           {/* <Route path="reports" element={<AdminReports />} /> */}
           <Route path="/admin/teachers" element={<TeachersManagement />} />
-          <Route path="/admin/library" element={<LibraryManagement/>}/>
+          <Route path="/admin/timetable" element={<TimetableManagement />} />
+          <Route path="/admin/library" element={<LibraryManagement />} />
+          <Route
+            path="/admin/examinations"
+            element={<ExaminationManagement />}
+          />
         </Route>
 
         {/*STUDENT ROUTES*/}
+
         <Route path="teacher" element={<TeacherLayout />}>
           <Route path="dashboard" element={<TeacherDashboard />} />
           <Route path="attendance" element={<TeacherAttendancePage />} />

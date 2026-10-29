@@ -81,11 +81,11 @@ function AdminSidebar() {
           url: "/admin/classes",
           icon: School,
         },
-        {
-          title: "Subjects",
-          url: "/admin/subjects",
-          icon: BookOpen,
-        },
+        // {
+        //   title: "Subjects",
+        //   url: "/admin/subjects",
+        //   icon: BookOpen,
+        // },
         {
           title: "Timetable",
           url: "/admin/timetable",
