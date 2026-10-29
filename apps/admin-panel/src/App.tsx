@@ -10,7 +10,7 @@ import TeacherAttendancePage from "./pages/app/teacher/TeacherDashboard"
 import StudentManagement from "./pages/app/admin/AcademicManagement/StudentManagement"
 import Classes from "./pages/app/admin/AcademicManagement/ClassesManagement"
 // import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
-import SubjectManagement from "./pages/app/admin/AcademicManagement/SubjectManagement"
+
 import ResultsGrades from "./pages/app/admin/AcademicManagement/ResultsAndGrades"
 import TeachersManagement from "./pages/app/admin/AcademicManagement/TeachersManagement"
 import LibraryManagement from "./pages/app/admin/AcademicManagement/LibraryManagement"
@@ -62,18 +62,17 @@ export function App() {
           {/* <Route path="reports" element={<AdminReports />} /> */}
           <Route path="/admin/teachers" element={<TeachersManagement />} />
           <Route path="/admin/timetable" element={<TimetableManagement />} />
-          <Route path="/admin/library" element={<LibraryManagement />} />
           <Route
             path="/admin/examinations"
             element={<ExaminationManagement />}
           />
-          <Route path="/admin/library" element={<LibraryManagement/>}/>
-          <Route path="/admin/results" element={<ResultsGrades/>}/>
-          <Route path="/admin/parents" element={<ParentsGuardians/>}/>
+          <Route path="/admin/results" element={<ResultsGrades />} />
+          <Route path="/admin/parents" element={<ParentsGuardians />} />
+          <Route path="/admin/library" element={<LibraryManagement />} />
+          <Route path="/admin/results" element={<ResultsGrades />} />
         </Route>
 
         {/*STUDENT ROUTES*/}
-
         <Route path="teacher" element={<TeacherLayout />}>
           <Route path="dashboard" element={<TeacherDashboard />} />
           <Route path="attendance" element={<TeacherAttendancePage />} />
