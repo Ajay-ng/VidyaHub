@@ -27,6 +27,8 @@ import Payments from "./pages/app/admin/FinanceManagement/Payments"
 import Transport from "./pages/app/admin/Attendance & Activities/Transport"
 import Assignments from "./pages/app/admin/Attendance & Activities/Assignments"
 import Attendance from "./pages/app/admin/Attendance & Activities/Attendance"
+import RolesPermissions from "./pages/app/admin/AdministrationManagement/roles&Permission"
+import UserManagement from "./pages/app/admin/AdministrationManagement/userManagement"
 
 import AnnouncementManagement from "./pages/app/admin/CommunicationManagement/AnnouncementsManagement"
 import MessageManagement from "./pages/app/admin/CommunicationManagement/MessageManagement"
@@ -104,6 +106,13 @@ export function App() {
           <Route path="payments" element={<Payments />} />
 
           {/* Attendance & Activities */}
+          <Route path="/admin/transport" element={<Transport/>}/>
+          <Route path="/admin/attendance" element={<Attendance/>}/>
+          <Route path="/admin/assignments" element={<Assignments/>}/>
+
+          {/* AdministrationManagement */}
+          <Route path="/admin/roles" element={<RolesPermissions/>}/>
+          <Route path="/admin/users" element={<UserManagement/>}/>
           <Route path="transport" element={<Transport />} />
           <Route path="attendance" element={<Attendance />} />
           <Route path="assignments" element={<Assignments />} />
