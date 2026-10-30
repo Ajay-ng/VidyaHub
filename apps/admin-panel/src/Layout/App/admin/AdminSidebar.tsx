@@ -1,4 +1,3 @@
-
 import {
   Sidebar,
   SidebarContent,
@@ -205,9 +204,7 @@ function AdminSidebar() {
       <SidebarContent>
         {adminSidebarOptions.map((group) => (
           <SidebarGroup key={group.group}>
-            <SidebarGroupLabel>
-              {group.group}
-            </SidebarGroupLabel>
+            <SidebarGroupLabel>{group.group}</SidebarGroupLabel>
 
             <SidebarGroupContent>
               <SidebarMenu>
@@ -216,10 +213,7 @@ function AdminSidebar() {
 
                   return (
                     <SidebarMenuItem key={item.url}>
-                      <SidebarMenuButton
-                        asChild
-                        className="cursor-pointer"
-                      >
+                      <SidebarMenuButton className="cursor-pointer">
                         <NavLink
                           to={item.url}
                           end
@@ -245,8 +239,7 @@ function AdminSidebar() {
       </SidebarContent>
 
       {/* Footer */}
-      <SidebarFooter className="mt-auto border-t px-4 py-3 space-y-3">
-
+      <SidebarFooter className="mt-auto space-y-3 border-t px-4 py-3">
         {/* Application Version */}
         <div className="flex items-center justify-between gap-2">
           <span className="truncate text-xs text-muted-foreground">
@@ -267,7 +260,6 @@ function AdminSidebar() {
           <LogOut className="h-4 w-4" />
           <span>Logout</span>
         </button>
-
       </SidebarFooter>
     </Sidebar>
   )
