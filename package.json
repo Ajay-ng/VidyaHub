@@ -2,6 +2,9 @@
   "name": "school-management",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -33,5 +36,4 @@
     "react-icons": "^5.7.0",
     "sonner": "^2.0.8"
   }
-  
 }

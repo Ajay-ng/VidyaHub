@@ -31,7 +31,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^10",
-    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.3",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
