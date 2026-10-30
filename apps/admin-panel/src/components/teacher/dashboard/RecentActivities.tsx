@@ -82,10 +82,10 @@ export function RecentActivities() {
           return (
             <div
               key={activity.id}
-              className="flex items-start gap-4 rounded-lg border p-3 transition-all hover:bg-slate-50"
+              className="flex items-start gap-4  border p-3 transition-all"
             >
               <div
-                className={`flex h-10 w-10 items-center justify-center rounded-full ${activity.color}`}
+                className={`flex h-10 w-10 items-center justify-center ${activity.color}`}
               >
                 <Icon className="h-5 w-5" />
               </div>

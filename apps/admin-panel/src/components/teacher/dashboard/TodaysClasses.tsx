@@ -68,10 +68,10 @@ export function TodayClasses() {
         {classes.map((item, index) => (
           <div
             key={index}
-            className="flex items-center justify-between rounded-lg border p-3 transition-all hover:bg-slate-50"
+            className="flex items-center justify-between border p-3 transition-all "
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+              <div className="flex h-10 w-10 items-center justify-center bg-blue-100 text-blue-600">
                 <BookOpen className="h-5 w-5" />
               </div>
 

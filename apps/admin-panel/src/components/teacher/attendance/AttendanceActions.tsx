@@ -31,7 +31,7 @@ export function AttendanceActions() {
           Download Report
         </Button>
 
-        <Button className="w-full bg-blue-600 hover:bg-blue-700 sm:w-auto">
+        <Button className="w-full bg-yellow-400 hover:bg-yellow-500 sm:w-auto text-black">
           <CheckCircle2 className="mr-2 h-4 w-4" />
           Save Attendance
         </Button>

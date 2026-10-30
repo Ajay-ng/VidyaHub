@@ -74,7 +74,7 @@ export function StatisticsCards() {
                     </h2>
                   </div>
 
-                  <div className="rounded-md bg-blue-50 p-2 text-blue-600">
+                  <div className=" bg-blue-50 p-2 text-blue-600">
                     <Icon className="h-4 w-4" />
                   </div>
                 </div>
