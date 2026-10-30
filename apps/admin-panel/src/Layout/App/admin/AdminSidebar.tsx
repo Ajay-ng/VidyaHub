@@ -1,3 +1,4 @@
+
 import {
   Sidebar,
   SidebarContent,
@@ -25,15 +26,16 @@ import {
   Library,
   Bell,
   MessageSquare,
-  Settings,
   ShieldCheck,
   CalendarDays,
   BriefcaseBusiness,
   CreditCard,
+  LogOut,
 } from "lucide-react"
 
 import type { LucideIcon } from "lucide-react"
-import { NavLink } from "react-router"
+import { NavLink, useNavigate } from "react-router-dom"
+
 import packageJson from "../../../../package.json"
 
 interface DAS {
@@ -48,6 +50,8 @@ interface DASHBOARDPROPS {
 }
 
 function AdminSidebar() {
+  const navigate = useNavigate()
+
   const adminSidebarOptions: DASHBOARDPROPS[] = [
     {
       group: "Overview",
@@ -177,25 +181,33 @@ function AdminSidebar() {
           url: "/admin/roles",
           icon: ShieldCheck,
         },
-        {
-          title: "Settings",
-          url: "/admin/settings",
-          icon: Settings,
-        },
       ],
     },
   ]
 
+  // Logout handler
+  const handleLogout = () => {
+    localStorage.removeItem("isAuthenticated")
+    localStorage.removeItem("userRole")
+    localStorage.removeItem("userEmail")
+
+    navigate("/auth/login", { replace: true })
+  }
+
   return (
     <Sidebar>
+      {/* Header */}
       <SidebarHeader className="flex items-center justify-center p-4 shadow-sm">
-        <p>Admin Console</p>
+        <p className="font-semibold">Admin Console</p>
       </SidebarHeader>
 
+      {/* Navigation */}
       <SidebarContent>
         {adminSidebarOptions.map((group) => (
           <SidebarGroup key={group.group}>
-            <SidebarGroupLabel>{group.group}</SidebarGroupLabel>
+            <SidebarGroupLabel>
+              {group.group}
+            </SidebarGroupLabel>
 
             <SidebarGroupContent>
               <SidebarMenu>
@@ -204,7 +216,10 @@ function AdminSidebar() {
 
                   return (
                     <SidebarMenuItem key={item.url}>
-                      <SidebarMenuButton className="cursor-pointer p-0">
+                      <SidebarMenuButton
+                        asChild
+                        className="cursor-pointer"
+                      >
                         <NavLink
                           to={item.url}
                           end
@@ -229,7 +244,10 @@ function AdminSidebar() {
         ))}
       </SidebarContent>
 
-      <SidebarFooter className="mt-auto border-t px-4 py-3">
+      {/* Footer */}
+      <SidebarFooter className="mt-auto border-t px-4 py-3 space-y-3">
+
+        {/* Application Version */}
         <div className="flex items-center justify-between gap-2">
           <span className="truncate text-xs text-muted-foreground">
             School Management
@@ -239,6 +257,17 @@ function AdminSidebar() {
             v{packageJson.version}
           </span>
         </div>
+
+        {/* Logout Button */}
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-destructive transition-colors hover:bg-destructive/10"
+        >
+          <LogOut className="h-4 w-4" />
+          <span>Logout</span>
+        </button>
+
       </SidebarFooter>
     </Sidebar>
   )

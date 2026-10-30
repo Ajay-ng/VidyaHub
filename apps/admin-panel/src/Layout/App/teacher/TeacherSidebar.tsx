@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+
+import { NavLink, useNavigate } from "react-router-dom"
 import {
   LayoutDashboard,
   Users,
@@ -8,7 +9,7 @@ import {
   User,
   LogOut,
   GraduationCap,
-} from "lucide-react";
+} from "lucide-react"
 
 import {
   Sidebar,
@@ -17,7 +18,7 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from "@/components/ui/sidebar"
 
 const menuItems = [
   {
@@ -50,12 +51,25 @@ const menuItems = [
     url: "/teacher/timetable",
     icon: Calendar,
   },
-];
+]
 
 export default function TeacherSidebar() {
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    // Clear authentication details
+    localStorage.removeItem("isAuthenticated")
+    localStorage.removeItem("userRole")
+    localStorage.removeItem("userEmail")
+
+    // Redirect to login page
+    navigate("/auth/login", { replace: true })
+  }
+
   return (
     <Sidebar>
-      <SidebarHeader className=" px-4 py-5">
+      {/* Sidebar Header */}
+      <SidebarHeader className="px-4 py-5">
         <div className="flex items-center gap-3">
           <div className="rounded-lg bg-sky-600 p-2 text-white">
             <GraduationCap className="h-6 w-6" />
@@ -70,6 +84,7 @@ export default function TeacherSidebar() {
         </div>
       </SidebarHeader>
 
+      {/* Sidebar Menu */}
       <SidebarContent className="py-4 text-sm">
         <SidebarMenu>
           {menuItems.map((item) => (
@@ -77,9 +92,9 @@ export default function TeacherSidebar() {
               <NavLink
                 to={item.url}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 rounded-lg px-3 py-2 mx-2 transition ${
+                  `mx-2 flex items-center gap-3 rounded-lg px-3 py-2 transition ${
                     isActive
-                      ? "bg-sky-600 text-white "
+                      ? "bg-sky-600 text-white"
                       : "hover:bg-slate-100 dark:hover:bg-slate-800"
                   }`
                 }
@@ -92,15 +107,17 @@ export default function TeacherSidebar() {
         </SidebarMenu>
       </SidebarContent>
 
-      <SidebarFooter className=" p-4">
-        <NavLink
-          to="/auth/login"
-          className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+      {/* Logout */}
+      <SidebarFooter className="p-4">
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left transition hover:bg-slate-100 dark:hover:bg-slate-800"
         >
           <LogOut className="h-5 w-5" />
           <span>Logout</span>
-        </NavLink>
+        </button>
       </SidebarFooter>
     </Sidebar>
-  );
+  )
 }
