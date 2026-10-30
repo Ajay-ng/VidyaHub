@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "22.x",
-    "npm": ">=10"
+    "node": "22.x"
   },
   "workspaces": [
     "apps/*",
@@ -24,8 +23,8 @@
     "test:all": "npm run test --workspaces --if-present",
     "build:admin": "npm run build --workspace=apps/admin-panel",
     "build:student": "npm run build --workspace=apps/student-panel",
-    "build:admin-desktop": "npm run build --workspace=admin-desktop",
-    "build:student-desktop": "npm run build --workspace=student-desktop",
+    "build:admin-desktop": "npm run build --workspace=apps/admin-panel",
+    "build:student-desktop": "npm run build --workspace=apps/student-panel",
     "build:backend": "npm run build --workspace=apps/backend",
     "build:all": "npm run build --workspaces --if-present",
     "version:patch": "npm version patch --workspace=apps/admin-panel --workspace=apps/student-panel --workspace=admin-desktop --workspace=student-desktop --workspace=apps/backend --no-git-tag-version",
