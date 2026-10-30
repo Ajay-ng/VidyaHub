@@ -1,156 +1,131 @@
 import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from "zod"
-import { Eye, EyeOff, LoaderCircle, LockKeyhole } from "lucide-react"
+import { useNavigate } from "react-router-dom"
+import { Eye, EyeOff, GraduationCap } from "lucide-react"
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
-const loginSchema = z.object({
-  email: z.string().trim().email("Enter a valid email address"),
-  password: z.string().min(1, "Password is required"),
-})
+type Role = "admin" | "teacher"
 
-type LoginFormValues = z.infer<typeof loginSchema>
+const demoUsers = [
+  {
+    email: "admin@school.com",
+    password: "Admin@123",
+    role: "admin" as Role,
+    redirect: "/admin/dashboard",
+  },
+  {
+    email: "teacher@school.com",
+    password: "Teacher@123",
+    role: "teacher" as Role,
+    redirect: "/teacher/dashboard",
+  },
+]
 
 export default function Login() {
+  const navigate = useNavigate()
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema),
-    defaultValues: {
-      email: "",
-      password: "",
-    },
-  })
+  const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setError("")
+    setLoading(true)
 
-  async function onSubmit(data: LoginFormValues) {
-    // Connect your backend login API here.
-    console.log("Login submitted:", data.email)
+    const user = demoUsers.find(
+      (item) =>
+        item.email.toLowerCase() === email.trim().toLowerCase() &&
+        item.password === password
+    )
+
+    if (!user) {
+      setError("Invalid email or password.")
+      setLoading(false)
+      return
+    }
+
+    localStorage.setItem("isAuthenticated", "true")
+    localStorage.setItem("userRole", user.role)
+    localStorage.setItem("userEmail", user.email)
+
+    // Navigate to the correct dashboard.
+    navigate(user.redirect, { replace: true })
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-muted/40 px-4 py-10">
-      <section aria-labelledby="login-title" className="w-full max-w-md">
-        <Card className="border-border/60 shadow-lg">
-          <CardHeader className="space-y-3 text-center">
-            <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-              <LockKeyhole className="size-6" />
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="w-full max-w-md space-y-6 rounded-xl border bg-card p-8 shadow-sm">
+        <div className="text-center">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+            <GraduationCap size={30} />
+          </div>
+
+          <h1 className="text-2xl font-bold">Vidyahub</h1>
+
+          <p className="mt-2 text-sm text-muted-foreground">
+            Sign in to your school management portal
+          </p>
+        </div>
+
+        <form onSubmit={handleLogin} className="space-y-5">
+          <div className="space-y-2">
+            <Label htmlFor="email">Email address</Label>
+
+            <Input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              required
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="password">Password</Label>
+
+            <div className="relative">
+              <Input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                className="pr-10"
+                required
+              />
+
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? (
+                  <EyeOff size={18} />
+                ) : (
+                  <Eye size={18} />
+                )}
+              </button>
             </div>
+          </div>
 
-            <CardTitle id="login-title" className="text-2xl font-bold">
-              Admin Login
-            </CardTitle>
-
-            <CardDescription>
-              Sign in to access your school management dashboard.
-            </CardDescription>
-          </CardHeader>
-
-          <CardContent>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="space-y-5"
-              noValidate
-            >
-              <div className="space-y-2">
-                <Label htmlFor="email">Email address</Label>
-
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="admin@school.com"
-                  autoComplete="username"
-                  aria-invalid={Boolean(errors.email)}
-                  aria-describedby={errors.email ? "email-error" : undefined}
-                  {...register("email")}
-                />
-
-                {errors.email && (
-                  <p
-                    id="email-error"
-                    role="alert"
-                    className="text-sm text-destructive"
-                  >
-                    {errors.email.message}
-                  </p>
-                )}
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="password">Password</Label>
-                </div>
-
-                <div className="relative">
-                  <Input
-                    id="password"
-                    type={showPassword ? "text" : "password"}
-                    placeholder="Enter your password"
-                    autoComplete="current-password"
-                    className="pr-10"
-                    aria-invalid={Boolean(errors.password)}
-                    aria-describedby={
-                      errors.password ? "password-error" : undefined
-                    }
-                    {...register("password")}
-                  />
-
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword((previous) => !previous)}
-                    aria-label={
-                      showPassword ? "Hide password" : "Show password"
-                    }
-                    aria-pressed={showPassword}
-                    className="absolute top-1/2 right-3 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                  >
-                    {showPassword ? (
-                      <EyeOff className="size-4" />
-                    ) : (
-                      <Eye className="size-4" />
-                    )}
-                  </button>
-                </div>
-
-                {errors.password && (
-                  <p
-                    id="password-error"
-                    role="alert"
-                    className="text-sm text-destructive"
-                  >
-                    {errors.password.message}
-                  </p>
-                )}
-              </div>
-
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting && (
-                  <LoaderCircle className="mr-2 size-4 animate-spin" />
-                )}
-                {isSubmitting ? "Signing in..." : "Sign in"}
-              </Button>
-            </form>
-
-            <p className="mt-6 text-center text-xs text-muted-foreground">
-              Authorized administrators only.
+          {error && (
+            <p className="text-sm text-destructive" role="alert">
+              {error}
             </p>
-          </CardContent>
-        </Card>
-      </section>
-    </main>
+          )}
+
+          <Button type="submit" className="w-full" disabled={loading}>
+            {loading ? "Signing in..." : "Sign In"}
+          </Button>
+        </form>
+      </div>
+    </div>
   )
 }
