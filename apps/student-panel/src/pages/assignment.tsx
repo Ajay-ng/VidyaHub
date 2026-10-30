@@ -6,7 +6,6 @@ import {
   AlertCircle,
   Search,
   CalendarDays,
-  BookOpen,
   FileText,
 } from "lucide-react"
 

@@ -207,7 +207,7 @@ export default function MaterialsPage() {
   return (
     <>
       {/* Toast notifications */}
-      <Toaster position="justify-center" richColors />
+      <Toaster position="bottom-right" richColors />
 
       <main className="w-full min-w-0 space-y-5 overflow-x-hidden bg-background p-3 sm:space-y-6 sm:p-5 lg:p-8">
         {/* Page heading */}

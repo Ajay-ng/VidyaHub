@@ -153,9 +153,9 @@ export default function QuizPage() {
 
   const completedQuizzes = quizzes.filter((quiz) => quiz.status === "Completed")
 
-  const upcomingCount = quizzes.filter(
-    (quiz) => quiz.status === "Upcoming"
-  ).length
+  // const upcomingCount = quizzes.filter(
+  //   (quiz) => quiz.status === "Upcoming"
+  // ).length
 
   const averageScore =
     completedQuizzes.length > 0
