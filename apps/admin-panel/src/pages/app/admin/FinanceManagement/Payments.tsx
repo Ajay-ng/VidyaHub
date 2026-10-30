@@ -467,10 +467,6 @@ export default function Payments() {
     toast.success("Payment report exported successfully.")
   }
 
-  function printReceipt() {
-    window.print()
-  }
-
   return (
     <section className="w-full min-w-0 space-y-6">
       {/* Page heading */}

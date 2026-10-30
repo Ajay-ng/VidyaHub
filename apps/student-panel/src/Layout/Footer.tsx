@@ -1,6 +1,4 @@
-
-import { ExternalLink } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/separator"
 
 export default function Footer() {
   return (
@@ -14,10 +12,9 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-1 text-center transition-colors hover:text-primary"
         >
-         @ Simcasys Technology Private Limited
-          
+          @ Simcasys Technology Private Limited
         </a>
       </div>
     </footer>
-  );
+  )
 }

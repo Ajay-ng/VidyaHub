@@ -1,5 +1,4 @@
-
-import { useMemo, useState } from "react";
+import { useMemo, useState } from "react"
 import {
   ArrowLeft,
   Award,
@@ -11,12 +10,12 @@ import {
   Search,
   Users,
   XCircle,
-} from "lucide-react";
+} from "lucide-react"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Badge } from "@/components/ui/badge"
 import {
   Table,
   TableBody,
@@ -24,47 +23,43 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/table"
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "@/components/ui/dialog"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/ui/select"
 
 type Student = {
-  id: string;
-  name: string;
-  rollNumber: string;
-  admissionNumber: string;
-  marks: number;
-  maxMarks: number;
-};
+  id: string
+  name: string
+  rollNumber: string
+  admissionNumber: string
+  marks: number
+  maxMarks: number
+}
 
 type Section = {
-  name: string;
-  students: Student[];
-};
+  name: string
+  students: Student[]
+}
 
 type SchoolClass = {
-  id: number;
-  name: string;
-  sections: Section[];
-};
+  id: number
+  name: string
+  sections: Section[]
+}
 
-const examOptions = [
-  "Unit Test 1",
-  "Midterm Examination",
-  "Final Examination",
-];
+const examOptions = ["Unit Test 1", "Midterm Examination", "Final Examination"]
 
 const names = [
   "Aarav Sharma",
@@ -79,16 +74,20 @@ const names = [
   "Aditi Verma",
   "Rohan Joshi",
   "Kavya Singh",
-];
+]
 
 const markSets: Record<string, number[]> = {
   "Unit Test 1": [95, 92, 85, 62, 78, 88, 72, 68, 55, 81, 47, 90],
-  "Midterm Examination": [475, 460, 425, 310, 390, 440, 360, 340, 275, 405, 230, 450],
-  "Final Examination": [480, 465, 435, 325, 400, 445, 375, 350, 285, 415, 245, 455],
-};
+  "Midterm Examination": [
+    475, 460, 425, 310, 390, 440, 360, 340, 275, 405, 230, 450,
+  ],
+  "Final Examination": [
+    480, 465, 435, 325, 400, 445, 375, 350, 285, 415, 245, 455,
+  ],
+}
 
 function createStudents(sectionCode: string): Student[] {
-  const isUnitTest = false;
+  const isUnitTest = false
 
   return names.map((name, index) => ({
     id: `${sectionCode}-${index + 1}`,
@@ -99,7 +98,7 @@ function createStudents(sectionCode: string): Student[] {
     ).padStart(3, "0")}`,
     marks: 0,
     maxMarks: isUnitTest ? 100 : 500,
-  }));
+  }))
 }
 
 const classDefinitions = [
@@ -110,68 +109,64 @@ const classDefinitions = [
   { id: 10, sections: ["A", "B", "C"] },
   { id: 11, sections: ["A", "B"] },
   { id: 12, sections: ["A", "B"] },
-];
+]
 
 const classes: SchoolClass[] = classDefinitions.map((item) => ({
   id: item.id,
   name: `Class ${item.id}`,
   sections: item.sections.map((section) => {
-    const code = `C${item.id}${section}`;
+    const code = `C${item.id}${section}`
 
     return {
       name: `Section ${section}`,
       students: createStudents(code),
-    };
+    }
   }),
-}));
+}))
 
-function getMarks(
-  student: Student,
-  exam: string,
-  studentIndex: number
-): number {
-  const values = markSets[exam] ?? markSets["Unit Test 1"];
-  const raw = values[studentIndex % values.length];
+function getMarks(exam: string, studentIndex: number): number {
+  const values = markSets[exam] ?? markSets["Unit Test 1"]
+  const raw = values[studentIndex % values.length]
 
   if (exam === "Unit Test 1") {
-    return raw;
+    return raw
   }
 
   // Demo marks are scaled to a 500-mark examination.
-  return raw;
+  return raw
 }
 
 function getGrade(percentage: number): string {
-  if (percentage >= 90) return "A+";
-  if (percentage >= 80) return "A";
-  if (percentage >= 70) return "B+";
-  if (percentage >= 60) return "B";
-  if (percentage >= 50) return "C";
-  if (percentage >= 40) return "D";
-  return "F";
+  if (percentage >= 90) return "A+"
+  if (percentage >= 80) return "A"
+  if (percentage >= 70) return "B+"
+  if (percentage >= 60) return "B"
+  if (percentage >= 50) return "C"
+  if (percentage >= 40) return "D"
+  return "F"
 }
 
 function getResult(percentage: number): "Pass" | "Fail" {
-  return percentage >= 35 ? "Pass" : "Fail";
+  return percentage >= 35 ? "Pass" : "Fail"
 }
 
 export default function ResultsGrades() {
-  const [selectedClass, setSelectedClass] = useState<SchoolClass | null>(null);
-  const [selectedSection, setSelectedSection] = useState<Section | null>(null);
-  const [selectedExam, setSelectedExam] = useState("Midterm Examination");
-  const [search, setSearch] = useState("");
-  const [selectedStudent, setSelectedStudent] = useState<Student | null>(null);
+  const [selectedClass, setSelectedClass] = useState<SchoolClass | null>(null)
+  const [selectedSection, setSelectedSection] = useState<Section | null>(null)
+  const [selectedExam, setSelectedExam] = useState("Midterm Examination")
+  const [search, setSearch] = useState("")
+  const [selectedStudent, setSelectedStudent] = useState<Student | null>(null)
 
-  const isUnitTest = selectedExam === "Unit Test 1";
-  const maxMarks = isUnitTest ? 100 : 500;
+  const isUnitTest = selectedExam === "Unit Test 1"
+  const maxMarks = isUnitTest ? 100 : 500
 
   const sectionResults = useMemo(() => {
-    if (!selectedSection) return [];
+    if (!selectedSection) return []
 
     return selectedSection.students
       .map((student, index) => {
-        const marks = getMarks(student, selectedExam, index);
-        const percentage = (marks / maxMarks) * 100;
+        const marks = getMarks(selectedExam, index)
+        const percentage = (marks / maxMarks) * 100
 
         return {
           ...student,
@@ -180,48 +175,46 @@ export default function ResultsGrades() {
           percentage,
           grade: getGrade(percentage),
           result: getResult(percentage),
-        };
+        }
       })
       .sort((a, b) => b.percentage - a.percentage)
       .map((student, index) => ({
         ...student,
         rank: index + 1,
-      }));
-  }, [selectedSection, selectedExam, maxMarks]);
+      }))
+  }, [selectedSection, selectedExam, maxMarks])
 
   const filteredResults = useMemo(() => {
-    const query = search.trim().toLowerCase();
+    const query = search.trim().toLowerCase()
 
     return sectionResults.filter(
       (student) =>
         student.name.toLowerCase().includes(query) ||
         student.rollNumber.toLowerCase().includes(query) ||
         student.admissionNumber.toLowerCase().includes(query)
-    );
-  }, [sectionResults, search]);
+    )
+  }, [sectionResults, search])
 
   const passCount = sectionResults.filter(
     (student) => student.result === "Pass"
-  ).length;
+  ).length
 
   const passPercentage = sectionResults.length
     ? (passCount / sectionResults.length) * 100
-    : 0;
+    : 0
 
   const averagePercentage = sectionResults.length
     ? sectionResults.reduce((sum, student) => sum + student.percentage, 0) /
       sectionResults.length
-    : 0;
-
-  const publishedCount = sectionResults.length;
+    : 0
 
   function goBack() {
     if (selectedSection) {
-      setSelectedSection(null);
+      setSelectedSection(null)
     } else if (selectedClass) {
-      setSelectedClass(null);
+      setSelectedClass(null)
     }
-    setSearch("");
+    setSearch("")
   }
 
   function exportCSV() {
@@ -235,7 +228,7 @@ export default function ResultsGrades() {
       "Percentage",
       "Grade",
       "Result",
-    ];
+    ]
 
     const rows = filteredResults.map((student) => [
       student.rank,
@@ -247,31 +240,29 @@ export default function ResultsGrades() {
       student.percentage.toFixed(2),
       student.grade,
       student.result,
-    ]);
+    ])
 
     const csv = [headers, ...rows]
       .map((row) =>
-        row
-          .map((value) => `"${String(value).replace(/"/g, '""')}"`)
-          .join(",")
+        row.map((value) => `"${String(value).replace(/"/g, '""')}"`).join(",")
       )
-      .join("\n");
+      .join("\n")
 
     const blob = new Blob(["\uFEFF" + csv], {
       type: "text/csv;charset=utf-8;",
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
+    })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement("a")
 
-    link.href = url;
+    link.href = url
     link.download = `${selectedClass?.name}-${selectedSection?.name}-${selectedExam
       .replace(/\s+/g, "-")
-      .toLowerCase()}-results.csv`;
+      .toLowerCase()}-results.csv`
 
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    URL.revokeObjectURL(url)
   }
 
   const statCards = [
@@ -299,7 +290,7 @@ export default function ResultsGrades() {
       icon: XCircle,
       description: "Students below passing criteria",
     },
-  ];
+  ]
 
   return (
     <div className="space-y-6 p-4 md:p-6">
@@ -334,7 +325,9 @@ export default function ResultsGrades() {
         <div className="w-full sm:w-64">
           <Select
             value={selectedExam}
-            onValueChange={(value) => setSelectedExam(value ?? "Midterm Examination")}
+            onValueChange={(value) =>
+              setSelectedExam(value ?? "Midterm Examination")
+            }
           >
             <SelectTrigger className="w-full">
               <SelectValue placeholder="Select examination" />
@@ -355,9 +348,9 @@ export default function ResultsGrades() {
         <button
           className="hover:text-foreground"
           onClick={() => {
-            setSelectedClass(null);
-            setSelectedSection(null);
-            setSearch("");
+            setSelectedClass(null)
+            setSelectedSection(null)
+            setSearch("")
           }}
         >
           All Classes
@@ -372,8 +365,8 @@ export default function ResultsGrades() {
                   : "font-medium text-foreground"
               }
               onClick={() => {
-                setSelectedSection(null);
-                setSearch("");
+                setSelectedSection(null)
+                setSearch("")
               }}
             >
               {selectedClass.name}
@@ -398,7 +391,7 @@ export default function ResultsGrades() {
               const studentCount = schoolClass.sections.reduce(
                 (total, section) => total + section.students.length,
                 0
-              );
+              )
 
               return (
                 <button
@@ -416,7 +409,8 @@ export default function ResultsGrades() {
                           {schoolClass.name}
                         </h2>
                         <p className="mt-1 text-sm text-muted-foreground">
-                          {schoolClass.sections.length} sections · {studentCount} demo students
+                          {schoolClass.sections.length} sections ·{" "}
+                          {studentCount} demo students
                         </p>
                         <p className="mt-2 text-sm font-medium">
                           View sections
@@ -426,7 +420,7 @@ export default function ResultsGrades() {
                     </CardContent>
                   </Card>
                 </button>
-              );
+              )
             })}
           </div>
         </>
@@ -449,8 +443,8 @@ export default function ResultsGrades() {
               <button
                 key={section.name}
                 onClick={() => {
-                  setSelectedSection(section);
-                  setSearch("");
+                  setSelectedSection(section)
+                  setSearch("")
                 }}
                 className="text-left"
               >
@@ -482,7 +476,7 @@ export default function ResultsGrades() {
         <>
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {statCards.map((stat) => {
-              const Icon = stat.icon;
+              const Icon = stat.icon
 
               return (
                 <Card key={stat.label}>
@@ -491,9 +485,7 @@ export default function ResultsGrades() {
                       <p className="text-sm text-muted-foreground">
                         {stat.label}
                       </p>
-                      <p className="mt-2 text-2xl font-bold">
-                        {stat.value}
-                      </p>
+                      <p className="mt-2 text-2xl font-bold">{stat.value}</p>
                       <p className="mt-1 text-xs text-muted-foreground">
                         {stat.description}
                       </p>
@@ -503,7 +495,7 @@ export default function ResultsGrades() {
                     </div>
                   </CardContent>
                 </Card>
-              );
+              )
             })}
           </div>
 
@@ -513,7 +505,8 @@ export default function ResultsGrades() {
                 <div>
                   <CardTitle>Student Results</CardTitle>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    {selectedClass.name} · {selectedSection.name} · {selectedExam}
+                    {selectedClass.name} · {selectedSection.name} ·{" "}
+                    {selectedExam}
                   </p>
                 </div>
 
@@ -526,7 +519,7 @@ export default function ResultsGrades() {
 
             <CardContent className="space-y-4">
               <div className="relative max-w-md">
-                <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                <Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
                   className="pl-9"
                   placeholder="Search student, roll number..."
@@ -628,11 +621,10 @@ export default function ResultsGrades() {
 
               <div className="flex flex-col gap-1 text-sm text-muted-foreground sm:flex-row sm:justify-between">
                 <span>
-                  Showing {filteredResults.length} of {sectionResults.length} students
+                  Showing {filteredResults.length} of {sectionResults.length}{" "}
+                  students
                 </span>
-                <span>
-                  Ranking is based on percentage within this section.
-                </span>
+                <span>Ranking is based on percentage within this section.</span>
               </div>
             </CardContent>
           </Card>
@@ -643,7 +635,7 @@ export default function ResultsGrades() {
       <Dialog
         open={selectedStudent !== null}
         onOpenChange={(open) => {
-          if (!open) setSelectedStudent(null);
+          if (!open) setSelectedStudent(null)
         }}
       >
         <DialogContent className="sm:max-w-md">
@@ -652,16 +644,17 @@ export default function ResultsGrades() {
               <DialogHeader>
                 <DialogTitle>{selectedStudent.name}</DialogTitle>
                 <DialogDescription>
-                  {selectedClass?.name} · {selectedSection?.name} · {selectedExam}
+                  {selectedClass?.name} · {selectedSection?.name} ·{" "}
+                  {selectedExam}
                 </DialogDescription>
               </DialogHeader>
 
               {(() => {
                 const student = sectionResults.find(
                   (item) => item.id === selectedStudent.id
-                );
+                )
 
-                if (!student) return null;
+                if (!student) return null
 
                 return (
                   <div className="space-y-4">
@@ -685,7 +678,9 @@ export default function ResultsGrades() {
                         </p>
                       </div>
                       <div className="rounded-lg border p-3">
-                        <p className="text-sm text-muted-foreground">Percentage</p>
+                        <p className="text-sm text-muted-foreground">
+                          Percentage
+                        </p>
                         <p className="mt-1 text-xl font-semibold">
                           {student.percentage.toFixed(1)}%
                         </p>
@@ -713,12 +708,12 @@ export default function ResultsGrades() {
                       Roll number: {student.rollNumber}
                     </div>
                   </div>
-                );
+                )
               })()}
             </>
           )}
         </DialogContent>
       </Dialog>
     </div>
-  );
+  )
 }

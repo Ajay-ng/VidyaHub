@@ -1,12 +1,8 @@
-import { Bell, Search, } from "lucide-react"
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Avatar,
-  AvatarFallback,
-   AvatarImage,
-} from "@/components/ui/avatar";
-import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Bell } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { SidebarTrigger } from "@/components/ui/sidebar"
 
 export default function Header() {
   return (
@@ -17,9 +13,7 @@ export default function Header() {
 
         <div className="hidden sm:block">
           <p className="font-semibold">Vidyahub</p>
-          <p className="text-xs text-muted-foreground">
-            Student Portal
-          </p>
+          <p className="text-xs text-muted-foreground">Student Portal</p>
         </div>
       </div>
 
@@ -36,29 +30,20 @@ export default function Header() {
 
       {/* Right section */}
       <div className="flex items-center gap-3">
-        <Button
-          variant="ghost"
-          size="icon"
-          aria-label="Notifications"
-        >
+        <Button variant="ghost" size="icon" aria-label="Notifications">
           <Bell className="size-6" />
         </Button>
 
-<Avatar>
-  <AvatarImage
-    src="/profile.jpg"
-    alt="Hemanth Kumar"
-  />
-  <AvatarFallback>HK</AvatarFallback>
-</Avatar>
+        <Avatar>
+          <AvatarImage src="/profile.jpg" alt="Hemanth Kumar" />
+          <AvatarFallback>HK</AvatarFallback>
+        </Avatar>
 
         <div className="hidden sm:block">
           <p className="text-sm font-semibold">Hemanth</p>
-          <p className="text-xs text-muted-foreground">
-            1SY260021
-          </p>
+          <p className="text-xs text-muted-foreground">1SY260021</p>
         </div>
       </div>
     </header>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import { Search, CalendarDays, Filter } from "lucide-react";
+import { Search, CalendarDays } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 import {
   Select,
@@ -9,13 +9,12 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/ui/select"
 
 export function AssignmentFilters() {
   return (
     <div className="rounded-lg border bg-background p-4 shadow-sm">
       <div className="grid gap-4 md:grid-cols-6">
-
         {/* Class */}
         <Select>
           <SelectTrigger className="h-10">
@@ -59,24 +58,18 @@ export function AssignmentFilters() {
         </Select>
 
         {/* Due Date */}
-        <Button
-          variant="outline"
-          className="h-10 justify-start font-normal"
-        >
+        <Button variant="outline" className="h-10 justify-start font-normal">
           <CalendarDays className="mr-2 h-4 w-4" />
           Due Date
         </Button>
 
         {/* Search */}
         <div className="relative col-span-2">
-          <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute top-3 left-3 h-4 w-4 text-muted-foreground" />
 
-          <Input
-            placeholder="Search assignment..."
-            className="pl-9 h-10"
-          />
+          <Input placeholder="Search assignment..." className="h-10 pl-9" />
         </div>
       </div>
-      </div>
-  );
+    </div>
+  )
 }
