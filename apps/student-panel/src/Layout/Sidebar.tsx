@@ -1,5 +1,4 @@
-
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom"
 import {
   LayoutDashboard,
   BookOpen,
@@ -9,9 +8,8 @@ import {
   ListChecks,
   CalendarDays,
   ClipboardCheck,
-  Settings,
   LogOut,
-} from "lucide-react";
+} from "lucide-react"
 
 import {
   Sidebar as ShadcnSidebar,
@@ -23,7 +21,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from "@/components/ui/sidebar"
 
 const navigation = [
   { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
@@ -39,22 +37,22 @@ const navigation = [
     path: "/leave-requests",
     icon: ClipboardCheck,
   },
-];
+]
 
 export default function Sidebar() {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate = useNavigate()
+  const location = useLocation()
 
   function handleLogout() {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/login", { replace: true });
+    localStorage.removeItem("isLoggedIn")
+    navigate("/login", { replace: true })
   }
 
   const activeClass =
-    "bg-blue-600 font-medium text-white hover:bg-blue-700 hover:text-white";
+    "bg-blue-600 font-medium text-white hover:bg-blue-700 hover:text-white"
 
   const inactiveClass =
-    "text-foreground hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-950 dark:hover:text-blue-300";
+    "text-foreground hover:bg-blue-50 hover:text-blue-700 dark:hover:bg-blue-950 dark:hover:text-blue-300"
 
   return (
     <ShadcnSidebar collapsible="icon" className="pb-12">
@@ -67,9 +65,7 @@ export default function Sidebar() {
               tooltip="Vidyahub"
               onClick={() => navigate("/dashboard")}
               className={
-                location.pathname === "/dashboard"
-                  ? activeClass
-                  : inactiveClass
+                location.pathname === "/dashboard" ? activeClass : inactiveClass
               }
             >
               <GraduationCap className="size-6" />
@@ -86,9 +82,9 @@ export default function Sidebar() {
 
           <SidebarMenu>
             {navigation.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon
 
-              const isActive = location.pathname === item.path;
+              const isActive = location.pathname === item.path
 
               return (
                 <SidebarMenuItem key={item.path}>
@@ -101,7 +97,7 @@ export default function Sidebar() {
                     <span>{item.label}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-              );
+              )
             })}
           </SidebarMenu>
         </SidebarGroup>
@@ -140,5 +136,5 @@ export default function Sidebar() {
         </SidebarMenu>
       </SidebarFooter>
     </ShadcnSidebar>
-  );
+  )
 }
