@@ -10,12 +10,12 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+
 import {
   LayoutDashboard,
   GraduationCap,
   Users,
   UserRound,
-  BookOpen,
   School,
   CalendarCheck,
   ClipboardList,
@@ -27,13 +27,13 @@ import {
   MessageSquare,
   Settings,
   ShieldCheck,
-  BarChart3,
   CalendarDays,
   BriefcaseBusiness,
   CreditCard,
 } from "lucide-react"
+
 import type { LucideIcon } from "lucide-react"
-import { NavLink, type NavLinkProps } from "react-router"
+import { NavLink } from "react-router"
 import packageJson from "../../../../package.json"
 
 interface DAS {
@@ -46,6 +46,7 @@ interface DASHBOARDPROPS {
   group: string
   items: DAS[]
 }
+
 function AdminSidebar() {
   const adminSidebarOptions: DASHBOARDPROPS[] = [
     {
@@ -56,11 +57,6 @@ function AdminSidebar() {
           url: "/admin/dashboard",
           icon: LayoutDashboard,
         },
-        // {
-        //   title: "Analytics & Reports",
-        //   url: "/admin/reports",
-        //   icon: BarChart3,
-        // },
       ],
     },
     {
@@ -81,11 +77,6 @@ function AdminSidebar() {
           url: "/admin/classes",
           icon: School,
         },
-        // {
-        //   title: "Subjects",
-        //   url: "/admin/subjects",
-        //   icon: BookOpen,
-        // },
         {
           title: "Timetable",
           url: "/admin/timetable",
@@ -217,7 +208,7 @@ function AdminSidebar() {
                         <NavLink
                           to={item.url}
                           end
-                          className={({ isActive }: NavLinkProps) =>
+                          className={({ isActive }) =>
                             `flex w-full flex-row items-center gap-2 px-4 py-2 ${
                               isActive
                                 ? "bg-primary text-primary-foreground"

@@ -1,8 +1,7 @@
-import { Search, Upload } from "lucide-react";
+import { Search } from "lucide-react"
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 
 import {
   Select,
@@ -10,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/ui/select"
 
 export function AttendanceFilters() {
   return (
@@ -66,23 +65,18 @@ export function AttendanceFilters() {
                 <SelectItem value="science">Science</SelectItem>
                 <SelectItem value="english">English</SelectItem>
                 <SelectItem value="social">Social Science</SelectItem>
-                <SelectItem value="computer">
-                  Computer Science
-                </SelectItem>
+                <SelectItem value="computer">Computer Science</SelectItem>
               </SelectContent>
             </Select>
           </div>
           {/* Search Student */}
           <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
 
-            <Input
-              placeholder="Search Student..."
-              className="h-10 pl-9"
-            />
+            <Input placeholder="Search Student..." className="h-10 pl-9" />
           </div>
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

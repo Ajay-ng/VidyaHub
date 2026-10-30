@@ -13,7 +13,6 @@ import {
   Receipt,
   Search,
   Trash2,
-  Users,
   Wallet,
   X,
   ChartNoAxesCombined,
